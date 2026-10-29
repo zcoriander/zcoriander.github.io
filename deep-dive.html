@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>深度拆解 · GitHub 冲浪手记</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="#categories">分类榜</a>
+      <a href="deep-dive.html" class="active">深度拆解</a>
+      <a href="about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page-main">
+  <div class="page-head">
+    <h1>深度拆解</h1>
+    <p class="lede">不只是贴链接。我真的翻开了 README、看了目录结构、想了想它为什么火。</p>
+  </div>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw/openclaw</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 393.3k</span>
+          <span class="lang">TypeScript</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">把 AI 助手部署在你自己的机器上，然后让它住进你已经在用的聊天软件里。Discord、iMessage、Slack、WhatsApp、Telegram……20 多个平台，一个 Gateway 统一调度。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 393.3k</strong><span>Star</span></div><div class="metric"><strong>⑂ 82.7k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>TypeScript</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>它到底在做什么</h3>
+        <p>一句话：本地跑的 AI 助手 + 一个叫 Gateway 的控制平面。Gateway 负责会话、工具调用、事件和渠道连接，助手本体通过插件机制对接 Claude、Codex 或本地模型。</p>
+<p>关键点是它不打算取代你的聊天软件，而是「住进去」。个人版跑在笔记本上，团队版跑在服务器上——作者说区别只是配置文件。</p>
+        <ul><li>状态、记忆、凭证全部留在自己硬件上</li><li>模型是可替换插件，换模型不用动其他配置</li><li>由 OpenClaw Foundation（501(c)(3) 独立基金会）托管，没有付费层</li></ul>
+        <h3>让我在意的架构选择</h3>
+        <p>README 里有一句话我反复看了两遍：trusted gateway, untrusted execution, policy enforced by code——可信网关、不可信执行、策略由代码强制。</p>
+<p>这和很多「把 Agent 塞进沙箱里跑」的方案是反的。它的思路是：执行环境（工具、命令、文件）是不可信边界内的，所以权限判定必须在网关这一层用代码写死，而不是指望被调用的那部分自觉。</p>
+<p>另外它默认只做每日版本检查，匿名功能统计是 opt-in，遥测可以完全关掉。对一个要常驻在你所有聊天窗口里的东西来说，这个默认值设置是加分项。</p>
+        
+        <h3>安装门槛</h3>
+        <p>一条 curl 命令或一条 npm 命令，跨 macOS / Linux / Windows。装完自动跑引导流程，验证模型连通性、创建工作区、配置 Gateway。</p>
+<p>Node.js 版本要求比较新（24.22.1+ 或 26.12.1+），这算是个小门槛——但换来的是不用自己拼装依赖。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>如果你想要一个「常驻在聊天软件里的私人助手」，目前生态里最完整的开源方案之一。架构上「策略由代码强制」那句话值得所有做 Agent 的人抄在墙上。适合有一定技术基础、愿意自己管一台机器的人；完全零基础的话，20 多个渠道的配置量会有点劝退。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 307.9k</span>
+          <span class="lang">Shell</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 307.9k</strong><span>Star</span></div><div class="metric"><strong>⑂ 27.4k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>核心思路：先谈清楚，再写代码</h3>
+        <p>它在你启动编码 Agent 的那一刻就介入。Agent 不会直接开始写代码，而是先退一步问你到底想做什么。</p>
+<p>从对话里提炼出规格之后，它会分成你「读得完、咽得下」的小块给你看。你签字确认设计，然后它给出实现计划——README 里形容这个计划要清晰到「一个热情但品味糟糕、没判断力、不了解项目背景、还讨厌写测试的初级工程师」都能照着做。</p>
+<p>这描述挺刻薄的，但很诚实：它假设执行者不会替你思考，所以计划必须自带上下文。</p>
+        
+        <h3>执行阶段：子 Agent 流水线</h3>
+        <p>你说「go」之后，它启动一个子 Agent 驱动的开发流程：Agent 逐个任务往下推进，自己检查和审查自己的工作，然后继续。</p>
+<p>README 里说它「连续自主工作几小时不偏离计划」并不罕见。同时强制真·红绿 TDD、YAGNI 和 DRY。</p>
+        <ul><li>规格先行的设计评审，避免一上来就写</li><li>子 Agent 承担实现与自审</li><li>方法论约束（TDD / YAGNI / DRY）内建在技能里</li></ul>
+        <h3>生态兼容性</h3>
+        <p>这是我觉得它最聪明的地方：支持面极广——Claude Code、Codex、Cursor、Copilot CLI、Gemini CLI、OpenCode、Qwen Code、Hermes Agent……十几种 harness 都能装。</p>
+<p>因为它把方法论做成了「可组合的技能 + 少量初始指令」，而不是绑死在某一个产品上。这让它更像是「Agent 时代的 GDD 文档」。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>如果你团队在用 AI 编码工具但产出质量忽高忽低，缺的不是模型而是流程约束。这个项目提供的正是流程。而且它明确反对「 vibe coding 」，跟我的看法一致：AI 降低了写代码的门槛，但没降低想清楚要什么的门槛。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 306.2k</span>
+          <span class="lang">Shell</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">作者每天在用的 Agent 技能包，定位很明确：给「做真实工程」用，不是给 vibe coding 用。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 306.2k</strong><span>Star</span></div><div class="metric"><strong>⑂ 25.7k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>它反对什么</h3>
+        <p>README 里点名了 GSD、BMAD、Spec-Kit 这类方案：它们试图通过「接管整个流程」来帮助开发者，代价是你失去了控制权，而且流程里出的 bug 很难排查。</p>
+<p>作者的选择是完全相反的：技能要小、易改、可组合，跟模型无关。</p>
+        <ul><li>刻意做得小而可组合</li><li>不绑定特定模型</li><li>设计上允许你「随便改，改成自己的」</li></ul>
+        <h3>安装方式体现了设计哲学</h3>
+        <p>推荐用 skills.sh 把可编辑的文件直接拷进你的项目，然后你自己维护更新——注意它建议你「每个 agent 选一个」，装两个会导致每个技能出现两遍。</p>
+<p>这种「拷贝文件而不是装插件」的方式，代价是要手动更新，收益是你能完全掌控内容、也能按自己的团队习惯改写。</p>
+        
+        <h3>为什么这类项目现在重要</h3>
+        <p>把「资深工程师的隐性经验」变成 Agent 可执行的技能文件，本质上是在做知识的显性化。</p>
+<p>这也解释了为什么 2026 年会有大量同类仓库涌出——当 Agent 能力趋同，真正的差异化就落到了「你给它喂什么方法论」上。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>和 Superpowers 是一对镜像：superpowers 是重流程、可自动触发；这个是轻流程、完全可控。两者都指向同一件事——AI 编码的瓶颈已经从「模型能不能写」转移到「流程约束得好不好」。想快速起步用前者，想深度定制用后者。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/shareAI-lab/learn-claude-code" target="_blank" rel="noopener">shareAI-lab/learn-claude-code</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 79.5k</span>
+          <span class="lang">Python</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 79.5k</strong><span>Star</span></div><div class="metric"><strong>⑂ 12.7k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 90</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>核心论点</h3>
+        <p>README 开头那句话很清醒：Agency comes from the model. An agent product = model + harness. 智能来自模型训练，不是外部代码编排。模型是驾驶员，harness 是车。这个仓库教你怎么造那辆车。</p>
+<p>接着它用三个历史案例论证——DeepMind DQN 打 Atari（2013）、OpenAI Five 打 Dota 2（2019）、AlphaStar 打星际争霸 2（2019）——说明能动性是学出来的，不是编排出来的。</p>
+        
+        <h3>它和 Superpowers 的关系</h3>
+        <p>两个项目放在一起看很有意思：learn-claude-code 是「造车厂」，superpowers 是「驾驶规范」。</p>
+<p>前者让你理解 harness 的每个零件为什么存在，后者规定拿到车之后该怎么开。</p>
+        <ul><li>用 Bash 从零实现一个 nano 级的 agent harness</li><li>配套中文/日文翻译，学习门槛低</li><li>有 Trendshift 徽章，说明在新生代项目里热度很高</li></ul>
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>这是我在这批项目里最推荐给「想理解而不是想直接用」的人的项目。README 的写作质量在开源项目里属于头部——论述清晰、有历史纵深、有明确的观点。读完你会发现，很多「AI 编程工具」的差异，本质是 harness 设计哲学的差异。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/ssloy/tinyrenderer" target="_blank" rel="noopener">ssloy/tinyrenderer</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 24.5k</span>
+          <span class="lang">C++</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">500 行裸 C++ 实现软件渲染器，用来教人搞明白 OpenGL / Vulkan / Metal / DirectX 底下到底发生了什么。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 24.5k</strong><span>Star</span></div><div class="metric"><strong>⑂ 2.3k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 60</strong><span>推荐分</span></div><div class="metric"><strong>C++</strong><span>主要语言</span></div><div class="metric"><strong>NOASSERTION</strong><span>许可证</span></div></div>
+        <h3>为什么它还是值得看</h3>
+        <p>作者自己说「代码本身没什么意思」，重点在配套的 14 篇课程笔记。这句话本身就是一种克制——它不假装是个库，就是一套教案。</p>
+<p>课程从 Bresenham 直线算法开始，经过三角形光栅化、重心坐标、隐藏面剔除、z-buffer、相机处理、着色、纹理、法线映射、阴影映射、SSAO，最后来个 toon shading 收尾。</p>
+        <ul><li>零第三方库，包括图形库</li><li>作者说自己的学生学完后能写出相当不错的渲染器</li><li>配套站点 haqr.eu 有完整中文/多语言笔记</li></ul>
+        <h3>它教会你的思维方式</h3>
+        <p>这其实是一套「逆向学习法」：先手写出最简实现，再回头理解每个图形 API 背后在做什么。</p>
+<p>作为新人，我觉得这种学习路径特别值得借鉴——先用最笨的办法跑通，再补理论。比反过来先啃一千页图形学教材有效得多。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>24k star 里我最推荐的一个。它代表了一类被低估的项目：代码量小得离谱，但它教的东西能迁移到你写的每一行图形/系统代码里。适合当作「学底层」的自修教材。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener">codecrafters-io/build-your-own-x</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 557.2k</span>
+          <span class="lang">Markdown</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">从零复刻你喜欢的技术：数据库、操作系统、编译器、容器、Docker、Git……全是教程。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 557.2k</strong><span>Star</span></div><div class="metric"><strong>⑂ 52.1k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 55</strong><span>推荐分</span></div><div class="metric"><strong>Markdown</strong><span>主要语言</span></div></div>
+        <h3>这个仓库的特殊之处</h3>
+        <p>557k star，全球 star 数最高的仓库之一。但它本质上不是代码库，而是一张巨大的索引表——每一行指向一个「自己实现一遍 X」的教程。</p>
+<p>涵盖范围从数据库（SQLite、Redis、PostgreSQL）、操作系统（Linux、Unix shell、终端）、编译器（Bash、LLVM、Go）、容器（Docker、Kubernetes）、网络（TCP、HTTP）、到浏览器（Chrome）、游戏引擎、神经网络、GUI 框架，甚至「自己写一个 Git」和「自己写一个 Neural Network」。</p>
+        <ul><li>Build your own X 系列是经典，很多教程配套完整的课程站点</li><li>覆盖从入门到编译器级别，难度梯度清晰</li><li>每个条目通常都标注了难度和前置知识</li></ul>
+        <h3>为什么这类项目长青</h3>
+        <p>它的价值不随技术栈变化。框架会换，但「理解数据库索引是怎么工作的」这件事不会过时。</p>
+<p>对比一下：它的 star 增长很慢（老项目常态），但社区活跃度一直不低，因为总有人在学新东西，也在持续贡献新的「X」。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>如果只能推荐一个「学习索引」，就是它。star 数 557k 说明它被反复验证过——但更重要的是它把「我想搞懂 X」变成了一条明确的行动路径。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">donnemartin/system-design-primer</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 376k</span>
+          <span class="lang">Python</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">大规模系统设计的学习指南，还附带了 Anki 记忆卡，直接对着面试准备。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 376k</strong><span>Star</span></div><div class="metric"><strong>⑂ 59k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 68</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>NOASSERTION</strong><span>许可证</span></div></div>
+        <h3>它解决什么问题</h3>
+        <p>系统设计面试是新手最焦虑的环节之一：题目开放，不知道从哪答起。这个仓库把答题的骨架给拆好了。</p>
+<p>内容从「如何回答一个系统设计问题」开始，然后逐个讲：缓存、数据库、负载均衡、缓存穿透/雪崩/击穿、限流、消息队列、一致性哈希、复制、分片、CAP 定理……还配了插图。</p>
+        <ul><li>每节都配 Anki 记忆卡，能直接导入做间隔重复</li><li>包含真实系统案例（Twitter、Netflix 等）</li><li>有中英等多语言翻译版本</li></ul>
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>它的 Anki 卡片设计是我最喜欢的一点——把「读过」变成「记得住」。这比单纯又一个 Markdown 教程务实得多。新人如果正准备系统设计面试，这是最高性价比的起点。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener">freeCodeCamp/freeCodeCamp</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 458.2k</span>
+          <span class="lang">TypeScript</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">全球最大的免费编程学习平台，458k star，课程本身也是开源的。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 458.2k</strong><span>Star</span></div><div class="metric"><strong>⑂ 48.7k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>TypeScript</strong><span>主要语言</span></div><div class="metric"><strong>BSD-3-Clause</strong><span>许可证</span></div></div>
+        <h3>不一样的定位</h3>
+        <p>它是「免费学编程」这件事的答案：不是一门课，是一整条课程体系——HTML/CSS/JS 到数据可视化、证书项目，每一节都能在浏览器里直接写代码并即时看到结果。</p>
+<p>更特别的是它的商业模式：完全免费，运营靠捐款。这让它没有必须「尽快让你升级付费」的焦虑，课程节奏是真的按学习者来设计的。</p>
+        <ul><li>TypeScript 技术栈，代码完全开源</li><li>浏览器内直接运行，无需本地环境</li><li>社区规模巨大，互助氛围浓</li></ul>
+        <h3>为什么它值得注意</h3>
+        <p>作为一个「学习资源」类项目，它常年保持高活跃度提交——这在老牌教程仓库里不常见。说明它还在积极维护，不是在吃老本。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>如果你完全零基础，它是最稳的起点。缺点是它教的是 web 开发，如果你的目标是后端、系统或 AI，直接看它的证书项目有点绕——但那个项目本身质量不错，可以当跳板。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/firstcontributions/first-contributions" target="_blank" rel="noopener">firstcontributions/first-contributions</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 56.6k</span>
+          
+          
+        </div>
+      </div>
+      <p class="deep-sub">专门用来教新手完成第一次开源贡献的仓库，56k star。</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 56.6k</strong><span>Star</span></div><div class="metric"><strong>⑂ 112k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 90</strong><span>推荐分</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>设计得极巧</h3>
+        <p>它的思路很聪明：让你去改一个你自己的练习仓库（练习分支），而不是直接改真实的热门项目。</p>
+<p>流程是：fork → clone → 建分支 → 改一处 → commit → push → 开 PR。目标是让你在真正动手前完整走一遍整个协作流程，把陌生感消掉。</p>
+        <ul><li>步骤图文清晰，几乎没有理解门槛</li><li>专门为「第一次」设计，而不是「又一次」</li><li>有中文等多语言版本</li></ul>
+        <h3>为什么这一步很重要</h3>
+        <p>很多人卡在第一次贡献不是技术问题，是心理门槛：不知道流程、不敢提 PR、怕被拒。</p>
+<p>这个仓库把流程拆解到每一步都给出确切命令，把第一次的心理成本降到最低。做完一遍之后，再面对真实项目就顺了。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>如果你的目标是「今年开始给开源做贡献」，这是最该先跑一遍的东西。半小时的投入，回报是拆掉一整层心理障碍。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/seedds/nxnative" target="_blank" rel="noopener">seedds/nxnative</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 9.3k</span>
+          <span class="lang">Objective-C</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 9.3k</strong><span>Star</span></div><div class="metric"><strong>⑂ 1.5k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 89.7</strong><span>推荐分</span></div><div class="metric"><strong>Objective-C</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>项目速览</h3>
+        <p>Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)</p>
+<p>最近一次代码提交在 2026-10-29，当前有 226 个未关闭 issue，许可证为 MIT。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>这是一个 star 数 9.3k 的项目，fork 1.5k。许可证清晰，适合上手试用。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/simbasjungles/free-my-tv" target="_blank" rel="noopener">simbasjungles/free-my-tv</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 5.3k</span>
+          <span class="lang">Java</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 5.3k</strong><span>Star</span></div><div class="metric"><strong>⑂ 887</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87.2</strong><span>推荐分</span></div><div class="metric"><strong>Java</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+        <h3>项目速览</h3>
+        <p>A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.</p>
+<p>最近一次代码提交在 2026-10-29，当前有 76 个未关闭 issue，许可证为 MIT。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>这是一个 star 数 5.3k 的项目，fork 887。许可证清晰，适合上手试用。</p>
+      </div>
+    </article>
+    <article class="deep">
+      <div class="deep-head">
+        <h2><a href="https://github.com/storytold/photocraft" target="_blank" rel="noopener">storytold/photocraft</a></h2>
+        <div class="deep-meta">
+          <span class="stars">★ 74.6k</span>
+          <span class="lang">Rust</span>
+          
+        </div>
+      </div>
+      <p class="deep-sub">PhotoCraft: An open-source, photo editor written by scratch in pure Rust</p>
+      <div class="topics"></div>
+      <div class="metrics"><div class="metric"><strong>★ 74.6k</strong><span>Star</span></div><div class="metric"><strong>⑂ 13.2k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Rust</strong><span>主要语言</span></div><div class="metric"><strong>Apache-2.0</strong><span>许可证</span></div></div>
+        <h3>项目速览</h3>
+        <p>PhotoCraft: An open-source, photo editor written by scratch in pure Rust</p>
+<p>最近一次代码提交在 2026-10-29，当前有 3.5k 个未关闭 issue，许可证为 Apache-2.0。</p>
+        
+      <div class="deep-verdict">
+        <h4>我的结论</h4>
+        <p>这是一个 star 数 74.6k 的项目，fork 13.2k。许可证清晰，适合上手试用。</p>
+      </div>
+    </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理</p></div>
+</footer>
+</body>
+</html>

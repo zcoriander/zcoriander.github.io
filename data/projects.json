@@ -1,0 +1,2771 @@
+{
+  "generated_at": "2026-10-29T11:37:50.218509+00:00",
+  "categories": {
+    "hot_week": [
+      {
+        "full_name": "seedds/nxnative",
+        "url": "https://github.com/seedds/nxnative",
+        "description": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+        "language": "Objective-C",
+        "stars": 9335,
+        "forks": 1491,
+        "open_issues": 226,
+        "topics": [],
+        "created_at": "2026-10-13T05:20:14Z",
+        "pushed_at": "2026-10-29T11:19:37Z",
+        "license": "MIT",
+        "owner": "seedds",
+        "name": "nxnative",
+        "score": 89.7,
+        "note": "建于 2026-10-13，16 天"
+      },
+      {
+        "full_name": "simbasjungles/free-my-tv",
+        "url": "https://github.com/simbasjungles/free-my-tv",
+        "description": "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
+        "language": "Java",
+        "stars": 5306,
+        "forks": 887,
+        "open_issues": 76,
+        "topics": [
+          "android-tv",
+          "claude-code",
+          "google-tv",
+          "home-screen",
+          "launcher",
+          "no-ads",
+          "open-source",
+          "samsung-tizen",
+          "tizen",
+          "tmdb",
+          "webos"
+        ],
+        "created_at": "2026-10-19T19:29:01Z",
+        "pushed_at": "2026-10-29T04:22:19Z",
+        "license": "MIT",
+        "owner": "simbasjungles",
+        "name": "free-my-tv",
+        "score": 87.2,
+        "note": "建于 2026-10-19，9 天"
+      },
+      {
+        "full_name": "storytold/photocraft",
+        "url": "https://github.com/storytold/photocraft",
+        "description": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 74619,
+        "forks": 13184,
+        "open_issues": 3479,
+        "topics": [
+          "art",
+          "image-editing",
+          "image-editing-software",
+          "image-editor",
+          "images",
+          "photo-editing",
+          "rust"
+        ],
+        "created_at": "2026-09-30T13:37:48Z",
+        "pushed_at": "2026-10-29T10:15:21Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "photocraft",
+        "score": 87,
+        "note": "建于 2026-09-30，28 天"
+      },
+      {
+        "full_name": "deepseek-ai/DeepInfer",
+        "url": "https://github.com/deepseek-ai/DeepInfer",
+        "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+        "language": "Python",
+        "stars": 24137,
+        "forks": 2885,
+        "open_issues": 220,
+        "topics": [],
+        "created_at": "2026-10-16T07:47:23Z",
+        "pushed_at": "2026-10-26T05:30:52Z",
+        "license": "Apache-2.0",
+        "owner": "deepseek-ai",
+        "name": "DeepInfer",
+        "score": 87,
+        "note": "建于 2026-10-16，13 天"
+      },
+      {
+        "full_name": "openai/math",
+        "url": "https://github.com/openai/math",
+        "description": null,
+        "language": "Lean",
+        "stars": 17016,
+        "forks": 1916,
+        "open_issues": 0,
+        "topics": [],
+        "created_at": "2026-10-06T21:47:02Z",
+        "pushed_at": "2026-10-26T21:18:10Z",
+        "license": "Apache-2.0",
+        "owner": "openai",
+        "name": "math",
+        "score": 87,
+        "note": "建于 2026-10-06，22 天"
+      },
+      {
+        "full_name": "storytold/filmcraft",
+        "url": "https://github.com/storytold/filmcraft",
+        "description": "FilmCraft: An open-source, nonlinear video editor written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 16788,
+        "forks": 6961,
+        "open_issues": 1997,
+        "topics": [
+          "art",
+          "rust",
+          "video",
+          "video-editing",
+          "video-editor",
+          "video-processing"
+        ],
+        "created_at": "2026-09-30T13:41:20Z",
+        "pushed_at": "2026-10-29T10:14:58Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "filmcraft",
+        "score": 87,
+        "note": "建于 2026-09-30，28 天"
+      },
+      {
+        "full_name": "storytold/lightcraft",
+        "url": "https://github.com/storytold/lightcraft",
+        "description": "LightCraft: An open-source non-destructive photo editor written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 15014,
+        "forks": 5759,
+        "open_issues": 1432,
+        "topics": [
+          "art",
+          "photography",
+          "raw",
+          "raw-editor",
+          "raw-processing",
+          "rust"
+        ],
+        "created_at": "2026-09-30T14:09:27Z",
+        "pushed_at": "2026-10-29T10:12:43Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "lightcraft",
+        "score": 87,
+        "note": "建于 2026-09-30，28 天"
+      },
+      {
+        "full_name": "storytold/vectorcraft",
+        "url": "https://github.com/storytold/vectorcraft",
+        "description": "VectorCraft: An open-source, vector art tool written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 10964,
+        "forks": 5312,
+        "open_issues": 1021,
+        "topics": [
+          "art",
+          "rust",
+          "rust-lang",
+          "svg",
+          "svg-editor",
+          "vector-graphics"
+        ],
+        "created_at": "2026-09-30T13:43:03Z",
+        "pushed_at": "2026-10-29T10:12:44Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "vectorcraft",
+        "score": 87,
+        "note": "建于 2026-09-30，28 天"
+      },
+      {
+        "full_name": "storytold/designcraft",
+        "url": "https://github.com/storytold/designcraft",
+        "description": "DesignCraft: An open-source page and layout design editor written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 4911,
+        "forks": 3393,
+        "open_issues": 770,
+        "topics": [
+          "art",
+          "layout",
+          "print",
+          "rust"
+        ],
+        "created_at": "2026-10-01T13:13:14Z",
+        "pushed_at": "2026-10-29T10:08:00Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "designcraft",
+        "score": 86.9,
+        "note": "建于 2026-10-01，27 天"
+      },
+      {
+        "full_name": "jhaizhou-ops/d2r-mobile",
+        "url": "https://github.com/jhaizhou-ops/d2r-mobile",
+        "description": "Open-source compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad, Mac, Android and HarmonyOS — full touch controls, 60 fps, new endgame modes. Bring your own game files. 开源的《暗黑破坏神 II：狱火重生》术士君临 iOS / macOS / 安卓 / 鸿蒙兼容层",
+        "language": "C",
+        "stars": 4853,
+        "forks": 1282,
+        "open_issues": 79,
+        "topics": [
+          "android",
+          "compatibility-layer",
+          "diablo-2-resurrected",
+          "diablo2",
+          "game-port",
+          "harmonyos",
+          "ios",
+          "ipad",
+          "iphone",
+          "mac",
+          "macos",
+          "metal",
+          "reign-of-the-warlock",
+          "vulkan"
+        ],
+        "created_at": "2026-10-12T08:41:19Z",
+        "pushed_at": "2026-10-29T01:09:02Z",
+        "license": "MIT",
+        "owner": "jhaizhou-ops",
+        "name": "d2r-mobile",
+        "score": 86.9,
+        "note": "建于 2026-10-12，17 天"
+      }
+    ],
+    "new_star": [
+      {
+        "full_name": "awesome-dsh-plugin/awesome-dsh-plugin",
+        "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+        "description": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+        "language": "JavaScript",
+        "stars": 21431,
+        "forks": 5772,
+        "open_issues": 318,
+        "topics": [
+          "awesome",
+          "awesome-list",
+          "deepseek-harness",
+          "dsh",
+          "dsh-plugin"
+        ],
+        "created_at": "2026-08-13T13:55:31Z",
+        "pushed_at": "2026-10-28T23:20:10Z",
+        "license": "CC0-1.0",
+        "owner": "awesome-dsh-plugin",
+        "name": "awesome-dsh-plugin",
+        "score": 90,
+        "note": "建于 2026-08-13，76 天，冲劲十足"
+      },
+      {
+        "full_name": "YuJunZhiXue/dsh-purge",
+        "url": "https://github.com/YuJunZhiXue/dsh-purge",
+        "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+        "language": "JavaScript",
+        "stars": 12719,
+        "forks": 2814,
+        "open_issues": 11,
+        "topics": [
+          "deepseek",
+          "deepseek-harness",
+          "dsh-plugin",
+          "dsh-plugins",
+          "harness-jailbreak",
+          "jailbreak",
+          "llm-jailbreak"
+        ],
+        "created_at": "2026-08-19T07:41:12Z",
+        "pushed_at": "2026-10-28T12:26:02Z",
+        "license": "Apache-2.0",
+        "owner": "YuJunZhiXue",
+        "name": "dsh-purge",
+        "score": 90,
+        "note": "建于 2026-08-19，71 天，冲劲十足"
+      },
+      {
+        "full_name": "deepseek-ai/deepseek-harness",
+        "url": "https://github.com/deepseek-ai/deepseek-harness",
+        "description": "DeepSeek Harness: Everything is a Plugin.",
+        "language": "TypeScript",
+        "stars": 265454,
+        "forks": 32174,
+        "open_issues": 0,
+        "topics": [
+          "ai-agents",
+          "cordis",
+          "dsh",
+          "dsh-plugin"
+        ],
+        "created_at": "2026-08-13T11:56:32Z",
+        "pushed_at": "2026-10-28T02:48:17Z",
+        "license": "MIT",
+        "owner": "deepseek-ai",
+        "name": "deepseek-harness",
+        "score": 87,
+        "note": "建于 2026-08-13，76 天，冲劲十足"
+      },
+      {
+        "full_name": "NandhaKishorM/laya",
+        "url": "https://github.com/NandhaKishorM/laya",
+        "description": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
+        "language": "Python",
+        "stars": 34602,
+        "forks": 3099,
+        "open_issues": 111,
+        "topics": [
+          "calibration",
+          "classification",
+          "decision-model",
+          "huggingface",
+          "jev",
+          "modernbert",
+          "multilingual",
+          "nlp",
+          "python",
+          "pytorch",
+          "routing",
+          "typed-decisions",
+          "zero-shot"
+        ],
+        "created_at": "2026-09-18T04:46:33Z",
+        "pushed_at": "2026-10-28T09:49:25Z",
+        "license": "Apache-2.0",
+        "owner": "NandhaKishorM",
+        "name": "laya",
+        "score": 87,
+        "note": "建于 2026-09-18，41 天，冲劲十足"
+      },
+      {
+        "full_name": "guillaumemeyer/watermarks-remover",
+        "url": "https://github.com/guillaumemeyer/watermarks-remover",
+        "description": "A privacy-first app that strips AI watermarks from content you own.",
+        "language": "Python",
+        "stars": 25479,
+        "forks": 2900,
+        "open_issues": 35,
+        "topics": [
+          "agent-skill",
+          "ai",
+          "anthropic",
+          "c2pa",
+          "chatgpt",
+          "claude",
+          "gemini",
+          "openai",
+          "provenance",
+          "synthid",
+          "watermark",
+          "watermark-detection",
+          "watermark-tools",
+          "watermarking",
+          "watermarks"
+        ],
+        "created_at": "2026-08-11T16:32:38Z",
+        "pushed_at": "2026-10-26T20:26:14Z",
+        "license": "MIT",
+        "owner": "guillaumemeyer",
+        "name": "watermarks-remover",
+        "score": 87,
+        "note": "建于 2026-08-11，78 天，冲劲十足"
+      },
+      {
+        "full_name": "robbietilton/Compositor",
+        "url": "https://github.com/robbietilton/Compositor",
+        "description": "The Photoshop alternative for Mac",
+        "language": "Swift",
+        "stars": 18158,
+        "forks": 1798,
+        "open_issues": 32,
+        "topics": [],
+        "created_at": "2026-09-16T20:35:54Z",
+        "pushed_at": "2026-10-28T01:38:34Z",
+        "license": "MIT",
+        "owner": "robbietilton",
+        "name": "Compositor",
+        "score": 87,
+        "note": "建于 2026-09-16，42 天，冲劲十足"
+      },
+      {
+        "full_name": "peach-mitao/peach",
+        "url": "https://github.com/peach-mitao/peach",
+        "description": "Peach: Local-first video metadata scraper and media manager.",
+        "language": "Python",
+        "stars": 13266,
+        "forks": 1552,
+        "open_issues": 102,
+        "topics": [
+          "local-first",
+          "media-library",
+          "media-manager",
+          "python",
+          "react",
+          "self-hosted",
+          "video-player"
+        ],
+        "created_at": "2026-08-19T19:48:30Z",
+        "pushed_at": "2026-10-29T07:53:29Z",
+        "license": "AGPL-3.0",
+        "owner": "peach-mitao",
+        "name": "peach",
+        "score": 87,
+        "note": "建于 2026-08-19，70 天，冲劲十足"
+      },
+      {
+        "full_name": "shihabal3amri/DiPlay",
+        "url": "https://github.com/shihabal3amri/DiPlay",
+        "description": "Independent CarPlay receiver for compatible Android head units. Wired and wireless public preview.",
+        "language": "Kotlin",
+        "stars": 12746,
+        "forks": 1635,
+        "open_issues": 302,
+        "topics": [],
+        "created_at": "2026-09-24T15:36:38Z",
+        "pushed_at": "2026-10-28T09:01:38Z",
+        "license": "GPL-3.0",
+        "owner": "shihabal3amri",
+        "name": "DiPlay",
+        "score": 87,
+        "note": "建于 2026-09-24，34 天，冲劲十足"
+      },
+      {
+        "full_name": "jub0t/Concat",
+        "url": "https://github.com/jub0t/Concat",
+        "description": "The truly free, open-source, local-first, cross-platform CapCut replacement. Scriptable through a JSON-RPC API & MCP.",
+        "language": "Rust",
+        "stars": 12520,
+        "forks": 1541,
+        "open_issues": 239,
+        "topics": [
+          "ffmpeg",
+          "free-video-editor",
+          "model-context-protocol",
+          "non-linear-editor",
+          "offline-first",
+          "open-source-video-editor",
+          "self-hosted",
+          "video-editing",
+          "video-editing-automation",
+          "video-editing-software",
+          "video-editing-tools",
+          "video-editor",
+          "voice-cloning",
+          "youtube-automation",
+          "youtube-shorts"
+        ],
+        "created_at": "2026-08-25T18:34:47Z",
+        "pushed_at": "2026-10-28T10:25:43Z",
+        "license": "AGPL-3.0",
+        "owner": "jub0t",
+        "name": "Concat",
+        "score": 87,
+        "note": "建于 2026-08-25，64 天，冲劲十足"
+      },
+      {
+        "full_name": "lnkiai/m3e-canvas",
+        "url": "https://github.com/lnkiai/m3e-canvas",
+        "description": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
+        "language": "TypeScript",
+        "stars": 9865,
+        "forks": 1084,
+        "open_issues": 13,
+        "topics": [
+          "design-tool",
+          "material-3-expressive",
+          "material-design",
+          "material3",
+          "nextjs",
+          "prompt",
+          "react",
+          "vibe-coding"
+        ],
+        "created_at": "2026-09-02T04:36:34Z",
+        "pushed_at": "2026-10-22T10:09:15Z",
+        "license": "MIT",
+        "owner": "lnkiai",
+        "name": "m3e-canvas",
+        "score": 86.9,
+        "note": "建于 2026-09-02，57 天，冲劲十足"
+      }
+    ],
+    "beginner": [
+      {
+        "full_name": "firstcontributions/first-contributions",
+        "url": "https://github.com/firstcontributions/first-contributions",
+        "description": "🚀✨ Help beginners to contribute to open source projects",
+        "language": null,
+        "stars": 56610,
+        "forks": 111959,
+        "open_issues": 587,
+        "topics": [
+          "beginner",
+          "beginner-friendly",
+          "contribute",
+          "contribution",
+          "contributions-welcome",
+          "good-first-contribution",
+          "good-first-issue",
+          "good-first-pr",
+          "open-source",
+          "tutorial"
+        ],
+        "created_at": "2016-09-20T14:35:09Z",
+        "pushed_at": "2026-10-29T10:46:37Z",
+        "license": "MIT",
+        "owner": "firstcontributions",
+        "name": "first-contributions",
+        "score": 90,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "career-ops-hq/career-ops",
+        "url": "https://github.com/career-ops-hq/career-ops",
+        "description": "Open-source AI job search agent and job finder: scan job boards, score each job 1-5 against your CV before you apply, tailor an ATS-friendly resume and cover letter, get interview prep and a job application tracker. It helps you fill in each application; you press Submit. Runs locally in your AI coding CLI (Claude Code, Codex, OpenCode and more).",
+        "language": "JavaScript",
+        "stars": 78530,
+        "forks": 14493,
+        "open_issues": 476,
+        "topics": [
+          "agent-skills",
+          "ai-agent",
+          "ai-job-search",
+          "ats",
+          "career",
+          "career-ops",
+          "claude-code",
+          "cover-letter",
+          "cv",
+          "good-first-issue",
+          "interview-preparation",
+          "interview-questions",
+          "job-application",
+          "job-hunting",
+          "job-search",
+          "job-search-tools",
+          "latex",
+          "local-first",
+          "open-source",
+          "resume"
+        ],
+        "created_at": "2026-04-04T18:21:18Z",
+        "pushed_at": "2026-10-29T06:03:44Z",
+        "license": "MIT",
+        "owner": "career-ops-hq",
+        "name": "career-ops",
+        "score": 90,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "rust-lang/rustlings",
+        "url": "https://github.com/rust-lang/rustlings",
+        "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
+        "language": "Rust",
+        "stars": 64488,
+        "forks": 11272,
+        "open_issues": 38,
+        "topics": [
+          "beginner-friendly",
+          "exercises",
+          "rust",
+          "rustlings"
+        ],
+        "created_at": "2015-09-15T02:25:18Z",
+        "pushed_at": "2026-10-26T17:14:42Z",
+        "license": "MIT",
+        "owner": "rust-lang",
+        "name": "rustlings",
+        "score": 90,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "PokeAPI/pokeapi",
+        "url": "https://github.com/PokeAPI/pokeapi",
+        "description": "The Pokémon API",
+        "language": "Python",
+        "stars": 5436,
+        "forks": 1183,
+        "open_issues": 140,
+        "topics": [
+          "api",
+          "beginner-friendly",
+          "graphql",
+          "hacktoberfest",
+          "pokeapi",
+          "pokemon"
+        ],
+        "created_at": "2014-12-04T10:17:17Z",
+        "pushed_at": "2026-10-29T09:15:52Z",
+        "license": "BSD-3-Clause",
+        "owner": "PokeAPI",
+        "name": "pokeapi",
+        "score": 87.4,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "HeyPuter/puter",
+        "url": "https://github.com/HeyPuter/puter",
+        "description": "🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.",
+        "language": "TypeScript",
+        "stars": 43997,
+        "forks": 4127,
+        "open_issues": 50,
+        "topics": [
+          "cloud",
+          "cloud-os",
+          "cloud-storage",
+          "desktop",
+          "desktop-environment",
+          "dropbox",
+          "good-first-issue",
+          "gui",
+          "javascript",
+          "nas",
+          "open-source",
+          "operating-system",
+          "os",
+          "osjs",
+          "puter",
+          "remote-desktop",
+          "storage",
+          "web-desktop",
+          "web-os",
+          "webtop"
+        ],
+        "created_at": "2024-03-03T01:44:32Z",
+        "pushed_at": "2026-10-29T11:17:23Z",
+        "license": "AGPL-3.0",
+        "owner": "HeyPuter",
+        "name": "puter",
+        "score": 87,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "recloudstream/cloudstream",
+        "url": "https://github.com/recloudstream/cloudstream",
+        "description": "Android app for streaming and downloading media.",
+        "language": "Kotlin",
+        "stars": 11089,
+        "forks": 1164,
+        "open_issues": 575,
+        "topics": [
+          "android",
+          "good-first-issue",
+          "home-theater",
+          "media-center",
+          "multimedia",
+          "video-streaming"
+        ],
+        "created_at": "2022-08-04T08:42:38Z",
+        "pushed_at": "2026-10-28T01:07:10Z",
+        "license": "GPL-3.0",
+        "owner": "recloudstream",
+        "name": "cloudstream",
+        "score": 87,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "openvinotoolkit/openvino",
+        "url": "https://github.com/openvinotoolkit/openvino",
+        "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+        "language": "C++",
+        "stars": 11083,
+        "forks": 3497,
+        "open_issues": 941,
+        "topics": [
+          "ai",
+          "computer-vision",
+          "deep-learning",
+          "deploy-ai",
+          "diffusion-models",
+          "generative-ai",
+          "good-first-issue",
+          "inference",
+          "llm-inference",
+          "natural-language-processing",
+          "nlp",
+          "openvino",
+          "optimize-ai",
+          "performance-boost",
+          "recommendation-system",
+          "speech-recognition",
+          "stable-diffusion",
+          "transformers",
+          "yolo"
+        ],
+        "created_at": "2018-10-15T10:54:40Z",
+        "pushed_at": "2026-10-29T11:27:02Z",
+        "license": "Apache-2.0",
+        "owner": "openvinotoolkit",
+        "name": "openvino",
+        "score": 87,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "bluewave-labs/Checkmate",
+        "url": "https://github.com/bluewave-labs/Checkmate",
+        "description": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Don't be shy, join here: https://discord.com/invite/NAb6H3UTjK :)",
+        "language": "TypeScript",
+        "stars": 11007,
+        "forks": 1234,
+        "open_issues": 122,
+        "topics": [
+          "good-first-contribution",
+          "good-first-issue",
+          "good-first-project",
+          "hacktoberfest",
+          "help-wanted",
+          "incident",
+          "infrastructure",
+          "infrastructure-monitoring",
+          "mui",
+          "mui-material",
+          "server-monitor",
+          "server-monitoring",
+          "server-monitoring-tools",
+          "statuspage",
+          "uptime",
+          "uptime-checker",
+          "uptime-monitor",
+          "uptime-monitoring",
+          "uptime-status",
+          "uptimerobot"
+        ],
+        "created_at": "2024-04-30T02:44:38Z",
+        "pushed_at": "2026-10-28T22:11:05Z",
+        "license": "AGPL-3.0",
+        "owner": "bluewave-labs",
+        "name": "Checkmate",
+        "score": 87,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "PySimpleGUI/PySimpleGUI",
+        "url": "https://github.com/PySimpleGUI/PySimpleGUI",
+        "description": "Python GUIs for Humans! Create any GUI simple or complicated in a way that's intuitive.  Launched in 2018. NEW for 2026 - the LGPL3 Version 6.  Transforms tkinter, Qt, WxPython, and Remi into a simple, intuitive, and fun experience for both hobbyists and expert users. ",
+        "language": "Python",
+        "stars": 13827,
+        "forks": 1820,
+        "open_issues": 708,
+        "topics": [
+          "beginner-friendly",
+          "datavisualization",
+          "games",
+          "gui",
+          "gui-framework",
+          "gui-programming",
+          "gui-window",
+          "pyside2",
+          "pysimplegui",
+          "python",
+          "python-gui",
+          "qt",
+          "qt-gui",
+          "remi",
+          "systemtray",
+          "tkinter",
+          "tkinter-gui",
+          "tkinter-python",
+          "user-interface",
+          "wxpython"
+        ],
+        "created_at": "2018-07-11T18:28:58Z",
+        "pushed_at": "2026-10-29T01:47:21Z",
+        "license": "LGPL-3.0",
+        "owner": "PySimpleGUI",
+        "name": "PySimpleGUI",
+        "score": 87,
+        "note": "适合作为第一份开源贡献"
+      },
+      {
+        "full_name": "lingdojo/kana-dojo",
+        "url": "https://github.com/lingdojo/kana-dojo",
+        "description": "Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel. Beginner-friendly with plenty of good first issues - all contributions are welcome!",
+        "language": "TypeScript",
+        "stars": 3744,
+        "forks": 3769,
+        "open_issues": 671,
+        "topics": [
+          "beginner",
+          "beginner-friendly",
+          "contribute",
+          "contribution",
+          "contributions-welcome",
+          "first-contributions",
+          "first-timers-only",
+          "good-first-contribution",
+          "good-first-issue",
+          "good-first-pr",
+          "hacktoberfest",
+          "help-wanted",
+          "japanese",
+          "japanese-language",
+          "language-learning",
+          "learn-japanese",
+          "nextjs",
+          "open-source",
+          "react",
+          "up-for-grabs"
+        ],
+        "created_at": "2025-05-26T10:38:07Z",
+        "pushed_at": "2026-10-29T10:51:00Z",
+        "license": "AGPL-3.0",
+        "owner": "lingdojo",
+        "name": "kana-dojo",
+        "score": 85.7,
+        "note": "适合作为第一份开源贡献"
+      }
+    ],
+    "fun": [
+      {
+        "full_name": "vikiboss/60s",
+        "url": "https://github.com/vikiboss/60s",
+        "description": "⏰ 60s API 免费接口。每天 60 秒看世界、奥运奖牌榜、小红书/B站/微博/抖音/知乎热搜、金价、油价、天气、翻译、壁纸、Epic 游戏、二维码、猫眼票房｜一系列 高质量、开源、可靠、全球 CDN 加速 的开放 API 集合，支持 Docker / Deno / Bun / Cloudflare Workers / Node.js 部署",
+        "language": "TypeScript",
+        "stars": 5869,
+        "forks": 1123,
+        "open_issues": 6,
+        "topics": [
+          "60s",
+          "api",
+          "bilibili",
+          "bing",
+          "bun",
+          "cloudflare-workers",
+          "deno",
+          "docker",
+          "entertainment",
+          "fun",
+          "news",
+          "today-in-history",
+          "typescript",
+          "weibo",
+          "youdao"
+        ],
+        "created_at": "2022-11-30T01:19:43Z",
+        "pushed_at": "2026-10-28T03:01:45Z",
+        "license": "MIT",
+        "owner": "vikiboss",
+        "name": "60s",
+        "score": 87.7,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "Cog-Creators/Red-DiscordBot",
+        "url": "https://github.com/Cog-Creators/Red-DiscordBot",
+        "description": "A multi-function Discord bot",
+        "language": "Python",
+        "stars": 5750,
+        "forks": 2533,
+        "open_issues": 312,
+        "topics": [
+          "bot",
+          "chatbot",
+          "discord",
+          "discord-bot",
+          "fun",
+          "moderation",
+          "modular",
+          "music",
+          "python",
+          "trivia"
+        ],
+        "created_at": "2016-01-02T09:27:12Z",
+        "pushed_at": "2026-10-25T08:52:46Z",
+        "license": "GPL-3.0",
+        "owner": "Cog-Creators",
+        "name": "Red-DiscordBot",
+        "score": 87.6,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "lpereira/lwan",
+        "url": "https://github.com/lpereira/lwan",
+        "description": "Experimental, scalable, high performance HTTP server",
+        "language": "C",
+        "stars": 6042,
+        "forks": 550,
+        "open_issues": 50,
+        "topics": [
+          "c",
+          "experimental",
+          "http",
+          "library",
+          "lwan"
+        ],
+        "created_at": "2012-01-28T00:48:12Z",
+        "pushed_at": "2026-10-28T19:34:24Z",
+        "license": "GPL-2.0",
+        "owner": "lpereira",
+        "name": "lwan",
+        "score": 84.8,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "community-shaders/skyrim-community-shaders",
+        "url": "https://github.com/community-shaders/skyrim-community-shaders",
+        "description": "Community-driven advanced graphics modifications for AE, SE and VR.",
+        "language": "C++",
+        "stars": 1139,
+        "forks": 218,
+        "open_issues": 102,
+        "topics": [
+          "c-plus-plus",
+          "directx",
+          "fun",
+          "game-engine",
+          "graphics",
+          "hacktoberfest",
+          "learning",
+          "modding",
+          "rendering",
+          "shaders",
+          "skse",
+          "skse64",
+          "skyrim"
+        ],
+        "created_at": "2023-02-25T18:57:32Z",
+        "pushed_at": "2026-10-29T10:17:46Z",
+        "license": "GPL-3.0",
+        "owner": "community-shaders",
+        "name": "skyrim-community-shaders",
+        "score": 80.6,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "taigrr/spank",
+        "url": "https://github.com/taigrr/spank",
+        "description": "Slap your MacBook, it yells back. Uses Apple Silicon accelerometer via IOKit HID.",
+        "language": "Go",
+        "stars": 5020,
+        "forks": 263,
+        "open_issues": 1,
+        "topics": [
+          "accelerometer",
+          "apple-silicon",
+          "fun",
+          "go",
+          "iokit",
+          "macos"
+        ],
+        "created_at": "2026-02-23T00:43:05Z",
+        "pushed_at": "2026-10-23T14:21:35Z",
+        "license": "MIT",
+        "owner": "taigrr",
+        "name": "spank",
+        "score": 80.0,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "Stable-Baselines-Team/stable-baselines3-contrib",
+        "url": "https://github.com/Stable-Baselines-Team/stable-baselines3-contrib",
+        "description": "Contrib package for Stable-Baselines3 -  Experimental reinforcement learning (RL) code",
+        "language": "Python",
+        "stars": 743,
+        "forks": 243,
+        "open_issues": 90,
+        "topics": [
+          "experimental",
+          "gsde",
+          "gym",
+          "machine-learning",
+          "openai",
+          "pytorch",
+          "reinforcement-learning",
+          "reinforcement-learning-algorithms",
+          "research",
+          "rl",
+          "robotics",
+          "sde",
+          "stable-baselines"
+        ],
+        "created_at": "2020-09-20T20:09:56Z",
+        "pushed_at": "2026-10-26T09:51:22Z",
+        "license": "MIT",
+        "owner": "Stable-Baselines-Team",
+        "name": "stable-baselines3-contrib",
+        "score": 78.7,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "carbon-language/carbon-lang",
+        "url": "https://github.com/carbon-language/carbon-lang",
+        "description": "Carbon Language's main repository: documents, design, implementation, and related tools. (NOTE: Carbon Language is experimental; see README)",
+        "language": "C++",
+        "stars": 33932,
+        "forks": 1632,
+        "open_issues": 253,
+        "topics": [
+          "carbon-lang",
+          "compiler",
+          "cpp",
+          "experimental",
+          "experimental-language",
+          "language",
+          "programming-language"
+        ],
+        "created_at": "2020-04-27T21:45:16Z",
+        "pushed_at": "2026-10-29T02:29:00Z",
+        "license": "NOASSERTION",
+        "owner": "carbon-language",
+        "name": "carbon-lang",
+        "score": 78,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "sepandhaghighi/art",
+        "url": "https://github.com/sepandhaghighi/art",
+        "description": "🎨 ASCII art library for Python",
+        "language": "Python",
+        "stars": 2510,
+        "forks": 163,
+        "open_issues": 14,
+        "topics": [
+          "art",
+          "ascii",
+          "ascii-art",
+          "ascii-art-library",
+          "ascii-text",
+          "easy",
+          "easy-to-use",
+          "figlet",
+          "fonts",
+          "fun",
+          "library",
+          "pip",
+          "pypi-packages",
+          "python",
+          "python-lib",
+          "python-library",
+          "python3",
+          "status",
+          "text",
+          "twitter"
+        ],
+        "created_at": "2017-10-04T10:45:44Z",
+        "pushed_at": "2026-10-29T10:19:38Z",
+        "license": "MIT",
+        "owner": "sepandhaghighi",
+        "name": "art",
+        "score": 77.0,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "mypaint/mypaint",
+        "url": "https://github.com/mypaint/mypaint",
+        "description": "MyPaint is a simple drawing and painting program that works well with Wacom-style graphics tablets.",
+        "language": "Python",
+        "stars": 2995,
+        "forks": 448,
+        "open_issues": 230,
+        "topics": [
+          "art",
+          "brushes",
+          "creative",
+          "distraction-free",
+          "drawing",
+          "graphics-tablet",
+          "infinite-scroll",
+          "libmypaint",
+          "mypaint",
+          "painting",
+          "python"
+        ],
+        "created_at": "2014-06-11T14:29:35Z",
+        "pushed_at": "2026-10-20T23:50:30Z",
+        "license": "GPL-2.0",
+        "owner": "mypaint",
+        "name": "mypaint",
+        "score": 76.8,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
+        "full_name": "once-ui-system/magic-portfolio",
+        "url": "https://github.com/once-ui-system/magic-portfolio",
+        "description": "⚡ Build your timeless portfolio with Once UI's Magic Portfolio",
+        "language": "TypeScript",
+        "stars": 1418,
+        "forks": 937,
+        "open_issues": 1,
+        "topics": [
+          "cv",
+          "nextjs",
+          "onceui",
+          "portfolio",
+          "resume",
+          "showcase"
+        ],
+        "created_at": "2024-08-08T20:39:25Z",
+        "pushed_at": "2026-10-28T16:54:25Z",
+        "license": "NOASSERTION",
+        "owner": "once-ui-system",
+        "name": "magic-portfolio",
+        "score": 76.5,
+        "note": "有意思，逛着逛着就学会了"
+      }
+    ],
+    "learning": [
+      {
+        "full_name": "shareAI-lab/learn-claude-code",
+        "url": "https://github.com/shareAI-lab/learn-claude-code",
+        "description": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
+        "language": "Python",
+        "stars": 79491,
+        "forks": 12720,
+        "open_issues": 51,
+        "topics": [
+          "agent",
+          "agent-development",
+          "ai-agent",
+          "claude",
+          "claude-code",
+          "educational",
+          "llm",
+          "python",
+          "teaching",
+          "tutorial"
+        ],
+        "created_at": "2025-06-29T15:34:15Z",
+        "pushed_at": "2026-10-27T04:47:00Z",
+        "license": "MIT",
+        "owner": "shareAI-lab",
+        "name": "learn-claude-code",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+        "description": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
+        "language": "Python",
+        "stars": 75470,
+        "forks": 13273,
+        "open_issues": 84,
+        "topics": [
+          "agents",
+          "ai",
+          "ai-agents",
+          "ai-engineering",
+          "computer-vision",
+          "course",
+          "deep-learning",
+          "dsh",
+          "from-scratch",
+          "generative-ai",
+          "llm",
+          "machine-learning",
+          "mcp",
+          "python",
+          "rea",
+          "reinforcement-learning",
+          "rust",
+          "transformers",
+          "tutorial",
+          "typescript"
+        ],
+        "created_at": "2026-03-18T18:38:02Z",
+        "pushed_at": "2026-10-29T07:12:32Z",
+        "license": "MIT",
+        "owner": "rohitg00",
+        "name": "ai-engineering-from-scratch",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "MLEveryday/100-Days-Of-ML-Code",
+        "url": "https://github.com/MLEveryday/100-Days-Of-ML-Code",
+        "description": "100-Days-Of-ML-Code中文版",
+        "language": "Python",
+        "stars": 22233,
+        "forks": 5458,
+        "open_issues": 18,
+        "topics": [
+          "100-days-of-ml-code",
+          "chinese-simplified",
+          "deep-learning",
+          "infographics",
+          "jupyter-notebook",
+          "keras",
+          "machine-learning",
+          "python",
+          "supervised-learning",
+          "tensorflow",
+          "tutorial",
+          "unsupervised-learning"
+        ],
+        "created_at": "2018-08-05T13:32:48Z",
+        "pushed_at": "2026-10-24T03:23:11Z",
+        "license": "MIT",
+        "owner": "MLEveryday",
+        "name": "100-Days-Of-ML-Code",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "recommenders-team/recommenders",
+        "url": "https://github.com/recommenders-team/recommenders",
+        "description": "Best Practices on Recommendation Systems",
+        "language": "Python",
+        "stars": 21971,
+        "forks": 3329,
+        "open_issues": 181,
+        "topics": [
+          "ai",
+          "artificial-intelligence",
+          "data-science",
+          "deep-learning",
+          "jupyter-notebook",
+          "kubernetes",
+          "machine-learning",
+          "operationalization",
+          "python",
+          "ranking",
+          "rating",
+          "recommendation",
+          "recommendation-algorithm",
+          "recommendation-engine",
+          "recommendation-system",
+          "recommender",
+          "tutorial"
+        ],
+        "created_at": "2018-09-19T10:06:07Z",
+        "pushed_at": "2026-10-26T14:26:54Z",
+        "license": "MIT",
+        "owner": "recommenders-team",
+        "name": "recommenders",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "EbookFoundation/free-programming-books",
+        "url": "https://github.com/EbookFoundation/free-programming-books",
+        "description": ":books: Freely available programming books",
+        "language": "Python",
+        "stars": 400456,
+        "forks": 67028,
+        "open_issues": 89,
+        "topics": [
+          "books",
+          "education",
+          "hacktoberfest",
+          "list",
+          "resource"
+        ],
+        "created_at": "2013-10-11T06:50:37Z",
+        "pushed_at": "2026-10-27T20:40:54Z",
+        "license": "CC-BY-4.0",
+        "owner": "EbookFoundation",
+        "name": "free-programming-books",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "processing/p5.js",
+        "url": "https://github.com/processing/p5.js",
+        "description": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org",
+        "language": "JavaScript",
+        "stars": 24265,
+        "forks": 3885,
+        "open_issues": 536,
+        "topics": [
+          "art",
+          "creative-coding",
+          "design",
+          "education",
+          "graphics",
+          "html",
+          "javascript",
+          "learning",
+          "p5js",
+          "processing",
+          "sound"
+        ],
+        "created_at": "2013-02-26T03:14:47Z",
+        "pushed_at": "2026-10-28T22:58:40Z",
+        "license": "LGPL-2.1",
+        "owner": "processing",
+        "name": "p5.js",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "opf/openproject",
+        "url": "https://github.com/opf/openproject",
+        "description": "OpenProject is the leading open source project management software for product, project and portfolio management. A powerful Jira alternative with agile planning, issue tracking, roadmaps, Gantt charts, time tracking, collaboration features, and more. Available on premises or in the cloud. ⭐ Star us on GitHub",
+        "language": "Ruby",
+        "stars": 16793,
+        "forks": 3644,
+        "open_issues": 315,
+        "topics": [
+          "agile-development",
+          "angular",
+          "bcf",
+          "boards",
+          "bug-tracker",
+          "gantt",
+          "gantt-chart",
+          "ifc",
+          "issue-tracker",
+          "jira-alternative",
+          "kanban",
+          "openproject",
+          "product-management",
+          "project-management",
+          "project-planning",
+          "roadmap",
+          "ruby",
+          "scrum",
+          "timeline",
+          "workflows"
+        ],
+        "created_at": "2012-11-28T09:59:11Z",
+        "pushed_at": "2026-10-29T11:35:21Z",
+        "license": "GPL-3.0",
+        "owner": "opf",
+        "name": "openproject",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "mouredev/roadmap-retos-programacion",
+        "url": "https://github.com/mouredev/roadmap-retos-programacion",
+        "description": "Ruta de estudio basada en ejercicios de código de la comunidad MoureDev para aprender y practicar lógica usando cualquier lenguaje de programación.",
+        "language": "Python",
+        "stars": 8924,
+        "forks": 6413,
+        "open_issues": 129,
+        "topics": [
+          "c-plus-plus",
+          "c-sharp",
+          "dart",
+          "ejercicios",
+          "go",
+          "java",
+          "javascript",
+          "katas",
+          "kotlin",
+          "logica-de-programacion",
+          "php",
+          "python",
+          "retos",
+          "retos-programacion",
+          "roadmap",
+          "ruby",
+          "rust",
+          "ruta-de-estudio",
+          "swift",
+          "typescript"
+        ],
+        "created_at": "2023-12-18T10:59:18Z",
+        "pushed_at": "2026-10-28T00:19:43Z",
+        "license": "Apache-2.0",
+        "owner": "mouredev",
+        "name": "roadmap-retos-programacion",
+        "score": 89.5,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "practical-tutorials/project-based-learning",
+        "url": "https://github.com/practical-tutorials/project-based-learning",
+        "description": "Curated list of project-based tutorials",
+        "language": "Python",
+        "stars": 288359,
+        "forks": 36747,
+        "open_issues": 236,
+        "topics": [
+          "beginner-project",
+          "cpp",
+          "golang",
+          "javascript",
+          "project",
+          "python",
+          "tutorial",
+          "webdevelopment"
+        ],
+        "created_at": "2017-04-12T05:07:46Z",
+        "pushed_at": "2026-10-26T07:13:08Z",
+        "license": "MIT",
+        "owner": "practical-tutorials",
+        "name": "project-based-learning",
+        "score": 87,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "luongnv89/claude-howto",
+        "url": "https://github.com/luongnv89/claude-howto",
+        "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+        "language": "Python",
+        "stars": 46004,
+        "forks": 5636,
+        "open_issues": 49,
+        "topics": [
+          "claude-code",
+          "guide",
+          "tutorial"
+        ],
+        "created_at": "2025-11-07T22:59:34Z",
+        "pushed_at": "2026-10-29T00:16:50Z",
+        "license": "MIT",
+        "owner": "luongnv89",
+        "name": "claude-howto",
+        "score": 87,
+        "note": "系统学习路径"
+      }
+    ],
+    "evergreen": [
+      {
+        "full_name": "torvalds/linux",
+        "url": "https://github.com/torvalds/linux",
+        "description": "Linux kernel source tree",
+        "language": "C",
+        "stars": 253830,
+        "forks": 67469,
+        "open_issues": 3,
+        "topics": [],
+        "created_at": "2011-09-04T22:48:12Z",
+        "pushed_at": "2026-10-28T18:09:17Z",
+        "license": "NOASSERTION",
+        "owner": "torvalds",
+        "name": "linux",
+        "commits_90d": 29185,
+        "momentum_source": "commits",
+        "score": 85,
+        "note": "近 90 天 29185 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "29185 commits/90d"
+      },
+      {
+        "full_name": "NousResearch/hermes-agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "description": "The agent that grows with you",
+        "language": "Python",
+        "stars": 258347,
+        "forks": 56707,
+        "open_issues": 51737,
+        "topics": [
+          "ai",
+          "ai-agent",
+          "ai-agents",
+          "anthropic",
+          "chatgpt",
+          "claude",
+          "claude-code",
+          "codex",
+          "hermes",
+          "hermes-agent",
+          "llm",
+          "nous-research",
+          "openai"
+        ],
+        "created_at": "2025-07-22T22:22:28Z",
+        "pushed_at": "2026-10-29T11:34:15Z",
+        "license": "MIT",
+        "owner": "NousResearch",
+        "name": "hermes-agent",
+        "commits_90d": 41010,
+        "momentum_source": "commits",
+        "score": 87,
+        "note": "近 90 天 41010 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "41010 commits/90d"
+      },
+      {
+        "full_name": "openclaw/openclaw",
+        "url": "https://github.com/openclaw/openclaw",
+        "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+        "language": "TypeScript",
+        "stars": 393333,
+        "forks": 82689,
+        "open_issues": 7823,
+        "topics": [
+          "ai",
+          "assistant",
+          "crustacean",
+          "molty",
+          "openclaw",
+          "own-your-data",
+          "personal"
+        ],
+        "created_at": "2025-11-24T10:16:47Z",
+        "pushed_at": "2026-10-29T11:32:05Z",
+        "license": "MIT",
+        "owner": "openclaw",
+        "name": "openclaw",
+        "commits_90d": 47645,
+        "momentum_source": "commits",
+        "score": 87,
+        "note": "近 90 天 47645 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "47645 commits/90d"
+      },
+      {
+        "full_name": "morluto/rea",
+        "url": "https://github.com/morluto/rea",
+        "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+        "language": "TypeScript",
+        "stars": 405269,
+        "forks": 101530,
+        "open_issues": 1286,
+        "topics": [
+          "agent-skills",
+          "ai-agents",
+          "binary-analysis",
+          "claude-code",
+          "cli",
+          "codex",
+          "cordis",
+          "decompiler",
+          "developer-tools",
+          "dsh",
+          "dsh-plugin",
+          "ghidra",
+          "hopper",
+          "llm",
+          "mcp",
+          "model-context-protocol",
+          "rea",
+          "reverse-engineering",
+          "static-analysis",
+          "touhou"
+        ],
+        "created_at": "2026-04-14T00:51:32Z",
+        "pushed_at": "2026-10-29T11:23:03Z",
+        "license": "MIT",
+        "owner": "morluto",
+        "name": "rea",
+        "commits_90d": 5503,
+        "momentum_source": "commits",
+        "score": 87,
+        "note": "近 90 天 5503 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "5503 commits/90d"
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "language": "JavaScript",
+        "stars": 292186,
+        "forks": 43246,
+        "open_issues": 252,
+        "topics": [
+          "ai-agents",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "productivity"
+        ],
+        "created_at": "2026-01-18T00:51:51Z",
+        "pushed_at": "2026-10-26T04:56:56Z",
+        "license": "MIT",
+        "owner": "affaan-m",
+        "name": "ECC",
+        "commits_90d": 1704,
+        "momentum_source": "commits",
+        "score": 87,
+        "note": "近 90 天 1704 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "1704 commits/90d"
+      },
+      {
+        "full_name": "public-apis/public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "description": "A collective list of free APIs",
+        "language": "Python",
+        "stars": 493128,
+        "forks": 54987,
+        "open_issues": 2493,
+        "topics": [
+          "api",
+          "apis",
+          "dataset",
+          "development",
+          "free",
+          "list",
+          "lists",
+          "open-source",
+          "public",
+          "public-api",
+          "public-apis",
+          "resources",
+          "software"
+        ],
+        "created_at": "2016-03-20T23:49:42Z",
+        "pushed_at": "2026-10-27T16:15:10Z",
+        "license": "MIT",
+        "owner": "public-apis",
+        "name": "public-apis",
+        "commits_90d": 1371,
+        "momentum_source": "commits",
+        "score": 84,
+        "note": "近 90 天 1371 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "1371 commits/90d"
+      },
+      {
+        "full_name": "freeCodeCamp/freeCodeCamp",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+        "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+        "language": "TypeScript",
+        "stars": 458156,
+        "forks": 48730,
+        "open_issues": 158,
+        "topics": [
+          "careers",
+          "certification",
+          "community",
+          "curriculum",
+          "d3",
+          "education",
+          "freecodecamp",
+          "javascript",
+          "learn-to-code",
+          "math",
+          "nodejs",
+          "nonprofits",
+          "programming",
+          "react",
+          "teachers"
+        ],
+        "created_at": "2014-12-24T17:49:19Z",
+        "pushed_at": "2026-10-29T09:53:18Z",
+        "license": "BSD-3-Clause",
+        "owner": "freeCodeCamp",
+        "name": "freeCodeCamp",
+        "commits_90d": 1081,
+        "momentum_source": "commits",
+        "score": 87,
+        "note": "近 90 天 1081 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "1081 commits/90d"
+      },
+      {
+        "full_name": "vinta/awesome-python",
+        "url": "https://github.com/vinta/awesome-python",
+        "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
+        "language": "Python",
+        "stars": 331054,
+        "forks": 29028,
+        "open_issues": 21,
+        "topics": [
+          "awesome",
+          "awesome-list",
+          "python",
+          "python-frameworks",
+          "python-libraries",
+          "python-tools"
+        ],
+        "created_at": "2014-06-27T21:00:06Z",
+        "pushed_at": "2026-10-28T01:26:10Z",
+        "license": "NOASSERTION",
+        "owner": "vinta",
+        "name": "awesome-python",
+        "commits_90d": 736,
+        "momentum_source": "commits",
+        "score": 82,
+        "note": "近 90 天 736 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "736 commits/90d"
+      },
+      {
+        "full_name": "nilbuild/developer-roadmap",
+        "url": "https://github.com/nilbuild/developer-roadmap",
+        "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
+        "language": "TypeScript",
+        "stars": 370692,
+        "forks": 45158,
+        "open_issues": 3,
+        "topics": [
+          "angular-roadmap",
+          "backend-roadmap",
+          "blockchain-roadmap",
+          "computer-science",
+          "dba-roadmap",
+          "developer-roadmap",
+          "devops-roadmap",
+          "frontend-roadmap",
+          "go-roadmap",
+          "java-roadmap",
+          "javascript-roadmap",
+          "nodejs-roadmap",
+          "python-roadmap",
+          "qa-roadmap",
+          "react-roadmap",
+          "roadmap",
+          "software-architect-roadmap",
+          "vue-roadmap"
+        ],
+        "created_at": "2017-03-15T13:45:52Z",
+        "pushed_at": "2026-10-28T12:18:10Z",
+        "license": "NOASSERTION",
+        "owner": "nilbuild",
+        "name": "developer-roadmap",
+        "commits_90d": 229,
+        "momentum_source": "commits",
+        "score": 82,
+        "note": "近 90 天 229 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "229 commits/90d"
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "language": "Shell",
+        "stars": 306163,
+        "forks": 25741,
+        "open_issues": 203,
+        "topics": [],
+        "created_at": "2026-02-03T11:15:53Z",
+        "pushed_at": "2026-10-29T10:43:06Z",
+        "license": "MIT",
+        "owner": "mattpocock",
+        "name": "skills",
+        "commits_90d": 220,
+        "momentum_source": "commits",
+        "score": 87,
+        "note": "近 90 天 220 次提交 —— 仍在高强度维护的老将",
+        "badge": "🔥 活跃榜",
+        "growth_note": "220 commits/90d"
+      }
+    ],
+    "curated": [
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework & software development methodology that works.",
+        "language": "Shell",
+        "stars": 307888,
+        "forks": 27383,
+        "open_issues": 369,
+        "topics": [
+          "ai",
+          "brainstorming",
+          "coding",
+          "obra",
+          "sdlc",
+          "skills",
+          "subagent-driven-development",
+          "superpowers"
+        ],
+        "created_at": "2025-10-09T19:45:18Z",
+        "pushed_at": "2026-10-23T03:48:57Z",
+        "license": "MIT",
+        "owner": "obra",
+        "name": "superpowers",
+        "score": 87
+      },
+      {
+        "full_name": "ssloy/tinyrenderer",
+        "url": "https://github.com/ssloy/tinyrenderer",
+        "description": "A brief computer graphics / rendering course",
+        "language": "C++",
+        "stars": 24477,
+        "forks": 2313,
+        "open_issues": 4,
+        "topics": [
+          "3d",
+          "3d-graphics",
+          "c-plus-plus",
+          "computer-graphics",
+          "cpp",
+          "engine",
+          "fun",
+          "graphics",
+          "images",
+          "learning",
+          "opengl",
+          "picture",
+          "pixels",
+          "rasterizer",
+          "rendering",
+          "rendering-engine",
+          "rendering-pipeline",
+          "shaders",
+          "software-rendering",
+          "tutorial"
+        ],
+        "created_at": "2015-01-17T16:46:01Z",
+        "pushed_at": "2026-07-29T12:13:12Z",
+        "license": "NOASSERTION",
+        "owner": "ssloy",
+        "name": "tinyrenderer",
+        "score": 60
+      },
+      {
+        "full_name": "codecrafters-io/build-your-own-x",
+        "url": "https://github.com/codecrafters-io/build-your-own-x",
+        "description": "Master programming by recreating your favorite technologies from scratch.",
+        "language": "Markdown",
+        "stars": 557157,
+        "forks": 52143,
+        "open_issues": 684,
+        "topics": [
+          "awesome-list",
+          "free",
+          "programming",
+          "tutorial-code",
+          "tutorial-exercises",
+          "tutorials"
+        ],
+        "created_at": "2018-05-09T12:03:18Z",
+        "pushed_at": "2026-07-14T19:25:58Z",
+        "license": null,
+        "owner": "codecrafters-io",
+        "name": "build-your-own-x",
+        "score": 55
+      },
+      {
+        "full_name": "donnemartin/system-design-primer",
+        "url": "https://github.com/donnemartin/system-design-primer",
+        "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+        "language": "Python",
+        "stars": 376017,
+        "forks": 59043,
+        "open_issues": 633,
+        "topics": [
+          "design",
+          "design-patterns",
+          "design-system",
+          "development",
+          "interview",
+          "interview-practice",
+          "interview-questions",
+          "programming",
+          "python",
+          "system",
+          "web",
+          "web-application",
+          "webapp"
+        ],
+        "created_at": "2017-02-26T16:15:28Z",
+        "pushed_at": "2026-09-15T01:10:09Z",
+        "license": "NOASSERTION",
+        "owner": "donnemartin",
+        "name": "system-design-primer",
+        "score": 68
+      }
+    ]
+  },
+  "deep_dives": [
+    {
+      "name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "category": "evergreen",
+      "language": "TypeScript",
+      "stars": 393333,
+      "growth_30d": null,
+      "summary": "把 AI 助手部署在你自己的机器上，然后让它住进你已经在用的聊天软件里。Discord、iMessage、Slack、WhatsApp、Telegram……20 多个平台，一个 Gateway 统一调度。",
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal"
+      ],
+      "score": 87,
+      "license": "MIT",
+      "forks": 82689,
+      "open_issues": 7823,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "一句话：本地跑的 AI 助手 + 一个叫 Gateway 的控制平面。Gateway 负责会话、工具调用、事件和渠道连接，助手本体通过插件机制对接 Claude、Codex 或本地模型。",
+            "关键点是它不打算取代你的聊天软件，而是「住进去」。个人版跑在笔记本上，团队版跑在服务器上——作者说区别只是配置文件。"
+          ],
+          "bullets": [
+            "状态、记忆、凭证全部留在自己硬件上",
+            "模型是可替换插件，换模型不用动其他配置",
+            "由 OpenClaw Foundation（501(c)(3) 独立基金会）托管，没有付费层"
+          ]
+        },
+        {
+          "title": "让我在意的架构选择",
+          "paragraphs": [
+            "README 里有一句话我反复看了两遍：trusted gateway, untrusted execution, policy enforced by code——可信网关、不可信执行、策略由代码强制。",
+            "这和很多「把 Agent 塞进沙箱里跑」的方案是反的。它的思路是：执行环境（工具、命令、文件）是不可信边界内的，所以权限判定必须在网关这一层用代码写死，而不是指望被调用的那部分自觉。",
+            "另外它默认只做每日版本检查，匿名功能统计是 opt-in，遥测可以完全关掉。对一个要常驻在你所有聊天窗口里的东西来说，这个默认值设置是加分项。"
+          ]
+        },
+        {
+          "title": "安装门槛",
+          "paragraphs": [
+            "一条 curl 命令或一条 npm 命令，跨 macOS / Linux / Windows。装完自动跑引导流程，验证模型连通性、创建工作区、配置 Gateway。",
+            "Node.js 版本要求比较新（24.22.1+ 或 26.12.1+），这算是个小门槛——但换来的是不用自己拼装依赖。"
+          ]
+        }
+      ],
+      "verdict": "如果你想要一个「常驻在聊天软件里的私人助手」，目前生态里最完整的开源方案之一。架构上「策略由代码强制」那句话值得所有做 Agent 的人抄在墙上。适合有一定技术基础、愿意自己管一台机器的人；完全零基础的话，20 多个渠道的配置量会有点劝退。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 393.3k",
+          "Star"
+        ],
+        [
+          "⑂ 82.7k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "TypeScript",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "category": "curated",
+      "language": "Shell",
+      "stars": 307888,
+      "growth_30d": null,
+      "summary": "一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "score": 87,
+      "license": "MIT",
+      "forks": 27383,
+      "open_issues": 369,
+      "pushed_at": "2026-10-23",
+      "sections": [
+        {
+          "title": "核心思路：先谈清楚，再写代码",
+          "paragraphs": [
+            "它在你启动编码 Agent 的那一刻就介入。Agent 不会直接开始写代码，而是先退一步问你到底想做什么。",
+            "从对话里提炼出规格之后，它会分成你「读得完、咽得下」的小块给你看。你签字确认设计，然后它给出实现计划——README 里形容这个计划要清晰到「一个热情但品味糟糕、没判断力、不了解项目背景、还讨厌写测试的初级工程师」都能照着做。",
+            "这描述挺刻薄的，但很诚实：它假设执行者不会替你思考，所以计划必须自带上下文。"
+          ]
+        },
+        {
+          "title": "执行阶段：子 Agent 流水线",
+          "paragraphs": [
+            "你说「go」之后，它启动一个子 Agent 驱动的开发流程：Agent 逐个任务往下推进，自己检查和审查自己的工作，然后继续。",
+            "README 里说它「连续自主工作几小时不偏离计划」并不罕见。同时强制真·红绿 TDD、YAGNI 和 DRY。"
+          ],
+          "bullets": [
+            "规格先行的设计评审，避免一上来就写",
+            "子 Agent 承担实现与自审",
+            "方法论约束（TDD / YAGNI / DRY）内建在技能里"
+          ]
+        },
+        {
+          "title": "生态兼容性",
+          "paragraphs": [
+            "这是我觉得它最聪明的地方：支持面极广——Claude Code、Codex、Cursor、Copilot CLI、Gemini CLI、OpenCode、Qwen Code、Hermes Agent……十几种 harness 都能装。",
+            "因为它把方法论做成了「可组合的技能 + 少量初始指令」，而不是绑死在某一个产品上。这让它更像是「Agent 时代的 GDD 文档」。"
+          ]
+        }
+      ],
+      "verdict": "如果你团队在用 AI 编码工具但产出质量忽高忽低，缺的不是模型而是流程约束。这个项目提供的正是流程。而且它明确反对「 vibe coding 」，跟我的看法一致：AI 降低了写代码的门槛，但没降低想清楚要什么的门槛。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 307.9k",
+          "Star"
+        ],
+        [
+          "⑂ 27.4k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "Shell",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "category": "evergreen",
+      "language": "Shell",
+      "stars": 306163,
+      "growth_30d": null,
+      "summary": "作者每天在用的 Agent 技能包，定位很明确：给「做真实工程」用，不是给 vibe coding 用。",
+      "topics": [],
+      "score": 87,
+      "license": "MIT",
+      "forks": 25741,
+      "open_issues": 203,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "它反对什么",
+          "paragraphs": [
+            "README 里点名了 GSD、BMAD、Spec-Kit 这类方案：它们试图通过「接管整个流程」来帮助开发者，代价是你失去了控制权，而且流程里出的 bug 很难排查。",
+            "作者的选择是完全相反的：技能要小、易改、可组合，跟模型无关。"
+          ],
+          "bullets": [
+            "刻意做得小而可组合",
+            "不绑定特定模型",
+            "设计上允许你「随便改，改成自己的」"
+          ]
+        },
+        {
+          "title": "安装方式体现了设计哲学",
+          "paragraphs": [
+            "推荐用 skills.sh 把可编辑的文件直接拷进你的项目，然后你自己维护更新——注意它建议你「每个 agent 选一个」，装两个会导致每个技能出现两遍。",
+            "这种「拷贝文件而不是装插件」的方式，代价是要手动更新，收益是你能完全掌控内容、也能按自己的团队习惯改写。"
+          ]
+        },
+        {
+          "title": "为什么这类项目现在重要",
+          "paragraphs": [
+            "把「资深工程师的隐性经验」变成 Agent 可执行的技能文件，本质上是在做知识的显性化。",
+            "这也解释了为什么 2026 年会有大量同类仓库涌出——当 Agent 能力趋同，真正的差异化就落到了「你给它喂什么方法论」上。"
+          ]
+        }
+      ],
+      "verdict": "和 Superpowers 是一对镜像：superpowers 是重流程、可自动触发；这个是轻流程、完全可控。两者都指向同一件事——AI 编码的瓶颈已经从「模型能不能写」转移到「流程约束得好不好」。想快速起步用前者，想深度定制用后者。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 306.2k",
+          "Star"
+        ],
+        [
+          "⑂ 25.7k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "Shell",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "category": "learning",
+      "language": "Python",
+      "stars": 79491,
+      "growth_30d": null,
+      "summary": "从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。",
+      "topics": [
+        "agent",
+        "agent-development",
+        "ai-agent",
+        "claude",
+        "claude-code",
+        "educational",
+        "llm",
+        "python"
+      ],
+      "score": 90,
+      "license": "MIT",
+      "forks": 12720,
+      "open_issues": 51,
+      "pushed_at": "2026-10-27",
+      "sections": [
+        {
+          "title": "核心论点",
+          "paragraphs": [
+            "README 开头那句话很清醒：Agency comes from the model. An agent product = model + harness. 智能来自模型训练，不是外部代码编排。模型是驾驶员，harness 是车。这个仓库教你怎么造那辆车。",
+            "接着它用三个历史案例论证——DeepMind DQN 打 Atari（2013）、OpenAI Five 打 Dota 2（2019）、AlphaStar 打星际争霸 2（2019）——说明能动性是学出来的，不是编排出来的。"
+          ]
+        },
+        {
+          "title": "它和 Superpowers 的关系",
+          "paragraphs": [
+            "两个项目放在一起看很有意思：learn-claude-code 是「造车厂」，superpowers 是「驾驶规范」。",
+            "前者让你理解 harness 的每个零件为什么存在，后者规定拿到车之后该怎么开。"
+          ],
+          "bullets": [
+            "用 Bash 从零实现一个 nano 级的 agent harness",
+            "配套中文/日文翻译，学习门槛低",
+            "有 Trendshift 徽章，说明在新生代项目里热度很高"
+          ]
+        }
+      ],
+      "verdict": "这是我在这批项目里最推荐给「想理解而不是想直接用」的人的项目。README 的写作质量在开源项目里属于头部——论述清晰、有历史纵深、有明确的观点。读完你会发现，很多「AI 编程工具」的差异，本质是 harness 设计哲学的差异。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 79.5k",
+          "Star"
+        ],
+        [
+          "⑂ 12.7k",
+          "Fork"
+        ],
+        [
+          "⌀ 90",
+          "推荐分"
+        ],
+        [
+          "Python",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "ssloy/tinyrenderer",
+      "url": "https://github.com/ssloy/tinyrenderer",
+      "category": "curated",
+      "language": "C++",
+      "stars": 24477,
+      "growth_30d": null,
+      "summary": "500 行裸 C++ 实现软件渲染器，用来教人搞明白 OpenGL / Vulkan / Metal / DirectX 底下到底发生了什么。",
+      "topics": [
+        "3d",
+        "3d-graphics",
+        "c-plus-plus",
+        "computer-graphics",
+        "cpp",
+        "engine",
+        "fun",
+        "graphics"
+      ],
+      "score": 60,
+      "license": "NOASSERTION",
+      "forks": 2313,
+      "open_issues": 4,
+      "pushed_at": "2026-07-29",
+      "sections": [
+        {
+          "title": "为什么它还是值得看",
+          "paragraphs": [
+            "作者自己说「代码本身没什么意思」，重点在配套的 14 篇课程笔记。这句话本身就是一种克制——它不假装是个库，就是一套教案。",
+            "课程从 Bresenham 直线算法开始，经过三角形光栅化、重心坐标、隐藏面剔除、z-buffer、相机处理、着色、纹理、法线映射、阴影映射、SSAO，最后来个 toon shading 收尾。"
+          ],
+          "bullets": [
+            "零第三方库，包括图形库",
+            "作者说自己的学生学完后能写出相当不错的渲染器",
+            "配套站点 haqr.eu 有完整中文/多语言笔记"
+          ]
+        },
+        {
+          "title": "它教会你的思维方式",
+          "paragraphs": [
+            "这其实是一套「逆向学习法」：先手写出最简实现，再回头理解每个图形 API 背后在做什么。",
+            "作为新人，我觉得这种学习路径特别值得借鉴——先用最笨的办法跑通，再补理论。比反过来先啃一千页图形学教材有效得多。"
+          ]
+        }
+      ],
+      "verdict": "24k star 里我最推荐的一个。它代表了一类被低估的项目：代码量小得离谱，但它教的东西能迁移到你写的每一行图形/系统代码里。适合当作「学底层」的自修教材。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 24.5k",
+          "Star"
+        ],
+        [
+          "⑂ 2.3k",
+          "Fork"
+        ],
+        [
+          "⌀ 60",
+          "推荐分"
+        ],
+        [
+          "C++",
+          "主要语言"
+        ],
+        [
+          "NOASSERTION",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "codecrafters-io/build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "category": "curated",
+      "language": "Markdown",
+      "stars": 557157,
+      "growth_30d": null,
+      "summary": "从零复刻你喜欢的技术：数据库、操作系统、编译器、容器、Docker、Git……全是教程。",
+      "topics": [
+        "awesome-list",
+        "free",
+        "programming",
+        "tutorial-code",
+        "tutorial-exercises",
+        "tutorials"
+      ],
+      "score": 55,
+      "license": null,
+      "forks": 52143,
+      "open_issues": 684,
+      "pushed_at": "2026-07-14",
+      "sections": [
+        {
+          "title": "这个仓库的特殊之处",
+          "paragraphs": [
+            "557k star，全球 star 数最高的仓库之一。但它本质上不是代码库，而是一张巨大的索引表——每一行指向一个「自己实现一遍 X」的教程。",
+            "涵盖范围从数据库（SQLite、Redis、PostgreSQL）、操作系统（Linux、Unix shell、终端）、编译器（Bash、LLVM、Go）、容器（Docker、Kubernetes）、网络（TCP、HTTP）、到浏览器（Chrome）、游戏引擎、神经网络、GUI 框架，甚至「自己写一个 Git」和「自己写一个 Neural Network」。"
+          ],
+          "bullets": [
+            "Build your own X 系列是经典，很多教程配套完整的课程站点",
+            "覆盖从入门到编译器级别，难度梯度清晰",
+            "每个条目通常都标注了难度和前置知识"
+          ]
+        },
+        {
+          "title": "为什么这类项目长青",
+          "paragraphs": [
+            "它的价值不随技术栈变化。框架会换，但「理解数据库索引是怎么工作的」这件事不会过时。",
+            "对比一下：它的 star 增长很慢（老项目常态），但社区活跃度一直不低，因为总有人在学新东西，也在持续贡献新的「X」。"
+          ]
+        }
+      ],
+      "verdict": "如果只能推荐一个「学习索引」，就是它。star 数 557k 说明它被反复验证过——但更重要的是它把「我想搞懂 X」变成了一条明确的行动路径。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 557.2k",
+          "Star"
+        ],
+        [
+          "⑂ 52.1k",
+          "Fork"
+        ],
+        [
+          "⌀ 55",
+          "推荐分"
+        ],
+        [
+          "Markdown",
+          "主要语言"
+        ]
+      ]
+    },
+    {
+      "name": "donnemartin/system-design-primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "category": "curated",
+      "language": "Python",
+      "stars": 376017,
+      "growth_30d": null,
+      "summary": "大规模系统设计的学习指南，还附带了 Anki 记忆卡，直接对着面试准备。",
+      "topics": [
+        "design",
+        "design-patterns",
+        "design-system",
+        "development",
+        "interview",
+        "interview-practice",
+        "interview-questions",
+        "programming"
+      ],
+      "score": 68,
+      "license": "NOASSERTION",
+      "forks": 59043,
+      "open_issues": 633,
+      "pushed_at": "2026-09-15",
+      "sections": [
+        {
+          "title": "它解决什么问题",
+          "paragraphs": [
+            "系统设计面试是新手最焦虑的环节之一：题目开放，不知道从哪答起。这个仓库把答题的骨架给拆好了。",
+            "内容从「如何回答一个系统设计问题」开始，然后逐个讲：缓存、数据库、负载均衡、缓存穿透/雪崩/击穿、限流、消息队列、一致性哈希、复制、分片、CAP 定理……还配了插图。"
+          ],
+          "bullets": [
+            "每节都配 Anki 记忆卡，能直接导入做间隔重复",
+            "包含真实系统案例（Twitter、Netflix 等）",
+            "有中英等多语言翻译版本"
+          ]
+        }
+      ],
+      "verdict": "它的 Anki 卡片设计是我最喜欢的一点——把「读过」变成「记得住」。这比单纯又一个 Markdown 教程务实得多。新人如果正准备系统设计面试，这是最高性价比的起点。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 376k",
+          "Star"
+        ],
+        [
+          "⑂ 59k",
+          "Fork"
+        ],
+        [
+          "⌀ 68",
+          "推荐分"
+        ],
+        [
+          "Python",
+          "主要语言"
+        ],
+        [
+          "NOASSERTION",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "freeCodeCamp/freeCodeCamp",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "category": "evergreen",
+      "language": "TypeScript",
+      "stars": 458156,
+      "growth_30d": null,
+      "summary": "全球最大的免费编程学习平台，458k star，课程本身也是开源的。",
+      "topics": [
+        "careers",
+        "certification",
+        "community",
+        "curriculum",
+        "d3",
+        "education",
+        "freecodecamp",
+        "javascript"
+      ],
+      "score": 87,
+      "license": "BSD-3-Clause",
+      "forks": 48730,
+      "open_issues": 158,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "不一样的定位",
+          "paragraphs": [
+            "它是「免费学编程」这件事的答案：不是一门课，是一整条课程体系——HTML/CSS/JS 到数据可视化、证书项目，每一节都能在浏览器里直接写代码并即时看到结果。",
+            "更特别的是它的商业模式：完全免费，运营靠捐款。这让它没有必须「尽快让你升级付费」的焦虑，课程节奏是真的按学习者来设计的。"
+          ],
+          "bullets": [
+            "TypeScript 技术栈，代码完全开源",
+            "浏览器内直接运行，无需本地环境",
+            "社区规模巨大，互助氛围浓"
+          ]
+        },
+        {
+          "title": "为什么它值得注意",
+          "paragraphs": [
+            "作为一个「学习资源」类项目，它常年保持高活跃度提交——这在老牌教程仓库里不常见。说明它还在积极维护，不是在吃老本。"
+          ]
+        }
+      ],
+      "verdict": "如果你完全零基础，它是最稳的起点。缺点是它教的是 web 开发，如果你的目标是后端、系统或 AI，直接看它的证书项目有点绕——但那个项目本身质量不错，可以当跳板。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 458.2k",
+          "Star"
+        ],
+        [
+          "⑂ 48.7k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "TypeScript",
+          "主要语言"
+        ],
+        [
+          "BSD-3-Clause",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "firstcontributions/first-contributions",
+      "url": "https://github.com/firstcontributions/first-contributions",
+      "category": "beginner",
+      "language": null,
+      "stars": 56610,
+      "growth_30d": null,
+      "summary": "专门用来教新手完成第一次开源贡献的仓库，56k star。",
+      "topics": [
+        "beginner",
+        "beginner-friendly",
+        "contribute",
+        "contribution",
+        "contributions-welcome",
+        "good-first-contribution",
+        "good-first-issue",
+        "good-first-pr"
+      ],
+      "score": 90,
+      "license": "MIT",
+      "forks": 111959,
+      "open_issues": 587,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "设计得极巧",
+          "paragraphs": [
+            "它的思路很聪明：让你去改一个你自己的练习仓库（练习分支），而不是直接改真实的热门项目。",
+            "流程是：fork → clone → 建分支 → 改一处 → commit → push → 开 PR。目标是让你在真正动手前完整走一遍整个协作流程，把陌生感消掉。"
+          ],
+          "bullets": [
+            "步骤图文清晰，几乎没有理解门槛",
+            "专门为「第一次」设计，而不是「又一次」",
+            "有中文等多语言版本"
+          ]
+        },
+        {
+          "title": "为什么这一步很重要",
+          "paragraphs": [
+            "很多人卡在第一次贡献不是技术问题，是心理门槛：不知道流程、不敢提 PR、怕被拒。",
+            "这个仓库把流程拆解到每一步都给出确切命令，把第一次的心理成本降到最低。做完一遍之后，再面对真实项目就顺了。"
+          ]
+        }
+      ],
+      "verdict": "如果你的目标是「今年开始给开源做贡献」，这是最该先跑一遍的东西。半小时的投入，回报是拆掉一整层心理障碍。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 56.6k",
+          "Star"
+        ],
+        [
+          "⑂ 112k",
+          "Fork"
+        ],
+        [
+          "⌀ 90",
+          "推荐分"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "seedds/nxnative",
+      "url": "https://github.com/seedds/nxnative",
+      "category": "hot_week",
+      "language": "Objective-C",
+      "stars": 9335,
+      "growth_30d": null,
+      "summary": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+      "topics": [],
+      "score": 89.7,
+      "license": "MIT",
+      "forks": 1491,
+      "open_issues": 226,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "项目速览",
+          "paragraphs": [
+            "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+            "最近一次代码提交在 2026-10-29，当前有 226 个未关闭 issue，许可证为 MIT。"
+          ],
+          "bullets": []
+        }
+      ],
+      "verdict": "这是一个 star 数 9.3k 的项目，fork 1.5k。许可证清晰，适合上手试用。",
+      "has_analysis": false,
+      "metrics": [
+        [
+          "★ 9.3k",
+          "Star"
+        ],
+        [
+          "⑂ 1.5k",
+          "Fork"
+        ],
+        [
+          "⌀ 89.7",
+          "推荐分"
+        ],
+        [
+          "Objective-C",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "simbasjungles/free-my-tv",
+      "url": "https://github.com/simbasjungles/free-my-tv",
+      "category": "hot_week",
+      "language": "Java",
+      "stars": 5306,
+      "growth_30d": null,
+      "summary": "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
+      "topics": [
+        "android-tv",
+        "claude-code",
+        "google-tv",
+        "home-screen",
+        "launcher",
+        "no-ads",
+        "open-source",
+        "samsung-tizen"
+      ],
+      "score": 87.2,
+      "license": "MIT",
+      "forks": 887,
+      "open_issues": 76,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "项目速览",
+          "paragraphs": [
+            "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
+            "最近一次代码提交在 2026-10-29，当前有 76 个未关闭 issue，许可证为 MIT。"
+          ],
+          "bullets": []
+        }
+      ],
+      "verdict": "这是一个 star 数 5.3k 的项目，fork 887。许可证清晰，适合上手试用。",
+      "has_analysis": false,
+      "metrics": [
+        [
+          "★ 5.3k",
+          "Star"
+        ],
+        [
+          "⑂ 887",
+          "Fork"
+        ],
+        [
+          "⌀ 87.2",
+          "推荐分"
+        ],
+        [
+          "Java",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "storytold/photocraft",
+      "url": "https://github.com/storytold/photocraft",
+      "category": "hot_week",
+      "language": "Rust",
+      "stars": 74619,
+      "growth_30d": null,
+      "summary": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
+      "topics": [
+        "art",
+        "image-editing",
+        "image-editing-software",
+        "image-editor",
+        "images",
+        "photo-editing",
+        "rust"
+      ],
+      "score": 87,
+      "license": "Apache-2.0",
+      "forks": 13184,
+      "open_issues": 3479,
+      "pushed_at": "2026-10-29",
+      "sections": [
+        {
+          "title": "项目速览",
+          "paragraphs": [
+            "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
+            "最近一次代码提交在 2026-10-29，当前有 3.5k 个未关闭 issue，许可证为 Apache-2.0。"
+          ],
+          "bullets": []
+        }
+      ],
+      "verdict": "这是一个 star 数 74.6k 的项目，fork 13.2k。许可证清晰，适合上手试用。",
+      "has_analysis": false,
+      "metrics": [
+        [
+          "★ 74.6k",
+          "Star"
+        ],
+        [
+          "⑂ 13.2k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "Rust",
+          "主要语言"
+        ],
+        [
+          "Apache-2.0",
+          "许可证"
+        ]
+      ]
+    }
+  ],
+  "hero_picks": [
+    {
+      "full_name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "description": "把 AI 助手部署在你自己的机器上，然后让它住进你已经在用的聊天软件里。Discord、iMessage、Slack、WhatsApp、Telegram……20 多个平台，一个 Gateway 统一调度。",
+      "language": "TypeScript",
+      "stars": 393333,
+      "growth_30d": null,
+      "topics": [
+        "ai",
+        "assistant",
+        "crustacean",
+        "molty",
+        "openclaw",
+        "own-your-data",
+        "personal"
+      ],
+      "score": 87,
+      "category": "evergreen",
+      "badge": "🔍 已深读",
+      "note": "本期深度拆解"
+    },
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。",
+      "language": "Shell",
+      "stars": 307888,
+      "growth_30d": null,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "score": 87,
+      "category": "curated",
+      "badge": "🔍 已深读",
+      "note": "本期深度拆解"
+    },
+    {
+      "full_name": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "description": "从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。",
+      "language": "Python",
+      "stars": 79491,
+      "growth_30d": null,
+      "topics": [
+        "agent",
+        "agent-development",
+        "ai-agent",
+        "claude",
+        "claude-code",
+        "educational",
+        "llm",
+        "python"
+      ],
+      "score": 90,
+      "category": "learning",
+      "badge": "🔍 已深读",
+      "note": "本期深度拆解"
+    },
+    {
+      "full_name": "firstcontributions/first-contributions",
+      "url": "https://github.com/firstcontributions/first-contributions",
+      "description": "专门用来教新手完成第一次开源贡献的仓库，56k star。",
+      "language": null,
+      "stars": 56610,
+      "growth_30d": null,
+      "topics": [
+        "beginner",
+        "beginner-friendly",
+        "contribute",
+        "contribution",
+        "contributions-welcome",
+        "good-first-contribution",
+        "good-first-issue",
+        "good-first-pr"
+      ],
+      "score": 90,
+      "category": "beginner",
+      "badge": "🔍 已深读",
+      "note": "本期深度拆解"
+    }
+  ],
+  "thoughts": [
+    {
+      "date": "2026-10-29",
+      "title": "star 数是个越来越不可靠的信号",
+      "body": "今天做这个站的时候踩到一个坑：我本来想按「近 30 天 star 增长」给常青榜排序，结果发现 GitHub 的 stargazers 时间戳接口必须认证才能用，未认证直接 401。这件事本身挺有意思——GitHub 刻意把「谁什么时候 star 了」当成需要登录才能看的数据，大概是防刷号和隐私考虑。但这意味着一个结果：star 总数是公开的，star 的变化过程是半公开的。所以很多榜单只能按总数排，于是老牌项目永远霸榜，哪怕它们早就不动了。我现在的解法是未认证时退化用「近 90 天提交数」当活跃度信号，配了 token 就能用真正的 star 增速。",
+      "links": [
+        [
+          "GitHub REST API 文档",
+          "https://docs.github.com/en/rest/activity/starring#list-stargazers"
+        ]
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "title": "2026 年的新项目开始「自带方法论」了",
+      "body": "今天翻项目的时候发现一个明显的趋势：superpowers、mattpocock/skills、affaan-m/ECC 这类新起的老大不高但 star 涨得快的仓库，主打的都不是「更强的模型」或「更快的推理」，而是「怎么让 AI 写代码更靠谱」。它们把资深工程师的隐性经验——先设计再动手、小步提交、红绿重构、不要 vibe coding——写成 Agent 可执行的技能文件。模型能力在趋同，Agent harness 也在趋同，那么差异化只能落在「你喂给它什么方法论」这一层。这对新人是个好消息：意味着你不需要懂最前沿的模型，也能做出有价值的贡献——把你自己领域的工作流写成 skill 就行。",
+      "links": [
+        [
+          "obra/superpowers",
+          "https://github.com/obra/superpowers"
+        ],
+        [
+          "mattpocock/skills",
+          "https://github.com/mattpocock/skills"
+        ]
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "title": "一个反直觉的观察：社区活跃度比 star 更能说明项目健康",
+      "body": "算推荐分的时候我加了一个权重：fork 数 / star 数的比例。理由很简单——star 是「收藏」，fork 是「我打算动手用」。一个 50k star 但 fork 只有 500 的项目，多半是「听说过，收藏了，没用过」；一个 10k star 但 fork 有 2500 的项目，说明真的有人在拿它干活。实践中这个指标比 star 数更能区分「名气大」和「真有用」。当然也有反例——像 build-your-own-x 这种纯索引型项目，fork 少是正常的。所以这个指标得结合项目类型看，不能一刀切。",
+      "links": []
+    },
+    {
+      "date": "2026-10-29",
+      "title": "给自己立个规矩：每个项目都真的翻开 README",
+      "body": "最初的版本我只想把 API 返回的数据格式化一下就上线。但那样的话，这个站就退化成了一个数字看板——star 数、排名、链接，全是别人已经有的信息，别人做得比我快。我决定每期至少挑几个项目真的把 README 读完，把「它到底在做什么」「为什么这样设计」「门槛在哪」写出来。写深度拆解的时候才发现，很多项目的 README 前三段就能看出作者的水平，而有些 star 极高的项目 README 写得很糟。这层信息是 API 给不了、榜单也给不了的——这才是这个站值得存在的地方。",
+      "links": []
+    }
+  ],
+  "category_notes": {
+    "evergreen": "这一栏不看 star 总数（老牌项目几乎不涨，总数永远那几个），改看「近 30 天新增 star」——谁在悄悄上位，一眼就能看出来。未配置 token 时退化为「近 90 天提交数」，同样能看出谁还在高强度维护。",
+    "hot_week": "最近 30 天内新建的仓库。star 数还不高，但增速吓人——这里最容易淘到未来的 stars。",
+    "new_star": "三个月内冒头的一批。相比「本周最热」范围更广，能看到上升早期的样子。",
+    "beginner": "有 good-first-issue 标签的项目，文档通常也更友好。第一次给开源提 PR 不知道从哪开始的话，看这里。",
+    "fun": "不一定最有用，但一定有意思。有些项目纯粹是让人看着解压——这也是开源生态的一部分。",
+    "learning": "系统性的学习路径。比起零散搜教程，跟着一条走完的收获要大得多。"
+  }
+}

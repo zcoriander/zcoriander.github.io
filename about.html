@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于 · GitHub 冲浪手记</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="#categories">分类榜</a>
+      <a href="deep-dive.html">深度拆解</a>
+      <a href="about.html" class="active">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page-main">
+  <div class="page-head">
+    <h1>关于这个站</h1>
+    <p class="lede">一个开源新人的私人冲浪笔记本。</p>
+  </div>
+
+  <section class="prose">
+    <h2>我是谁</h2>
+    <p>一个刚进 GitHub 门的新人程序员。踩过的坑不少，但每次挖到好项目都特别兴奋，就想记下来分享。</p>
+    <p>这个站是我的两件事合起来：<strong>每周的 GitHub 冲浪榜单</strong>，和<strong>随手记下的想法</strong>。</p>
+
+    <h2>榜单是怎么来的</h2>
+    <p>全部数据来自 GitHub 公开 API（搜索 + 仓库详情接口），每次更新都会重新抓一遍。分类和排序规则写在首页的"冲浪方法"里，欢迎来挑刺。</p>
+
+    <h2>关于「常青经典」这一栏</h2>
+    <p>很多榜单按 star 总数排，结果永远是那几个老面孔——因为它们的 star 早就不怎么涨了，总数自然不动。</p>
+    <p>所以这一栏我换了个思路：<strong>用近 30 天的 star 增量排序</strong>。同样的老牌项目，有的还在稳步增长，有的其实早就停滞了。排出来的结果会告诉你谁在悄悄上位。</p>
+
+    <h2>安全说明</h2>
+    <p>本站的自动化脚本通过环境变量或本地受限文件读取 GitHub token，<strong>token 不会写入任何仓库、不会进入页面内容</strong>。详细方案见仓库里的 <code>docs/SECURITY.md</code>。</p>
+  </section>
+
+  <section class="prose">
+    <h2>📝 手记与想法</h2>
+    <p>这里放我在冲浪过程中的观察、困惑和一些还没想明白的事。</p>
+        <div class="thought">
+      <div class="thought-date">2026-10-29</div>
+      <h3>star 数是个越来越不可靠的信号</h3>
+      <p>今天做这个站的时候踩到一个坑：我本来想按「近 30 天 star 增长」给常青榜排序，结果发现 GitHub 的 stargazers 时间戳接口必须认证才能用，未认证直接 401。这件事本身挺有意思——GitHub 刻意把「谁什么时候 star 了」当成需要登录才能看的数据，大概是防刷号和隐私考虑。但这意味着一个结果：star 总数是公开的，star 的变化过程是半公开的。所以很多榜单只能按总数排，于是老牌项目永远霸榜，哪怕它们早就不动了。我现在的解法是未认证时退化用「近 90 天提交数」当活跃度信号，配了 token 就能用真正的 star 增速。</p>
+      <p class="thought-links"><a href="https://docs.github.com/en/rest/activity/starring#list-stargazers" target="_blank" rel="noopener">GitHub REST API 文档</a></p>
+    </div>    <div class="thought">
+      <div class="thought-date">2026-10-29</div>
+      <h3>2026 年的新项目开始「自带方法论」了</h3>
+      <p>今天翻项目的时候发现一个明显的趋势：superpowers、mattpocock/skills、affaan-m/ECC 这类新起的老大不高但 star 涨得快的仓库，主打的都不是「更强的模型」或「更快的推理」，而是「怎么让 AI 写代码更靠谱」。它们把资深工程师的隐性经验——先设计再动手、小步提交、红绿重构、不要 vibe coding——写成 Agent 可执行的技能文件。模型能力在趋同，Agent harness 也在趋同，那么差异化只能落在「你喂给它什么方法论」这一层。这对新人是个好消息：意味着你不需要懂最前沿的模型，也能做出有价值的贡献——把你自己领域的工作流写成 skill 就行。</p>
+      <p class="thought-links"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a></p>
+    </div>    <div class="thought">
+      <div class="thought-date">2026-10-29</div>
+      <h3>一个反直觉的观察：社区活跃度比 star 更能说明项目健康</h3>
+      <p>算推荐分的时候我加了一个权重：fork 数 / star 数的比例。理由很简单——star 是「收藏」，fork 是「我打算动手用」。一个 50k star 但 fork 只有 500 的项目，多半是「听说过，收藏了，没用过」；一个 10k star 但 fork 有 2500 的项目，说明真的有人在拿它干活。实践中这个指标比 star 数更能区分「名气大」和「真有用」。当然也有反例——像 build-your-own-x 这种纯索引型项目，fork 少是正常的。所以这个指标得结合项目类型看，不能一刀切。</p>
+      
+    </div>    <div class="thought">
+      <div class="thought-date">2026-10-29</div>
+      <h3>给自己立个规矩：每个项目都真的翻开 README</h3>
+      <p>最初的版本我只想把 API 返回的数据格式化一下就上线。但那样的话，这个站就退化成了一个数字看板——star 数、排名、链接，全是别人已经有的信息，别人做得比我快。我决定每期至少挑几个项目真的把 README 读完，把「它到底在做什么」「为什么这样设计」「门槛在哪」写出来。写深度拆解的时候才发现，很多项目的 README 前三段就能看出作者的水平，而有些 star 极高的项目 README 写得很糟。这层信息是 API 给不了、榜单也给不了的——这才是这个站值得存在的地方。</p>
+      
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理</p></div>
+</footer>
+</body>
+</html>

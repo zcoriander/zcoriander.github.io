@@ -1,0 +1,13 @@
+# 本地敏感文件 —— 绝不提交
+*.token
+github_token
+.env
+.env.*
+!.env.example
+
+# 采集缓存
+/tmp/
+*.cache
+
+# 系统
+.DS_Store
