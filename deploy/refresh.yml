@@ -1,0 +1,82 @@
+name: Weekly Refresh
+
+on:
+  schedule:
+    # 每周一 09:00 UTC（北京时间 17:00）
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '只生成不提交（预览效果）'
+        type: boolean
+        default: false
+
+# 最小权限声明：每项用多少给多少
+permissions:
+  contents: write          # 提交刷新后的内容
+  pages: write             # 部署 Pages
+  id-token: write          # OIDC 认证（Pages 部署必需）
+
+# 防止并发重复运行
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Collect data
+        env:
+          # Actions 内置 token：自动注入、自动轮换，无需配置 secret
+          # tools/collect.py 会优先读取环境变量 GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/collect.py
+
+      - name: Enrich content
+        run: python tools/enrich.py
+
+      - name: Build site
+        run: python tools/build_site.py
+
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "✅ 内容无变化，跳过提交"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "📊 本次变更："
+            git diff --stat
+          fi
+
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true' && inputs.dry_run != true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: weekly refresh $(date -u +'%Y-%m-%d')"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 🌊 GitHub 冲浪手记 · 自动刷新完成"
+            echo ""
+            echo "- 分支: \`${{ github.ref_name }}\`"
+            echo "- 提交: $(git log --oneline -1)"
+            echo "- 变更: ${{ steps.check.outputs.changed == 'true' && '有' || '无（已跳过提交）' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
