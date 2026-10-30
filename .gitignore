@@ -1,9 +1,25 @@
-# 本地敏感文件 —— 绝不提交
-*.token
+# ===== 敏感文件 —— 绝不提交 =====
+# GitHub token / 密钥
 github_token
+github_token.*
+*.token
+*.tokens
+*_token
+*_token.*
 .env
 .env.*
 !.env.example
+secrets/
+.local-secrets/
+.local/
+credentials/
+*.pem
+*.key
+*.p12
+id_rsa*
+.netrc
+.npmrc
+.authinfo
 
 # 采集缓存
 /tmp/
@@ -11,3 +27,9 @@ github_token
 
 # 系统
 .DS_Store
+Thumbs.db
+
+# 编辑器
+.idea/
+.vscode/
+*.swp

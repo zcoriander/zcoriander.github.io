@@ -1,32 +1,55 @@
 {
-  "generated_at": "2026-10-29T11:37:50.218509+00:00",
+  "generated_at": "2026-10-30T04:49:15.157259+00:00",
   "categories": {
     "hot_week": [
       {
         "full_name": "seedds/nxnative",
         "url": "https://github.com/seedds/nxnative",
         "description": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
-        "language": "Objective-C",
-        "stars": 9335,
-        "forks": 1491,
-        "open_issues": 226,
+        "language": "Python",
+        "stars": 9830,
+        "forks": 1582,
+        "open_issues": 265,
         "topics": [],
         "created_at": "2026-10-13T05:20:14Z",
-        "pushed_at": "2026-10-29T11:19:37Z",
+        "pushed_at": "2026-10-30T04:27:12Z",
         "license": "MIT",
         "owner": "seedds",
         "name": "nxnative",
-        "score": 89.7,
+        "score": 89.9,
         "note": "建于 2026-10-13，16 天"
+      },
+      {
+        "full_name": "storytold/effectcraft",
+        "url": "https://github.com/storytold/effectcraft",
+        "description": "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 8173,
+        "forks": 4339,
+        "open_issues": 792,
+        "topics": [
+          "art",
+          "compositing",
+          "compositing-software",
+          "motion-graphics",
+          "rust"
+        ],
+        "created_at": "2026-10-01T14:24:46Z",
+        "pushed_at": "2026-10-30T04:43:24Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "effectcraft",
+        "score": 89.1,
+        "note": "建于 2026-10-01，28 天"
       },
       {
         "full_name": "simbasjungles/free-my-tv",
         "url": "https://github.com/simbasjungles/free-my-tv",
         "description": "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
         "language": "Java",
-        "stars": 5306,
-        "forks": 887,
-        "open_issues": 76,
+        "stars": 5406,
+        "forks": 901,
+        "open_issues": 63,
         "topics": [
           "android-tv",
           "claude-code",
@@ -41,46 +64,21 @@
           "webos"
         ],
         "created_at": "2026-10-19T19:29:01Z",
-        "pushed_at": "2026-10-29T04:22:19Z",
+        "pushed_at": "2026-10-30T01:49:12Z",
         "license": "MIT",
         "owner": "simbasjungles",
         "name": "free-my-tv",
-        "score": 87.2,
-        "note": "建于 2026-10-19，9 天"
-      },
-      {
-        "full_name": "storytold/photocraft",
-        "url": "https://github.com/storytold/photocraft",
-        "description": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
-        "language": "Rust",
-        "stars": 74619,
-        "forks": 13184,
-        "open_issues": 3479,
-        "topics": [
-          "art",
-          "image-editing",
-          "image-editing-software",
-          "image-editor",
-          "images",
-          "photo-editing",
-          "rust"
-        ],
-        "created_at": "2026-09-30T13:37:48Z",
-        "pushed_at": "2026-10-29T10:15:21Z",
-        "license": "Apache-2.0",
-        "owner": "storytold",
-        "name": "photocraft",
-        "score": 87,
-        "note": "建于 2026-09-30，28 天"
+        "score": 87.3,
+        "note": "建于 2026-10-19，10 天"
       },
       {
         "full_name": "deepseek-ai/DeepInfer",
         "url": "https://github.com/deepseek-ai/DeepInfer",
         "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
         "language": "Python",
-        "stars": 24137,
-        "forks": 2885,
-        "open_issues": 220,
+        "stars": 24299,
+        "forks": 2918,
+        "open_issues": 222,
         "topics": [],
         "created_at": "2026-10-16T07:47:23Z",
         "pushed_at": "2026-10-26T05:30:52Z",
@@ -95,98 +93,26 @@
         "url": "https://github.com/openai/math",
         "description": null,
         "language": "Lean",
-        "stars": 17016,
-        "forks": 1916,
+        "stars": 17078,
+        "forks": 1924,
         "open_issues": 0,
         "topics": [],
         "created_at": "2026-10-06T21:47:02Z",
-        "pushed_at": "2026-10-26T21:18:10Z",
+        "pushed_at": "2026-10-30T00:35:38Z",
         "license": "Apache-2.0",
         "owner": "openai",
         "name": "math",
         "score": 87,
-        "note": "建于 2026-10-06，22 天"
-      },
-      {
-        "full_name": "storytold/filmcraft",
-        "url": "https://github.com/storytold/filmcraft",
-        "description": "FilmCraft: An open-source, nonlinear video editor written by scratch in pure Rust",
-        "language": "Rust",
-        "stars": 16788,
-        "forks": 6961,
-        "open_issues": 1997,
-        "topics": [
-          "art",
-          "rust",
-          "video",
-          "video-editing",
-          "video-editor",
-          "video-processing"
-        ],
-        "created_at": "2026-09-30T13:41:20Z",
-        "pushed_at": "2026-10-29T10:14:58Z",
-        "license": "Apache-2.0",
-        "owner": "storytold",
-        "name": "filmcraft",
-        "score": 87,
-        "note": "建于 2026-09-30，28 天"
-      },
-      {
-        "full_name": "storytold/lightcraft",
-        "url": "https://github.com/storytold/lightcraft",
-        "description": "LightCraft: An open-source non-destructive photo editor written by scratch in pure Rust",
-        "language": "Rust",
-        "stars": 15014,
-        "forks": 5759,
-        "open_issues": 1432,
-        "topics": [
-          "art",
-          "photography",
-          "raw",
-          "raw-editor",
-          "raw-processing",
-          "rust"
-        ],
-        "created_at": "2026-09-30T14:09:27Z",
-        "pushed_at": "2026-10-29T10:12:43Z",
-        "license": "Apache-2.0",
-        "owner": "storytold",
-        "name": "lightcraft",
-        "score": 87,
-        "note": "建于 2026-09-30，28 天"
-      },
-      {
-        "full_name": "storytold/vectorcraft",
-        "url": "https://github.com/storytold/vectorcraft",
-        "description": "VectorCraft: An open-source, vector art tool written by scratch in pure Rust",
-        "language": "Rust",
-        "stars": 10964,
-        "forks": 5312,
-        "open_issues": 1021,
-        "topics": [
-          "art",
-          "rust",
-          "rust-lang",
-          "svg",
-          "svg-editor",
-          "vector-graphics"
-        ],
-        "created_at": "2026-09-30T13:43:03Z",
-        "pushed_at": "2026-10-29T10:12:44Z",
-        "license": "Apache-2.0",
-        "owner": "storytold",
-        "name": "vectorcraft",
-        "score": 87,
-        "note": "建于 2026-09-30，28 天"
+        "note": "建于 2026-10-06，23 天"
       },
       {
         "full_name": "storytold/designcraft",
         "url": "https://github.com/storytold/designcraft",
         "description": "DesignCraft: An open-source page and layout design editor written by scratch in pure Rust",
         "language": "Rust",
-        "stars": 4911,
-        "forks": 3393,
-        "open_issues": 770,
+        "stars": 4935,
+        "forks": 3407,
+        "open_issues": 748,
         "topics": [
           "art",
           "layout",
@@ -194,21 +120,21 @@
           "rust"
         ],
         "created_at": "2026-10-01T13:13:14Z",
-        "pushed_at": "2026-10-29T10:08:00Z",
+        "pushed_at": "2026-10-30T02:22:29Z",
         "license": "Apache-2.0",
         "owner": "storytold",
         "name": "designcraft",
         "score": 86.9,
-        "note": "建于 2026-10-01，27 天"
+        "note": "建于 2026-10-01，28 天"
       },
       {
         "full_name": "jhaizhou-ops/d2r-mobile",
         "url": "https://github.com/jhaizhou-ops/d2r-mobile",
         "description": "Open-source compatibility layer for Diablo II: Resurrected with the Reign of the Warlock expansion. Runs your own Switch copy natively on iPhone, iPad, Mac, Android and HarmonyOS — full touch controls, 60 fps, new endgame modes. Bring your own game files. 开源的《暗黑破坏神 II：狱火重生》术士君临 iOS / macOS / 安卓 / 鸿蒙兼容层",
         "language": "C",
-        "stars": 4853,
-        "forks": 1282,
-        "open_issues": 79,
+        "stars": 4881,
+        "forks": 1285,
+        "open_issues": 76,
         "topics": [
           "android",
           "compatibility-layer",
@@ -226,12 +152,63 @@
           "vulkan"
         ],
         "created_at": "2026-10-12T08:41:19Z",
-        "pushed_at": "2026-10-29T01:09:02Z",
+        "pushed_at": "2026-10-30T04:30:44Z",
         "license": "MIT",
         "owner": "jhaizhou-ops",
         "name": "d2r-mobile",
         "score": 86.9,
         "note": "建于 2026-10-12，17 天"
+      },
+      {
+        "full_name": "storytold/deckcraft",
+        "url": "https://github.com/storytold/deckcraft",
+        "description": "Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust. Part of the ArtCraft Crafting Apps.",
+        "language": "Rust",
+        "stars": 4424,
+        "forks": 2534,
+        "open_issues": 646,
+        "topics": [],
+        "created_at": "2026-10-07T05:27:21Z",
+        "pushed_at": "2026-10-30T02:16:26Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "deckcraft",
+        "score": 86.5,
+        "note": "建于 2026-10-07，22 天"
+      },
+      {
+        "full_name": "storytold/craft-launcher",
+        "url": "https://github.com/storytold/craft-launcher",
+        "description": "The Craft App Launcher",
+        "language": "Rust",
+        "stars": 4324,
+        "forks": 1337,
+        "open_issues": 621,
+        "topics": [],
+        "created_at": "2026-10-09T23:21:59Z",
+        "pushed_at": "2026-10-30T02:25:20Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "craft-launcher",
+        "score": 86.4,
+        "note": "建于 2026-10-09，20 天"
+      },
+      {
+        "full_name": "amosblomqvist/learnharness",
+        "url": "https://github.com/amosblomqvist/learnharness",
+        "description": "Agent harness for learning difficult things.",
+        "language": "TypeScript",
+        "stars": 4075,
+        "forks": 624,
+        "open_issues": 242,
+        "topics": [],
+        "created_at": "2026-10-16T19:35:33Z",
+        "pushed_at": "2026-10-29T04:35:56Z",
+        "license": "AGPL-3.0",
+        "owner": "amosblomqvist",
+        "name": "learnharness",
+        "score": 86.1,
+        "note": "建于 2026-10-16，13 天"
       }
     ],
     "new_star": [
@@ -240,9 +217,9 @@
         "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
         "description": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
         "language": "JavaScript",
-        "stars": 21431,
-        "forks": 5772,
-        "open_issues": 318,
+        "stars": 21523,
+        "forks": 5869,
+        "open_issues": 276,
         "topics": [
           "awesome",
           "awesome-list",
@@ -251,21 +228,21 @@
           "dsh-plugin"
         ],
         "created_at": "2026-08-13T13:55:31Z",
-        "pushed_at": "2026-10-28T23:20:10Z",
+        "pushed_at": "2026-10-29T23:35:42Z",
         "license": "CC0-1.0",
         "owner": "awesome-dsh-plugin",
         "name": "awesome-dsh-plugin",
         "score": 90,
-        "note": "建于 2026-08-13，76 天，冲劲十足"
+        "note": "建于 2026-08-13，77 天，冲劲十足"
       },
       {
         "full_name": "YuJunZhiXue/dsh-purge",
         "url": "https://github.com/YuJunZhiXue/dsh-purge",
         "description": "DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
         "language": "JavaScript",
-        "stars": 12719,
-        "forks": 2814,
-        "open_issues": 11,
+        "stars": 13218,
+        "forks": 2977,
+        "open_issues": 14,
         "topics": [
           "deepseek",
           "deepseek-harness",
@@ -288,8 +265,8 @@
         "url": "https://github.com/deepseek-ai/deepseek-harness",
         "description": "DeepSeek Harness: Everything is a Plugin.",
         "language": "TypeScript",
-        "stars": 265454,
-        "forks": 32174,
+        "stars": 266043,
+        "forks": 32255,
         "open_issues": 0,
         "topics": [
           "ai-agents",
@@ -298,21 +275,46 @@
           "dsh-plugin"
         ],
         "created_at": "2026-08-13T11:56:32Z",
-        "pushed_at": "2026-10-28T02:48:17Z",
+        "pushed_at": "2026-10-30T02:12:14Z",
         "license": "MIT",
         "owner": "deepseek-ai",
         "name": "deepseek-harness",
         "score": 87,
-        "note": "建于 2026-08-13，76 天，冲劲十足"
+        "note": "建于 2026-08-13，77 天，冲劲十足"
+      },
+      {
+        "full_name": "storytold/photocraft",
+        "url": "https://github.com/storytold/photocraft",
+        "description": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 74899,
+        "forks": 13236,
+        "open_issues": 3513,
+        "topics": [
+          "art",
+          "image-editing",
+          "image-editing-software",
+          "image-editor",
+          "images",
+          "photo-editing",
+          "rust"
+        ],
+        "created_at": "2026-09-30T13:37:48Z",
+        "pushed_at": "2026-10-30T02:25:03Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "photocraft",
+        "score": 87,
+        "note": "建于 2026-09-30，29 天，冲劲十足"
       },
       {
         "full_name": "NandhaKishorM/laya",
         "url": "https://github.com/NandhaKishorM/laya",
         "description": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
         "language": "Python",
-        "stars": 34602,
-        "forks": 3099,
-        "open_issues": 111,
+        "stars": 34653,
+        "forks": 3102,
+        "open_issues": 98,
         "topics": [
           "calibration",
           "classification",
@@ -329,21 +331,21 @@
           "zero-shot"
         ],
         "created_at": "2026-09-18T04:46:33Z",
-        "pushed_at": "2026-10-28T09:49:25Z",
+        "pushed_at": "2026-10-30T04:23:52Z",
         "license": "Apache-2.0",
         "owner": "NandhaKishorM",
         "name": "laya",
         "score": 87,
-        "note": "建于 2026-09-18，41 天，冲劲十足"
+        "note": "建于 2026-09-18，42 天，冲劲十足"
       },
       {
         "full_name": "guillaumemeyer/watermarks-remover",
         "url": "https://github.com/guillaumemeyer/watermarks-remover",
         "description": "A privacy-first app that strips AI watermarks from content you own.",
         "language": "Python",
-        "stars": 25479,
-        "forks": 2900,
-        "open_issues": 35,
+        "stars": 25589,
+        "forks": 2912,
+        "open_issues": 36,
         "topics": [
           "agent-skill",
           "ai",
@@ -367,33 +369,57 @@
         "owner": "guillaumemeyer",
         "name": "watermarks-remover",
         "score": 87,
-        "note": "建于 2026-08-11，78 天，冲劲十足"
+        "note": "建于 2026-08-11，79 天，冲劲十足"
       },
       {
         "full_name": "robbietilton/Compositor",
         "url": "https://github.com/robbietilton/Compositor",
         "description": "The Photoshop alternative for Mac",
         "language": "Swift",
-        "stars": 18158,
-        "forks": 1798,
-        "open_issues": 32,
+        "stars": 18190,
+        "forks": 1801,
+        "open_issues": 29,
         "topics": [],
         "created_at": "2026-09-16T20:35:54Z",
-        "pushed_at": "2026-10-28T01:38:34Z",
+        "pushed_at": "2026-10-30T03:27:24Z",
         "license": "MIT",
         "owner": "robbietilton",
         "name": "Compositor",
         "score": 87,
-        "note": "建于 2026-09-16，42 天，冲劲十足"
+        "note": "建于 2026-09-16，43 天，冲劲十足"
+      },
+      {
+        "full_name": "storytold/lightcraft",
+        "url": "https://github.com/storytold/lightcraft",
+        "description": "LightCraft: An open-source non-destructive photo editor written by scratch in pure Rust",
+        "language": "Rust",
+        "stars": 15062,
+        "forks": 5776,
+        "open_issues": 1478,
+        "topics": [
+          "art",
+          "photography",
+          "raw",
+          "raw-editor",
+          "raw-processing",
+          "rust"
+        ],
+        "created_at": "2026-09-30T14:09:27Z",
+        "pushed_at": "2026-10-30T02:38:40Z",
+        "license": "Apache-2.0",
+        "owner": "storytold",
+        "name": "lightcraft",
+        "score": 87,
+        "note": "建于 2026-09-30，29 天，冲劲十足"
       },
       {
         "full_name": "peach-mitao/peach",
         "url": "https://github.com/peach-mitao/peach",
         "description": "Peach: Local-first video metadata scraper and media manager.",
         "language": "Python",
-        "stars": 13266,
-        "forks": 1552,
-        "open_issues": 102,
+        "stars": 13351,
+        "forks": 1562,
+        "open_issues": 110,
         "topics": [
           "local-first",
           "media-library",
@@ -404,21 +430,21 @@
           "video-player"
         ],
         "created_at": "2026-08-19T19:48:30Z",
-        "pushed_at": "2026-10-29T07:53:29Z",
+        "pushed_at": "2026-10-30T04:42:52Z",
         "license": "AGPL-3.0",
         "owner": "peach-mitao",
         "name": "peach",
         "score": 87,
-        "note": "建于 2026-08-19，70 天，冲劲十足"
+        "note": "建于 2026-08-19，71 天，冲劲十足"
       },
       {
         "full_name": "shihabal3amri/DiPlay",
         "url": "https://github.com/shihabal3amri/DiPlay",
         "description": "Independent CarPlay receiver for compatible Android head units. Wired and wireless public preview.",
         "language": "Kotlin",
-        "stars": 12746,
-        "forks": 1635,
-        "open_issues": 302,
+        "stars": 12813,
+        "forks": 1639,
+        "open_issues": 312,
         "topics": [],
         "created_at": "2026-09-24T15:36:38Z",
         "pushed_at": "2026-10-28T09:01:38Z",
@@ -426,66 +452,7 @@
         "owner": "shihabal3amri",
         "name": "DiPlay",
         "score": 87,
-        "note": "建于 2026-09-24，34 天，冲劲十足"
-      },
-      {
-        "full_name": "jub0t/Concat",
-        "url": "https://github.com/jub0t/Concat",
-        "description": "The truly free, open-source, local-first, cross-platform CapCut replacement. Scriptable through a JSON-RPC API & MCP.",
-        "language": "Rust",
-        "stars": 12520,
-        "forks": 1541,
-        "open_issues": 239,
-        "topics": [
-          "ffmpeg",
-          "free-video-editor",
-          "model-context-protocol",
-          "non-linear-editor",
-          "offline-first",
-          "open-source-video-editor",
-          "self-hosted",
-          "video-editing",
-          "video-editing-automation",
-          "video-editing-software",
-          "video-editing-tools",
-          "video-editor",
-          "voice-cloning",
-          "youtube-automation",
-          "youtube-shorts"
-        ],
-        "created_at": "2026-08-25T18:34:47Z",
-        "pushed_at": "2026-10-28T10:25:43Z",
-        "license": "AGPL-3.0",
-        "owner": "jub0t",
-        "name": "Concat",
-        "score": 87,
-        "note": "建于 2026-08-25，64 天，冲劲十足"
-      },
-      {
-        "full_name": "lnkiai/m3e-canvas",
-        "url": "https://github.com/lnkiai/m3e-canvas",
-        "description": "Sketch Material 3 Expressive screens in the browser and turn them into vibe-coding prompts.",
-        "language": "TypeScript",
-        "stars": 9865,
-        "forks": 1084,
-        "open_issues": 13,
-        "topics": [
-          "design-tool",
-          "material-3-expressive",
-          "material-design",
-          "material3",
-          "nextjs",
-          "prompt",
-          "react",
-          "vibe-coding"
-        ],
-        "created_at": "2026-09-02T04:36:34Z",
-        "pushed_at": "2026-10-22T10:09:15Z",
-        "license": "MIT",
-        "owner": "lnkiai",
-        "name": "m3e-canvas",
-        "score": 86.9,
-        "note": "建于 2026-09-02，57 天，冲劲十足"
+        "note": "建于 2026-09-24，35 天，冲劲十足"
       }
     ],
     "beginner": [
@@ -494,9 +461,9 @@
         "url": "https://github.com/firstcontributions/first-contributions",
         "description": "🚀✨ Help beginners to contribute to open source projects",
         "language": null,
-        "stars": 56610,
-        "forks": 111959,
-        "open_issues": 587,
+        "stars": 56618,
+        "forks": 111987,
+        "open_issues": 590,
         "topics": [
           "beginner",
           "beginner-friendly",
@@ -510,7 +477,7 @@
           "tutorial"
         ],
         "created_at": "2016-09-20T14:35:09Z",
-        "pushed_at": "2026-10-29T10:46:37Z",
+        "pushed_at": "2026-10-30T03:04:58Z",
         "license": "MIT",
         "owner": "firstcontributions",
         "name": "first-contributions",
@@ -522,9 +489,9 @@
         "url": "https://github.com/career-ops-hq/career-ops",
         "description": "Open-source AI job search agent and job finder: scan job boards, score each job 1-5 against your CV before you apply, tailor an ATS-friendly resume and cover letter, get interview prep and a job application tracker. It helps you fill in each application; you press Submit. Runs locally in your AI coding CLI (Claude Code, Codex, OpenCode and more).",
         "language": "JavaScript",
-        "stars": 78530,
-        "forks": 14493,
-        "open_issues": 476,
+        "stars": 78731,
+        "forks": 14531,
+        "open_issues": 536,
         "topics": [
           "agent-skills",
           "ai-agent",
@@ -548,7 +515,7 @@
           "resume"
         ],
         "created_at": "2026-04-04T18:21:18Z",
-        "pushed_at": "2026-10-29T06:03:44Z",
+        "pushed_at": "2026-10-30T01:12:28Z",
         "license": "MIT",
         "owner": "career-ops-hq",
         "name": "career-ops",
@@ -560,8 +527,8 @@
         "url": "https://github.com/rust-lang/rustlings",
         "description": ":crab: Small exercises to get you used to reading and writing Rust code!",
         "language": "Rust",
-        "stars": 64488,
-        "forks": 11272,
+        "stars": 64498,
+        "forks": 11276,
         "open_issues": 38,
         "topics": [
           "beginner-friendly",
@@ -582,8 +549,8 @@
         "url": "https://github.com/PokeAPI/pokeapi",
         "description": "The Pokémon API",
         "language": "Python",
-        "stars": 5436,
-        "forks": 1183,
+        "stars": 5437,
+        "forks": 1185,
         "open_issues": 140,
         "topics": [
           "api",
@@ -606,9 +573,9 @@
         "url": "https://github.com/HeyPuter/puter",
         "description": "🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.",
         "language": "TypeScript",
-        "stars": 43997,
-        "forks": 4127,
-        "open_issues": 50,
+        "stars": 44011,
+        "forks": 4130,
+        "open_issues": 42,
         "topics": [
           "cloud",
           "cloud-os",
@@ -632,7 +599,7 @@
           "webtop"
         ],
         "created_at": "2024-03-03T01:44:32Z",
-        "pushed_at": "2026-10-29T11:17:23Z",
+        "pushed_at": "2026-10-30T04:42:30Z",
         "license": "AGPL-3.0",
         "owner": "HeyPuter",
         "name": "puter",
@@ -644,9 +611,9 @@
         "url": "https://github.com/recloudstream/cloudstream",
         "description": "Android app for streaming and downloading media.",
         "language": "Kotlin",
-        "stars": 11089,
-        "forks": 1164,
-        "open_issues": 575,
+        "stars": 11097,
+        "forks": 1166,
+        "open_issues": 568,
         "topics": [
           "android",
           "good-first-issue",
@@ -656,7 +623,7 @@
           "video-streaming"
         ],
         "created_at": "2022-08-04T08:42:38Z",
-        "pushed_at": "2026-10-28T01:07:10Z",
+        "pushed_at": "2026-10-29T14:08:38Z",
         "license": "GPL-3.0",
         "owner": "recloudstream",
         "name": "cloudstream",
@@ -668,9 +635,9 @@
         "url": "https://github.com/openvinotoolkit/openvino",
         "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
         "language": "C++",
-        "stars": 11083,
-        "forks": 3497,
-        "open_issues": 941,
+        "stars": 11088,
+        "forks": 3499,
+        "open_issues": 952,
         "topics": [
           "ai",
           "computer-vision",
@@ -693,7 +660,7 @@
           "yolo"
         ],
         "created_at": "2018-10-15T10:54:40Z",
-        "pushed_at": "2026-10-29T11:27:02Z",
+        "pushed_at": "2026-10-30T04:39:34Z",
         "license": "Apache-2.0",
         "owner": "openvinotoolkit",
         "name": "openvino",
@@ -705,9 +672,9 @@
         "url": "https://github.com/bluewave-labs/Checkmate",
         "description": "Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Don't be shy, join here: https://discord.com/invite/NAb6H3UTjK :)",
         "language": "TypeScript",
-        "stars": 11007,
+        "stars": 11010,
         "forks": 1234,
-        "open_issues": 122,
+        "open_issues": 120,
         "topics": [
           "good-first-contribution",
           "good-first-issue",
@@ -731,7 +698,7 @@
           "uptimerobot"
         ],
         "created_at": "2024-04-30T02:44:38Z",
-        "pushed_at": "2026-10-28T22:11:05Z",
+        "pushed_at": "2026-10-29T22:37:27Z",
         "license": "AGPL-3.0",
         "owner": "bluewave-labs",
         "name": "Checkmate",
@@ -743,7 +710,7 @@
         "url": "https://github.com/PySimpleGUI/PySimpleGUI",
         "description": "Python GUIs for Humans! Create any GUI simple or complicated in a way that's intuitive.  Launched in 2018. NEW for 2026 - the LGPL3 Version 6.  Transforms tkinter, Qt, WxPython, and Remi into a simple, intuitive, and fun experience for both hobbyists and expert users. ",
         "language": "Python",
-        "stars": 13827,
+        "stars": 13825,
         "forks": 1820,
         "open_issues": 708,
         "topics": [
@@ -769,7 +736,7 @@
           "wxpython"
         ],
         "created_at": "2018-07-11T18:28:58Z",
-        "pushed_at": "2026-10-29T01:47:21Z",
+        "pushed_at": "2026-10-29T21:35:04Z",
         "license": "LGPL-3.0",
         "owner": "PySimpleGUI",
         "name": "PySimpleGUI",
@@ -781,9 +748,9 @@
         "url": "https://github.com/lingdojo/kana-dojo",
         "description": "Aesthetic, minimalist platform for learning Japanese inspired by Duolingo and Monkeytype, built with Next.js and sponsored by Vercel. Beginner-friendly with plenty of good first issues - all contributions are welcome!",
         "language": "TypeScript",
-        "stars": 3744,
-        "forks": 3769,
-        "open_issues": 671,
+        "stars": 3747,
+        "forks": 3772,
+        "open_issues": 682,
         "topics": [
           "beginner",
           "beginner-friendly",
@@ -807,7 +774,7 @@
           "up-for-grabs"
         ],
         "created_at": "2025-05-26T10:38:07Z",
-        "pushed_at": "2026-10-29T10:51:00Z",
+        "pushed_at": "2026-10-30T04:46:02Z",
         "license": "AGPL-3.0",
         "owner": "lingdojo",
         "name": "kana-dojo",
@@ -821,8 +788,8 @@
         "url": "https://github.com/vikiboss/60s",
         "description": "⏰ 60s API 免费接口。每天 60 秒看世界、奥运奖牌榜、小红书/B站/微博/抖音/知乎热搜、金价、油价、天气、翻译、壁纸、Epic 游戏、二维码、猫眼票房｜一系列 高质量、开源、可靠、全球 CDN 加速 的开放 API 集合，支持 Docker / Deno / Bun / Cloudflare Workers / Node.js 部署",
         "language": "TypeScript",
-        "stars": 5869,
-        "forks": 1123,
+        "stars": 5870,
+        "forks": 1122,
         "open_issues": 6,
         "topics": [
           "60s",
@@ -854,8 +821,8 @@
         "url": "https://github.com/Cog-Creators/Red-DiscordBot",
         "description": "A multi-function Discord bot",
         "language": "Python",
-        "stars": 5750,
-        "forks": 2533,
+        "stars": 5749,
+        "forks": 2532,
         "open_issues": 312,
         "topics": [
           "bot",
@@ -901,13 +868,46 @@
         "note": "有意思，逛着逛着就学会了"
       },
       {
+        "full_name": "oldratlee/fucking-java-concurrency",
+        "url": "https://github.com/oldratlee/fucking-java-concurrency",
+        "description": "🎏 Simple showcases of java concurrency problems, seeing 🙈 is believing 🐵",
+        "language": "Java",
+        "stars": 1214,
+        "forks": 343,
+        "open_issues": 1,
+        "topics": [
+          "concurrency",
+          "concurrency-gotchas",
+          "concurrency-issue",
+          "concurrency-problem",
+          "concurrent-programming",
+          "deadlock",
+          "demo",
+          "java",
+          "multi-threading",
+          "multithreading",
+          "parallelism",
+          "showcase",
+          "sync",
+          "synchronization",
+          "thread-safety"
+        ],
+        "created_at": "2014-06-15T11:03:52Z",
+        "pushed_at": "2026-10-26T19:42:44Z",
+        "license": "Apache-2.0",
+        "owner": "oldratlee",
+        "name": "fucking-java-concurrency",
+        "score": 80.8,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
         "full_name": "community-shaders/skyrim-community-shaders",
         "url": "https://github.com/community-shaders/skyrim-community-shaders",
         "description": "Community-driven advanced graphics modifications for AE, SE and VR.",
         "language": "C++",
         "stars": 1139,
-        "forks": 218,
-        "open_issues": 102,
+        "forks": 219,
+        "open_issues": 99,
         "topics": [
           "c-plus-plus",
           "directx",
@@ -924,7 +924,7 @@
           "skyrim"
         ],
         "created_at": "2023-02-25T18:57:32Z",
-        "pushed_at": "2026-10-29T10:17:46Z",
+        "pushed_at": "2026-10-30T00:15:21Z",
         "license": "GPL-3.0",
         "owner": "community-shaders",
         "name": "skyrim-community-shaders",
@@ -936,7 +936,7 @@
         "url": "https://github.com/taigrr/spank",
         "description": "Slap your MacBook, it yells back. Uses Apple Silicon accelerometer via IOKit HID.",
         "language": "Go",
-        "stars": 5020,
+        "stars": 5021,
         "forks": 263,
         "open_issues": 1,
         "topics": [
@@ -991,7 +991,7 @@
         "url": "https://github.com/carbon-language/carbon-lang",
         "description": "Carbon Language's main repository: documents, design, implementation, and related tools. (NOTE: Carbon Language is experimental; see README)",
         "language": "C++",
-        "stars": 33932,
+        "stars": 33933,
         "forks": 1632,
         "open_issues": 253,
         "topics": [
@@ -1004,7 +1004,7 @@
           "programming-language"
         ],
         "created_at": "2020-04-27T21:45:16Z",
-        "pushed_at": "2026-10-29T02:29:00Z",
+        "pushed_at": "2026-10-30T02:23:28Z",
         "license": "NOASSERTION",
         "owner": "carbon-language",
         "name": "carbon-lang",
@@ -1012,13 +1012,41 @@
         "note": "有意思，逛着逛着就学会了"
       },
       {
+        "full_name": "opennookorg/screenshot-studio",
+        "url": "https://github.com/opennookorg/screenshot-studio",
+        "description": "A free, browser-based editor for creating stunning screenshots and visuals. No signup, no watermarks.",
+        "language": "TypeScript",
+        "stars": 1092,
+        "forks": 162,
+        "open_issues": 2,
+        "topics": [
+          "blob",
+          "blob-storage",
+          "canvas",
+          "nextjs",
+          "oss",
+          "shadcn-ui",
+          "showcase",
+          "typescript",
+          "vercel",
+          "vercel-oss"
+        ],
+        "created_at": "2025-11-03T09:59:12Z",
+        "pushed_at": "2026-10-24T18:11:57Z",
+        "license": "Apache-2.0",
+        "owner": "opennookorg",
+        "name": "screenshot-studio",
+        "score": 77.4,
+        "note": "有意思，逛着逛着就学会了"
+      },
+      {
         "full_name": "sepandhaghighi/art",
         "url": "https://github.com/sepandhaghighi/art",
         "description": "🎨 ASCII art library for Python",
         "language": "Python",
-        "stars": 2510,
-        "forks": 163,
-        "open_issues": 14,
+        "stars": 2509,
+        "forks": 164,
+        "open_issues": 15,
         "topics": [
           "art",
           "ascii",
@@ -1042,64 +1070,11 @@
           "twitter"
         ],
         "created_at": "2017-10-04T10:45:44Z",
-        "pushed_at": "2026-10-29T10:19:38Z",
+        "pushed_at": "2026-10-30T01:52:34Z",
         "license": "MIT",
         "owner": "sepandhaghighi",
         "name": "art",
         "score": 77.0,
-        "note": "有意思，逛着逛着就学会了"
-      },
-      {
-        "full_name": "mypaint/mypaint",
-        "url": "https://github.com/mypaint/mypaint",
-        "description": "MyPaint is a simple drawing and painting program that works well with Wacom-style graphics tablets.",
-        "language": "Python",
-        "stars": 2995,
-        "forks": 448,
-        "open_issues": 230,
-        "topics": [
-          "art",
-          "brushes",
-          "creative",
-          "distraction-free",
-          "drawing",
-          "graphics-tablet",
-          "infinite-scroll",
-          "libmypaint",
-          "mypaint",
-          "painting",
-          "python"
-        ],
-        "created_at": "2014-06-11T14:29:35Z",
-        "pushed_at": "2026-10-20T23:50:30Z",
-        "license": "GPL-2.0",
-        "owner": "mypaint",
-        "name": "mypaint",
-        "score": 76.8,
-        "note": "有意思，逛着逛着就学会了"
-      },
-      {
-        "full_name": "once-ui-system/magic-portfolio",
-        "url": "https://github.com/once-ui-system/magic-portfolio",
-        "description": "⚡ Build your timeless portfolio with Once UI's Magic Portfolio",
-        "language": "TypeScript",
-        "stars": 1418,
-        "forks": 937,
-        "open_issues": 1,
-        "topics": [
-          "cv",
-          "nextjs",
-          "onceui",
-          "portfolio",
-          "resume",
-          "showcase"
-        ],
-        "created_at": "2024-08-08T20:39:25Z",
-        "pushed_at": "2026-10-28T16:54:25Z",
-        "license": "NOASSERTION",
-        "owner": "once-ui-system",
-        "name": "magic-portfolio",
-        "score": 76.5,
         "note": "有意思，逛着逛着就学会了"
       }
     ],
@@ -1109,8 +1084,8 @@
         "url": "https://github.com/shareAI-lab/learn-claude-code",
         "description": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
         "language": "Python",
-        "stars": 79491,
-        "forks": 12720,
+        "stars": 79538,
+        "forks": 12730,
         "open_issues": 51,
         "topics": [
           "agent",
@@ -1137,9 +1112,9 @@
         "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
         "description": "Learn AI Engineering! Learn it. Build it. Ship it for others.",
         "language": "Python",
-        "stars": 75470,
-        "forks": 13273,
-        "open_issues": 84,
+        "stars": 75619,
+        "forks": 13314,
+        "open_issues": 86,
         "topics": [
           "agents",
           "ai",
@@ -1163,7 +1138,7 @@
           "typescript"
         ],
         "created_at": "2026-03-18T18:38:02Z",
-        "pushed_at": "2026-10-29T07:12:32Z",
+        "pushed_at": "2026-10-29T15:07:57Z",
         "license": "MIT",
         "owner": "rohitg00",
         "name": "ai-engineering-from-scratch",
@@ -1175,7 +1150,7 @@
         "url": "https://github.com/MLEveryday/100-Days-Of-ML-Code",
         "description": "100-Days-Of-ML-Code中文版",
         "language": "Python",
-        "stars": 22233,
+        "stars": 22234,
         "forks": 5458,
         "open_issues": 18,
         "topics": [
@@ -1205,9 +1180,9 @@
         "url": "https://github.com/recommenders-team/recommenders",
         "description": "Best Practices on Recommendation Systems",
         "language": "Python",
-        "stars": 21971,
-        "forks": 3329,
-        "open_issues": 181,
+        "stars": 21972,
+        "forks": 3330,
+        "open_issues": 179,
         "topics": [
           "ai",
           "artificial-intelligence",
@@ -1228,10 +1203,65 @@
           "tutorial"
         ],
         "created_at": "2018-09-19T10:06:07Z",
-        "pushed_at": "2026-10-26T14:26:54Z",
+        "pushed_at": "2026-10-30T03:15:48Z",
         "license": "MIT",
         "owner": "recommenders-team",
         "name": "recommenders",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "processing/p5.js",
+        "url": "https://github.com/processing/p5.js",
+        "description": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org",
+        "language": "JavaScript",
+        "stars": 24265,
+        "forks": 3884,
+        "open_issues": 532,
+        "topics": [
+          "art",
+          "creative-coding",
+          "design",
+          "education",
+          "graphics",
+          "html",
+          "javascript",
+          "learning",
+          "p5js",
+          "processing",
+          "sound"
+        ],
+        "created_at": "2013-02-26T03:14:47Z",
+        "pushed_at": "2026-10-29T19:59:29Z",
+        "license": "LGPL-2.1",
+        "owner": "processing",
+        "name": "p5.js",
+        "score": 90,
+        "note": "系统学习路径"
+      },
+      {
+        "full_name": "ankidroid/Anki-Android",
+        "url": "https://github.com/ankidroid/Anki-Android",
+        "description": "AnkiDroid: Anki flashcards on Android. Your secret trick to achieve superhuman information retention.",
+        "language": "Kotlin",
+        "stars": 12120,
+        "forks": 3000,
+        "open_issues": 293,
+        "topics": [
+          "android",
+          "anki",
+          "ankidroid",
+          "education",
+          "flashcards",
+          "kotlin",
+          "learning",
+          "srs"
+        ],
+        "created_at": "2013-01-20T13:55:53Z",
+        "pushed_at": "2026-10-30T04:33:49Z",
+        "license": "GPL-3.0",
+        "owner": "ankidroid",
+        "name": "Anki-Android",
         "score": 90,
         "note": "系统学习路径"
       },
@@ -1240,8 +1270,8 @@
         "url": "https://github.com/EbookFoundation/free-programming-books",
         "description": ":books: Freely available programming books",
         "language": "Python",
-        "stars": 400456,
-        "forks": 67028,
+        "stars": 400501,
+        "forks": 67031,
         "open_issues": 89,
         "topics": [
           "books",
@@ -1259,42 +1289,13 @@
         "note": "系统学习路径"
       },
       {
-        "full_name": "processing/p5.js",
-        "url": "https://github.com/processing/p5.js",
-        "description": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org",
-        "language": "JavaScript",
-        "stars": 24265,
-        "forks": 3885,
-        "open_issues": 536,
-        "topics": [
-          "art",
-          "creative-coding",
-          "design",
-          "education",
-          "graphics",
-          "html",
-          "javascript",
-          "learning",
-          "p5js",
-          "processing",
-          "sound"
-        ],
-        "created_at": "2013-02-26T03:14:47Z",
-        "pushed_at": "2026-10-28T22:58:40Z",
-        "license": "LGPL-2.1",
-        "owner": "processing",
-        "name": "p5.js",
-        "score": 90,
-        "note": "系统学习路径"
-      },
-      {
         "full_name": "opf/openproject",
         "url": "https://github.com/opf/openproject",
         "description": "OpenProject is the leading open source project management software for product, project and portfolio management. A powerful Jira alternative with agile planning, issue tracking, roadmaps, Gantt charts, time tracking, collaboration features, and more. Available on premises or in the cloud. ⭐ Star us on GitHub",
         "language": "Ruby",
-        "stars": 16793,
-        "forks": 3644,
-        "open_issues": 315,
+        "stars": 16824,
+        "forks": 3651,
+        "open_issues": 309,
         "topics": [
           "agile-development",
           "angular",
@@ -1318,7 +1319,7 @@
           "workflows"
         ],
         "created_at": "2012-11-28T09:59:11Z",
-        "pushed_at": "2026-10-29T11:35:21Z",
+        "pushed_at": "2026-10-30T03:37:33Z",
         "license": "GPL-3.0",
         "owner": "opf",
         "name": "openproject",
@@ -1326,13 +1327,36 @@
         "note": "系统学习路径"
       },
       {
+        "full_name": "toly1994328/FlutterUnit",
+        "url": "https://github.com/toly1994328/FlutterUnit",
+        "description": "All Platform Flutter Experience App ",
+        "language": "Dart",
+        "stars": 8853,
+        "forks": 1407,
+        "open_issues": 72,
+        "topics": [
+          "dart",
+          "flutter",
+          "learning",
+          "painting",
+          "widget-library"
+        ],
+        "created_at": "2020-03-19T23:47:07Z",
+        "pushed_at": "2026-10-26T04:46:30Z",
+        "license": "GPL-3.0",
+        "owner": "toly1994328",
+        "name": "FlutterUnit",
+        "score": 89.5,
+        "note": "系统学习路径"
+      },
+      {
         "full_name": "mouredev/roadmap-retos-programacion",
         "url": "https://github.com/mouredev/roadmap-retos-programacion",
         "description": "Ruta de estudio basada en ejercicios de código de la comunidad MoureDev para aprender y practicar lógica usando cualquier lenguaje de programación.",
         "language": "Python",
-        "stars": 8924,
-        "forks": 6413,
-        "open_issues": 129,
+        "stars": 8926,
+        "forks": 6415,
+        "open_issues": 131,
         "topics": [
           "c-plus-plus",
           "c-sharp",
@@ -1362,85 +1386,47 @@
         "name": "roadmap-retos-programacion",
         "score": 89.5,
         "note": "系统学习路径"
-      },
-      {
-        "full_name": "practical-tutorials/project-based-learning",
-        "url": "https://github.com/practical-tutorials/project-based-learning",
-        "description": "Curated list of project-based tutorials",
-        "language": "Python",
-        "stars": 288359,
-        "forks": 36747,
-        "open_issues": 236,
-        "topics": [
-          "beginner-project",
-          "cpp",
-          "golang",
-          "javascript",
-          "project",
-          "python",
-          "tutorial",
-          "webdevelopment"
-        ],
-        "created_at": "2017-04-12T05:07:46Z",
-        "pushed_at": "2026-10-26T07:13:08Z",
-        "license": "MIT",
-        "owner": "practical-tutorials",
-        "name": "project-based-learning",
-        "score": 87,
-        "note": "系统学习路径"
-      },
-      {
-        "full_name": "luongnv89/claude-howto",
-        "url": "https://github.com/luongnv89/claude-howto",
-        "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
-        "language": "Python",
-        "stars": 46004,
-        "forks": 5636,
-        "open_issues": 49,
-        "topics": [
-          "claude-code",
-          "guide",
-          "tutorial"
-        ],
-        "created_at": "2025-11-07T22:59:34Z",
-        "pushed_at": "2026-10-29T00:16:50Z",
-        "license": "MIT",
-        "owner": "luongnv89",
-        "name": "claude-howto",
-        "score": 87,
-        "note": "系统学习路径"
       }
     ],
     "evergreen": [
       {
-        "full_name": "torvalds/linux",
-        "url": "https://github.com/torvalds/linux",
-        "description": "Linux kernel source tree",
-        "language": "C",
-        "stars": 253830,
-        "forks": 67469,
-        "open_issues": 3,
-        "topics": [],
-        "created_at": "2011-09-04T22:48:12Z",
-        "pushed_at": "2026-10-28T18:09:17Z",
-        "license": "NOASSERTION",
-        "owner": "torvalds",
-        "name": "linux",
-        "commits_90d": 29185,
-        "momentum_source": "commits",
-        "score": 85,
-        "note": "近 90 天 29185 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "29185 commits/90d"
+        "full_name": "openclaw/openclaw",
+        "url": "https://github.com/openclaw/openclaw",
+        "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+        "language": "TypeScript",
+        "stars": 393396,
+        "forks": 82694,
+        "open_issues": 7870,
+        "topics": [
+          "ai",
+          "assistant",
+          "crustacean",
+          "molty",
+          "openclaw",
+          "own-your-data",
+          "personal"
+        ],
+        "created_at": "2025-11-24T10:16:47Z",
+        "pushed_at": "2026-10-30T04:48:19Z",
+        "license": "MIT",
+        "owner": "openclaw",
+        "name": "openclaw",
+        "score": 87,
+        "commits_90d": 47504,
+        "contributors": 3722,
+        "momentum": 108.0,
+        "note": "近 90 天 47504 次提交 · 3722 位贡献者 —— 势头分 108.0",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 108.0"
       },
       {
         "full_name": "NousResearch/hermes-agent",
         "url": "https://github.com/NousResearch/hermes-agent",
         "description": "The agent that grows with you",
         "language": "Python",
-        "stars": 258347,
-        "forks": 56707,
-        "open_issues": 51737,
+        "stars": 258573,
+        "forks": 56789,
+        "open_issues": 51961,
         "topics": [
           "ai",
           "ai-agent",
@@ -1457,54 +1443,26 @@
           "openai"
         ],
         "created_at": "2025-07-22T22:22:28Z",
-        "pushed_at": "2026-10-29T11:34:15Z",
+        "pushed_at": "2026-10-30T02:42:42Z",
         "license": "MIT",
         "owner": "NousResearch",
         "name": "hermes-agent",
-        "commits_90d": 41010,
-        "momentum_source": "commits",
         "score": 87,
-        "note": "近 90 天 41010 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "41010 commits/90d"
-      },
-      {
-        "full_name": "openclaw/openclaw",
-        "url": "https://github.com/openclaw/openclaw",
-        "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
-        "language": "TypeScript",
-        "stars": 393333,
-        "forks": 82689,
-        "open_issues": 7823,
-        "topics": [
-          "ai",
-          "assistant",
-          "crustacean",
-          "molty",
-          "openclaw",
-          "own-your-data",
-          "personal"
-        ],
-        "created_at": "2025-11-24T10:16:47Z",
-        "pushed_at": "2026-10-29T11:32:05Z",
-        "license": "MIT",
-        "owner": "openclaw",
-        "name": "openclaw",
-        "commits_90d": 47645,
-        "momentum_source": "commits",
-        "score": 87,
-        "note": "近 90 天 47645 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "47645 commits/90d"
+        "commits_90d": 40918,
+        "contributors": 4865,
+        "momentum": 108.0,
+        "note": "近 90 天 40918 次提交 · 4865 位贡献者 —— 势头分 108.0",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 108.0"
       },
       {
         "full_name": "morluto/rea",
         "url": "https://github.com/morluto/rea",
         "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
         "language": "TypeScript",
-        "stars": 405269,
-        "forks": 101530,
-        "open_issues": 1286,
+        "stars": 408663,
+        "forks": 102347,
+        "open_issues": 1296,
         "topics": [
           "agent-skills",
           "ai-agents",
@@ -1528,25 +1486,26 @@
           "touhou"
         ],
         "created_at": "2026-04-14T00:51:32Z",
-        "pushed_at": "2026-10-29T11:23:03Z",
+        "pushed_at": "2026-10-29T22:49:39Z",
         "license": "MIT",
         "owner": "morluto",
         "name": "rea",
-        "commits_90d": 5503,
-        "momentum_source": "commits",
         "score": 87,
-        "note": "近 90 天 5503 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "5503 commits/90d"
+        "commits_90d": 5531,
+        "contributors": 351,
+        "momentum": 106.7,
+        "note": "近 90 天 5531 次提交 · 351 位贡献者 —— 势头分 106.7",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 106.7"
       },
       {
         "full_name": "affaan-m/ECC",
         "url": "https://github.com/affaan-m/ECC",
         "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
         "language": "JavaScript",
-        "stars": 292186,
-        "forks": 43246,
-        "open_issues": 252,
+        "stars": 292815,
+        "forks": 43333,
+        "open_issues": 173,
         "topics": [
           "ai-agents",
           "anthropic",
@@ -1558,25 +1517,26 @@
           "productivity"
         ],
         "created_at": "2026-01-18T00:51:51Z",
-        "pushed_at": "2026-10-26T04:56:56Z",
+        "pushed_at": "2026-10-30T03:06:42Z",
         "license": "MIT",
         "owner": "affaan-m",
         "name": "ECC",
-        "commits_90d": 1704,
-        "momentum_source": "commits",
         "score": 87,
-        "note": "近 90 天 1704 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "1704 commits/90d"
+        "commits_90d": 1965,
+        "contributors": 480,
+        "momentum": 106.1,
+        "note": "近 90 天 1965 次提交 · 480 位贡献者 —— 势头分 106.1",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 106.1"
       },
       {
         "full_name": "public-apis/public-apis",
         "url": "https://github.com/public-apis/public-apis",
         "description": "A collective list of free APIs",
         "language": "Python",
-        "stars": 493128,
-        "forks": 54987,
-        "open_issues": 2493,
+        "stars": 493327,
+        "forks": 55017,
+        "open_issues": 2485,
         "topics": [
           "api",
           "apis",
@@ -1593,25 +1553,26 @@
           "software"
         ],
         "created_at": "2016-03-20T23:49:42Z",
-        "pushed_at": "2026-10-27T16:15:10Z",
+        "pushed_at": "2026-10-29T14:36:24Z",
         "license": "MIT",
         "owner": "public-apis",
         "name": "public-apis",
-        "commits_90d": 1371,
-        "momentum_source": "commits",
         "score": 84,
-        "note": "近 90 天 1371 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "1371 commits/90d"
+        "commits_90d": 1421,
+        "contributors": 2139,
+        "momentum": 104.8,
+        "note": "近 90 天 1421 次提交 · 2139 位贡献者 —— 势头分 104.8",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 104.8"
       },
       {
         "full_name": "freeCodeCamp/freeCodeCamp",
         "url": "https://github.com/freeCodeCamp/freeCodeCamp",
         "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
         "language": "TypeScript",
-        "stars": 458156,
-        "forks": 48730,
-        "open_issues": 158,
+        "stars": 458203,
+        "forks": 48726,
+        "open_issues": 164,
         "topics": [
           "careers",
           "certification",
@@ -1630,25 +1591,26 @@
           "teachers"
         ],
         "created_at": "2014-12-24T17:49:19Z",
-        "pushed_at": "2026-10-29T09:53:18Z",
+        "pushed_at": "2026-10-30T00:00:43Z",
         "license": "BSD-3-Clause",
         "owner": "freeCodeCamp",
         "name": "freeCodeCamp",
-        "commits_90d": 1081,
-        "momentum_source": "commits",
         "score": 87,
-        "note": "近 90 天 1081 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "1081 commits/90d"
+        "commits_90d": 1081,
+        "contributors": 6997,
+        "momentum": 104.3,
+        "note": "近 90 天 1081 次提交 · 6997 位贡献者 —— 势头分 104.3",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 104.3"
       },
       {
         "full_name": "vinta/awesome-python",
         "url": "https://github.com/vinta/awesome-python",
         "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
         "language": "Python",
-        "stars": 331054,
-        "forks": 29028,
-        "open_issues": 21,
+        "stars": 331239,
+        "forks": 29032,
+        "open_issues": 22,
         "topics": [
           "awesome",
           "awesome-list",
@@ -1658,25 +1620,26 @@
           "python-tools"
         ],
         "created_at": "2014-06-27T21:00:06Z",
-        "pushed_at": "2026-10-28T01:26:10Z",
+        "pushed_at": "2026-10-29T12:38:48Z",
         "license": "NOASSERTION",
         "owner": "vinta",
         "name": "awesome-python",
-        "commits_90d": 736,
-        "momentum_source": "commits",
         "score": 82,
-        "note": "近 90 天 736 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "736 commits/90d"
+        "commits_90d": 737,
+        "contributors": 588,
+        "momentum": 102.1,
+        "note": "近 90 天 737 次提交 · 588 位贡献者 —— 势头分 102.1",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 102.1"
       },
       {
         "full_name": "nilbuild/developer-roadmap",
         "url": "https://github.com/nilbuild/developer-roadmap",
         "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
         "language": "TypeScript",
-        "stars": 370692,
-        "forks": 45158,
-        "open_issues": 3,
+        "stars": 370760,
+        "forks": 45160,
+        "open_issues": 5,
         "topics": [
           "angular-roadmap",
           "backend-roadmap",
@@ -1702,33 +1665,73 @@
         "license": "NOASSERTION",
         "owner": "nilbuild",
         "name": "developer-roadmap",
-        "commits_90d": 229,
-        "momentum_source": "commits",
         "score": 82,
-        "note": "近 90 天 229 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "229 commits/90d"
+        "commits_90d": 228,
+        "contributors": 1624,
+        "momentum": 97.7,
+        "note": "近 90 天 228 次提交 · 1624 位贡献者 —— 势头分 97.7",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 97.7"
       },
       {
-        "full_name": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "description": "Skills for Real Engineers. Straight from my .agents directory.",
-        "language": "Shell",
-        "stars": 306163,
-        "forks": 25741,
-        "open_issues": 203,
-        "topics": [],
-        "created_at": "2026-02-03T11:15:53Z",
-        "pushed_at": "2026-10-29T10:43:06Z",
+        "full_name": "react/react",
+        "url": "https://github.com/react/react",
+        "description": "The library for web and native user interfaces.",
+        "language": "JavaScript",
+        "stars": 251750,
+        "forks": 51597,
+        "open_issues": 1519,
+        "topics": [
+          "declarative",
+          "frontend",
+          "javascript",
+          "library",
+          "react",
+          "ui"
+        ],
+        "created_at": "2013-05-24T16:15:54Z",
+        "pushed_at": "2026-10-29T22:16:54Z",
         "license": "MIT",
-        "owner": "mattpocock",
-        "name": "skills",
-        "commits_90d": 220,
-        "momentum_source": "commits",
+        "owner": "react",
+        "name": "react",
         "score": 87,
-        "note": "近 90 天 220 次提交 —— 仍在高强度维护的老将",
-        "badge": "🔥 活跃榜",
-        "growth_note": "220 commits/90d"
+        "commits_90d": 131,
+        "contributors": 2027,
+        "momentum": 96.3,
+        "note": "近 90 天 131 次提交 · 2027 位贡献者 —— 势头分 96.3",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 96.3"
+      },
+      {
+        "full_name": "awesome-selfhosted/awesome-selfhosted",
+        "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+        "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+        "language": null,
+        "stars": 331880,
+        "forks": 15639,
+        "open_issues": 0,
+        "topics": [
+          "awesome",
+          "awesome-list",
+          "cloud",
+          "free-software",
+          "hosting",
+          "privacy",
+          "self-hosted",
+          "selfhosted"
+        ],
+        "created_at": "2015-06-01T02:33:17Z",
+        "pushed_at": "2026-10-29T10:27:46Z",
+        "license": "NOASSERTION",
+        "owner": "awesome-selfhosted",
+        "name": "awesome-selfhosted",
+        "score": 78,
+        "commits_90d": 84,
+        "contributors": 1362,
+        "momentum": 88.1,
+        "note": "近 90 天 84 次提交 · 1362 位贡献者 —— 势头分 88.1",
+        "badge": "📈 势头榜",
+        "growth_note": "势头 88.1"
       }
     ],
     "curated": [
@@ -1737,9 +1740,9 @@
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
         "language": "Shell",
-        "stars": 307888,
-        "forks": 27383,
-        "open_issues": 369,
+        "stars": 308741,
+        "forks": 27464,
+        "open_issues": 373,
         "topics": [
           "ai",
           "brainstorming",
@@ -1751,10 +1754,26 @@
           "superpowers"
         ],
         "created_at": "2025-10-09T19:45:18Z",
-        "pushed_at": "2026-10-23T03:48:57Z",
+        "pushed_at": "2026-10-29T23:35:34Z",
         "license": "MIT",
         "owner": "obra",
         "name": "superpowers",
+        "score": 87
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "language": "Shell",
+        "stars": 306754,
+        "forks": 25808,
+        "open_issues": 207,
+        "topics": [],
+        "created_at": "2026-02-03T11:15:53Z",
+        "pushed_at": "2026-10-29T10:43:06Z",
+        "license": "MIT",
+        "owner": "mattpocock",
+        "name": "skills",
         "score": 87
       },
       {
@@ -1762,8 +1781,8 @@
         "url": "https://github.com/ssloy/tinyrenderer",
         "description": "A brief computer graphics / rendering course",
         "language": "C++",
-        "stars": 24477,
-        "forks": 2313,
+        "stars": 24478,
+        "forks": 2312,
         "open_issues": 4,
         "topics": [
           "3d",
@@ -1799,8 +1818,8 @@
         "url": "https://github.com/codecrafters-io/build-your-own-x",
         "description": "Master programming by recreating your favorite technologies from scratch.",
         "language": "Markdown",
-        "stars": 557157,
-        "forks": 52143,
+        "stars": 557399,
+        "forks": 52159,
         "open_issues": 684,
         "topics": [
           "awesome-list",
@@ -1822,8 +1841,8 @@
         "url": "https://github.com/donnemartin/system-design-primer",
         "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
         "language": "Python",
-        "stars": 376017,
-        "forks": 59043,
+        "stars": 376153,
+        "forks": 59067,
         "open_issues": 633,
         "topics": [
           "design",
@@ -1855,7 +1874,7 @@
       "url": "https://github.com/openclaw/openclaw",
       "category": "evergreen",
       "language": "TypeScript",
-      "stars": 393333,
+      "stars": 393396,
       "growth_30d": null,
       "summary": "把 AI 助手部署在你自己的机器上，然后让它住进你已经在用的聊天软件里。Discord、iMessage、Slack、WhatsApp、Telegram……20 多个平台，一个 Gateway 统一调度。",
       "topics": [
@@ -1869,9 +1888,9 @@
       ],
       "score": 87,
       "license": "MIT",
-      "forks": 82689,
-      "open_issues": 7823,
-      "pushed_at": "2026-10-29",
+      "forks": 82694,
+      "open_issues": 7870,
+      "pushed_at": "2026-10-30",
       "sections": [
         {
           "title": "它到底在做什么",
@@ -1905,7 +1924,7 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 393.3k",
+          "★ 393.4k",
           "Star"
         ],
         [
@@ -1931,7 +1950,7 @@
       "url": "https://github.com/obra/superpowers",
       "category": "curated",
       "language": "Shell",
-      "stars": 307888,
+      "stars": 308741,
       "growth_30d": null,
       "summary": "一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。",
       "topics": [
@@ -1946,9 +1965,9 @@
       ],
       "score": 87,
       "license": "MIT",
-      "forks": 27383,
-      "open_issues": 369,
-      "pushed_at": "2026-10-23",
+      "forks": 27464,
+      "open_issues": 373,
+      "pushed_at": "2026-10-29",
       "sections": [
         {
           "title": "核心思路：先谈清楚，再写代码",
@@ -1982,11 +2001,11 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 307.9k",
+          "★ 308.7k",
           "Star"
         ],
         [
-          "⑂ 27.4k",
+          "⑂ 27.5k",
           "Fork"
         ],
         [
@@ -2006,16 +2025,16 @@
     {
       "name": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
-      "category": "evergreen",
+      "category": "curated",
       "language": "Shell",
-      "stars": 306163,
+      "stars": 306754,
       "growth_30d": null,
       "summary": "作者每天在用的 Agent 技能包，定位很明确：给「做真实工程」用，不是给 vibe coding 用。",
       "topics": [],
       "score": 87,
       "license": "MIT",
-      "forks": 25741,
-      "open_issues": 203,
+      "forks": 25808,
+      "open_issues": 207,
       "pushed_at": "2026-10-29",
       "sections": [
         {
@@ -2049,11 +2068,11 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 306.2k",
+          "★ 306.8k",
           "Star"
         ],
         [
-          "⑂ 25.7k",
+          "⑂ 25.8k",
           "Fork"
         ],
         [
@@ -2075,7 +2094,7 @@
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "category": "learning",
       "language": "Python",
-      "stars": 79491,
+      "stars": 79538,
       "growth_30d": null,
       "summary": "从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。",
       "topics": [
@@ -2090,7 +2109,7 @@
       ],
       "score": 90,
       "license": "MIT",
-      "forks": 12720,
+      "forks": 12730,
       "open_issues": 51,
       "pushed_at": "2026-10-27",
       "sections": [
@@ -2144,7 +2163,7 @@
       "url": "https://github.com/ssloy/tinyrenderer",
       "category": "curated",
       "language": "C++",
-      "stars": 24477,
+      "stars": 24478,
       "growth_30d": null,
       "summary": "500 行裸 C++ 实现软件渲染器，用来教人搞明白 OpenGL / Vulkan / Metal / DirectX 底下到底发生了什么。",
       "topics": [
@@ -2159,7 +2178,7 @@
       ],
       "score": 60,
       "license": "NOASSERTION",
-      "forks": 2313,
+      "forks": 2312,
       "open_issues": 4,
       "pushed_at": "2026-07-29",
       "sections": [
@@ -2213,7 +2232,7 @@
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "category": "curated",
       "language": "Markdown",
-      "stars": 557157,
+      "stars": 557399,
       "growth_30d": null,
       "summary": "从零复刻你喜欢的技术：数据库、操作系统、编译器、容器、Docker、Git……全是教程。",
       "topics": [
@@ -2226,7 +2245,7 @@
       ],
       "score": 55,
       "license": null,
-      "forks": 52143,
+      "forks": 52159,
       "open_issues": 684,
       "pushed_at": "2026-07-14",
       "sections": [
@@ -2254,11 +2273,11 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 557.2k",
+          "★ 557.4k",
           "Star"
         ],
         [
-          "⑂ 52.1k",
+          "⑂ 52.2k",
           "Fork"
         ],
         [
@@ -2276,7 +2295,7 @@
       "url": "https://github.com/donnemartin/system-design-primer",
       "category": "curated",
       "language": "Python",
-      "stars": 376017,
+      "stars": 376153,
       "growth_30d": null,
       "summary": "大规模系统设计的学习指南，还附带了 Anki 记忆卡，直接对着面试准备。",
       "topics": [
@@ -2291,7 +2310,7 @@
       ],
       "score": 68,
       "license": "NOASSERTION",
-      "forks": 59043,
+      "forks": 59067,
       "open_issues": 633,
       "pushed_at": "2026-09-15",
       "sections": [
@@ -2312,11 +2331,11 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 376k",
+          "★ 376.2k",
           "Star"
         ],
         [
-          "⑂ 59k",
+          "⑂ 59.1k",
           "Fork"
         ],
         [
@@ -2338,7 +2357,7 @@
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "category": "evergreen",
       "language": "TypeScript",
-      "stars": 458156,
+      "stars": 458203,
       "growth_30d": null,
       "summary": "全球最大的免费编程学习平台，458k star，课程本身也是开源的。",
       "topics": [
@@ -2353,9 +2372,9 @@
       ],
       "score": 87,
       "license": "BSD-3-Clause",
-      "forks": 48730,
-      "open_issues": 158,
-      "pushed_at": "2026-10-29",
+      "forks": 48726,
+      "open_issues": 164,
+      "pushed_at": "2026-10-30",
       "sections": [
         {
           "title": "不一样的定位",
@@ -2406,7 +2425,7 @@
       "url": "https://github.com/firstcontributions/first-contributions",
       "category": "beginner",
       "language": null,
-      "stars": 56610,
+      "stars": 56618,
       "growth_30d": null,
       "summary": "专门用来教新手完成第一次开源贡献的仓库，56k star。",
       "topics": [
@@ -2421,9 +2440,9 @@
       ],
       "score": 90,
       "license": "MIT",
-      "forks": 111959,
-      "open_issues": 587,
-      "pushed_at": "2026-10-29",
+      "forks": 111987,
+      "open_issues": 590,
+      "pushed_at": "2026-10-30",
       "sections": [
         {
           "title": "设计得极巧",
@@ -2470,43 +2489,43 @@
       "name": "seedds/nxnative",
       "url": "https://github.com/seedds/nxnative",
       "category": "hot_week",
-      "language": "Objective-C",
-      "stars": 9335,
+      "language": "Python",
+      "stars": 9830,
       "growth_30d": null,
       "summary": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
       "topics": [],
-      "score": 89.7,
+      "score": 89.9,
       "license": "MIT",
-      "forks": 1491,
-      "open_issues": 226,
-      "pushed_at": "2026-10-29",
+      "forks": 1582,
+      "open_issues": 265,
+      "pushed_at": "2026-10-30",
       "sections": [
         {
           "title": "项目速览",
           "paragraphs": [
             "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
-            "最近一次代码提交在 2026-10-29，当前有 226 个未关闭 issue，许可证为 MIT。"
+            "最近一次代码提交在 2026-10-30，当前有 265 个未关闭 issue，许可证为 MIT。"
           ],
           "bullets": []
         }
       ],
-      "verdict": "这是一个 star 数 9.3k 的项目，fork 1.5k。许可证清晰，适合上手试用。",
+      "verdict": "这是一个 star 数 9.8k 的项目，fork 1.6k。许可证清晰，适合上手试用。",
       "has_analysis": false,
       "metrics": [
         [
-          "★ 9.3k",
+          "★ 9.8k",
           "Star"
         ],
         [
-          "⑂ 1.5k",
+          "⑂ 1.6k",
           "Fork"
         ],
         [
-          "⌀ 89.7",
+          "⌀ 89.9",
           "推荐分"
         ],
         [
-          "Objective-C",
+          "Python",
           "主要语言"
         ],
         [
@@ -2516,11 +2535,66 @@
       ]
     },
     {
+      "name": "storytold/effectcraft",
+      "url": "https://github.com/storytold/effectcraft",
+      "category": "hot_week",
+      "language": "Rust",
+      "stars": 8173,
+      "growth_30d": null,
+      "summary": "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+      "topics": [
+        "art",
+        "compositing",
+        "compositing-software",
+        "motion-graphics",
+        "rust"
+      ],
+      "score": 89.1,
+      "license": "Apache-2.0",
+      "forks": 4339,
+      "open_issues": 792,
+      "pushed_at": "2026-10-30",
+      "sections": [
+        {
+          "title": "项目速览",
+          "paragraphs": [
+            "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+            "最近一次代码提交在 2026-10-30，当前有 792 个未关闭 issue，许可证为 Apache-2.0。"
+          ],
+          "bullets": []
+        }
+      ],
+      "verdict": "这是一个 star 数 8.2k 的项目，fork 4.3k。许可证清晰，适合上手试用。",
+      "has_analysis": false,
+      "metrics": [
+        [
+          "★ 8.2k",
+          "Star"
+        ],
+        [
+          "⑂ 4.3k",
+          "Fork"
+        ],
+        [
+          "⌀ 89.1",
+          "推荐分"
+        ],
+        [
+          "Rust",
+          "主要语言"
+        ],
+        [
+          "Apache-2.0",
+          "许可证"
+        ]
+      ]
+    },
+    {
       "name": "simbasjungles/free-my-tv",
       "url": "https://github.com/simbasjungles/free-my-tv",
       "category": "hot_week",
       "language": "Java",
-      "stars": 5306,
+      "stars": 5406,
       "growth_30d": null,
       "summary": "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
       "topics": [
@@ -2533,34 +2607,34 @@
         "open-source",
         "samsung-tizen"
       ],
-      "score": 87.2,
+      "score": 87.3,
       "license": "MIT",
-      "forks": 887,
-      "open_issues": 76,
-      "pushed_at": "2026-10-29",
+      "forks": 901,
+      "open_issues": 63,
+      "pushed_at": "2026-10-30",
       "sections": [
         {
           "title": "项目速览",
           "paragraphs": [
             "A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo.",
-            "最近一次代码提交在 2026-10-29，当前有 76 个未关闭 issue，许可证为 MIT。"
+            "最近一次代码提交在 2026-10-30，当前有 63 个未关闭 issue，许可证为 MIT。"
           ],
           "bullets": []
         }
       ],
-      "verdict": "这是一个 star 数 5.3k 的项目，fork 887。许可证清晰，适合上手试用。",
+      "verdict": "这是一个 star 数 5.4k 的项目，fork 901。许可证清晰，适合上手试用。",
       "has_analysis": false,
       "metrics": [
         [
-          "★ 5.3k",
+          "★ 5.4k",
           "Star"
         ],
         [
-          "⑂ 887",
+          "⑂ 901",
           "Fork"
         ],
         [
-          "⌀ 87.2",
+          "⌀ 87.3",
           "推荐分"
         ],
         [
@@ -2572,63 +2646,6 @@
           "许可证"
         ]
       ]
-    },
-    {
-      "name": "storytold/photocraft",
-      "url": "https://github.com/storytold/photocraft",
-      "category": "hot_week",
-      "language": "Rust",
-      "stars": 74619,
-      "growth_30d": null,
-      "summary": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
-      "topics": [
-        "art",
-        "image-editing",
-        "image-editing-software",
-        "image-editor",
-        "images",
-        "photo-editing",
-        "rust"
-      ],
-      "score": 87,
-      "license": "Apache-2.0",
-      "forks": 13184,
-      "open_issues": 3479,
-      "pushed_at": "2026-10-29",
-      "sections": [
-        {
-          "title": "项目速览",
-          "paragraphs": [
-            "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
-            "最近一次代码提交在 2026-10-29，当前有 3.5k 个未关闭 issue，许可证为 Apache-2.0。"
-          ],
-          "bullets": []
-        }
-      ],
-      "verdict": "这是一个 star 数 74.6k 的项目，fork 13.2k。许可证清晰，适合上手试用。",
-      "has_analysis": false,
-      "metrics": [
-        [
-          "★ 74.6k",
-          "Star"
-        ],
-        [
-          "⑂ 13.2k",
-          "Fork"
-        ],
-        [
-          "⌀ 87",
-          "推荐分"
-        ],
-        [
-          "Rust",
-          "主要语言"
-        ],
-        [
-          "Apache-2.0",
-          "许可证"
-        ]
-      ]
     }
   ],
   "hero_picks": [
@@ -2637,7 +2654,7 @@
       "url": "https://github.com/openclaw/openclaw",
       "description": "把 AI 助手部署在你自己的机器上，然后让它住进你已经在用的聊天软件里。Discord、iMessage、Slack、WhatsApp、Telegram……20 多个平台，一个 Gateway 统一调度。",
       "language": "TypeScript",
-      "stars": 393333,
+      "stars": 393396,
       "growth_30d": null,
       "topics": [
         "ai",
@@ -2658,7 +2675,7 @@
       "url": "https://github.com/obra/superpowers",
       "description": "一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。",
       "language": "Shell",
-      "stars": 307888,
+      "stars": 308741,
       "growth_30d": null,
       "topics": [
         "ai",
@@ -2680,7 +2697,7 @@
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "description": "从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。",
       "language": "Python",
-      "stars": 79491,
+      "stars": 79538,
       "growth_30d": null,
       "topics": [
         "agent",
@@ -2702,7 +2719,7 @@
       "url": "https://github.com/firstcontributions/first-contributions",
       "description": "专门用来教新手完成第一次开源贡献的仓库，56k star。",
       "language": null,
-      "stars": 56610,
+      "stars": 56618,
       "growth_30d": null,
       "topics": [
         "beginner",

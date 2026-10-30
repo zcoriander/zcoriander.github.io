@@ -32,6 +32,20 @@ if not TOKEN and os.path.isfile(TOKEN_FILE):
     except OSError:
         pass
 
+# 兜底：若标准位置没有，尝试工作区 .local-secrets/ 下的备份
+if not TOKEN:
+    _fallback = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        ".local-secrets", "github_token.bak",
+    )
+    if os.path.isfile(_fallback):
+        try:
+            with open(_fallback) as f:
+                TOKEN = f.read().strip()
+            TOKEN_FILE = _fallback
+        except OSError:
+            pass
+
 # token 通过 curl 的 header 传入，绝不出现在 argv（避免 ps 泄漏），也绝不打印
 _AUTH_HEADER = f"Authorization: Bearer {TOKEN}" if TOKEN else ""
 
@@ -165,6 +179,83 @@ def commits_since(repo, since_iso):
         return len(data) if isinstance(data, list) else 0
     except Exception:
         return None
+
+
+def momentum_score(p):
+    """
+    「势头分」—— 常青榜的核心排序指标。
+
+    背景：GitHub 的 stargazers 时间戳接口对 fine-grained token 返回
+    403（Resource not accessible by personal access token），即使仓库公开也拿不到。
+    所以无法直接计算「近 30 天 star 增量」。
+
+    替代方案：组合多个认证后可得、且能反映「上升势头」的信号：
+      1. 近 90 天 commit 数    —— 维护强度（对数计分，防止刷提交碾压）
+      2. fork/star 比          —— 真有人在动手用的比例
+      3. 最近提交新鲜度        —— 是否还在活跃
+      4. 推荐分                —— 综合健康度（已含许可证、issue 压力等）
+      5. 社区贡献者数          —— 社区规模与广度
+
+    这几个信号叠加，能有效区分「还在高强度维护的老将」和「早已停滞的老面孔」，
+    让常青榜不会退化成 star 总数的复制粘贴。
+    """
+    import math as _m
+
+    score = 0.0
+
+    # 1) 维护强度（最多 30 分）—— 用 log2 压缩，比 log10 更有区分度
+    c = p.get("commits_90d")
+    if c is not None:
+        import math as _m
+        score += min(30, _m.log2(max(c, 1)) * 2.6)
+
+    # 2) fork/star 比（最多 25 分）—— fork = 真打算动手用
+    stars = max(p.get("stars", 1), 1)
+    ratio = p.get("forks", 0) / stars
+    score += min(25, ratio * 420)
+
+    # 3) 最近提交新鲜度（最多 20 分）
+    ds = days_since(p.get("pushed_at", ""))
+    if ds <= 7:
+        score += 20
+    elif ds <= 14:
+        score += 16
+    elif ds <= 30:
+        score += 12
+    elif ds <= 90:
+        score += 7
+    elif ds <= 180:
+        score += 3
+
+    # 4) 推荐分（最多 15 分）
+    score += p.get("score", 0) * 0.15
+
+    # 5) 社区贡献者数（最多 20 分）—— log2，区分度更好
+    contrib = p.get("contributors")
+    if contrib is not None:
+        import math as _m
+        score += min(20, _m.log2(max(contrib, 1)) * 2.2)
+
+    return round(score, 1)
+
+
+def contributors_count(repo):
+    """贡献者数（用 Link header 的 rel="last" 页码，per_page=1 时即总数）"""
+    cmd = ["curl", "-s", "-i", "--max-time", "40",
+           "-H", "Accept: application/vnd.github+json",
+           "-H", f"User-Agent: {UA}"]
+    if _AUTH_HEADER:
+        cmd += ["-H", _AUTH_HEADER]
+    cmd.append(f"{API}/repos/{repo}/contributors?per_page=1&anon=1")
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=50)
+    except subprocess.TimeoutExpired:
+        return None
+    import re
+    m = re.search(r'[?&]page=(\d+)>; rel="last"', r.stdout)
+    if m:
+        return int(m.group(1))
+    return None
 
 
 def estimate_growth(repo, total_stars):
@@ -380,45 +471,28 @@ def main():
 
     # 常青榜特殊处理：
     # star 总量榜几乎年年不变（老项目增速趋近于零），
-    # 所以改用「近 30 天 star 增长」排序 —— 看谁在悄悄上位。
-    # 未配置 token 时 star 时间戳接口返回 401，退化为「近 90 天提交数」作为活跃度信号。
+    # 所以不按 star 总数排，而是算「势头分」——组合维护强度、fork/star 比、
+    # 提交新鲜度、推荐分、贡献者数。详见 momentum_score() 的说明。
     evergreen_pool = [e for e in evergreen_raw if e["full_name"] not in used]
     since90 = (today - timedelta(days=90)).isoformat().replace("+00:00", "Z")
-    print(f"    为 {len(evergreen_pool[:18])} 个候选估算增速指标...")
-    for i, e in enumerate(evergreen_pool[:18], 1):
-        g = estimate_growth(e["full_name"], e["stars"])
-        if g is not None:
-            e["growth_30d"] = g
-            e["momentum_source"] = "star"
-        else:
-            c = commits_since(e["full_name"], since90)
-            if c is not None:
-                e["commits_90d"] = c
-                e["momentum_source"] = "commits"
-        print(f"    [{i}/18] {e['full_name']}: growth={e.get('growth_30d')} commits90={e.get('commits_90d')}")
-        time.sleep(0.4)
+    print(f"    为 {len(evergreen_pool[:20])} 个候选计算势头信号...")
+    for i, e in enumerate(evergreen_pool[:20], 1):
+        e.setdefault("score", score_repo(e))
+        c = commits_since(e["full_name"], since90)
+        if c is not None:
+            e["commits_90d"] = c
+        ct = contributors_count(e["full_name"])
+        if ct is not None:
+            e["contributors"] = ct
+        print(f"    [{i}/20] {e['full_name']}: commits90={e.get('commits_90d')} "
+              f"contributors={e.get('contributors')} score={e.get('score')}")
+        time.sleep(0.35)
 
-    # 排序：多信号加权，避免单一指标失真
-    #  - star 增速（配了 token 时最准）
-    #  - 近 90 天提交数（活跃度，但"少提交高价值"项目会被低估）
-    #  - fork/star 比（真有人在用的信号）
-    #  - 推荐分（综合健康度）
     for p in evergreen_pool:
-        p.setdefault("score", score_repo(p))
+        p["momentum"] = momentum_score(p)
 
-    def momentum_key(p):
-        if p.get("growth_30d") is not None:
-            return (3, p["growth_30d"])
-        c = p.get("commits_90d")
-        ratio = p.get("forks", 0) / max(p.get("stars", 1), 1)
-        score = p.get("score", 0)
-        # 提交数取对数，避免 40929 这种刷提交数碾压一切
-        import math as _m
-        c_score = _m.log10(max(c, 1)) * 40 if c is not None else 0
-        ratio_score = ratio * 300
-        return (2, c_score + ratio_score + score * 0.6)
-
-    evergreen_pool.sort(key=momentum_key, reverse=True)
+    # 势头分优先；同分再按 star 数
+    evergreen_pool.sort(key=lambda x: (x.get("momentum", 0), x.get("stars", 0)), reverse=True)
     evergreen = evergreen_pool[:10]
     for p in evergreen:
         p["score"] = score_repo(p)
@@ -436,16 +510,20 @@ def main():
     for p in categories["learning"]:
         p["note"] = "系统学习路径"
     for p in categories["evergreen"]:
-        if p.get("growth_30d") is not None:
-            p["note"] = f"近 30 天新增 {p['growth_30d']} star —— 老项目里的上升势力"
-            p["badge"] = "📈 增速榜"
-        elif p.get("commits_90d") is not None:
-            p["note"] = f"近 90 天 {p['commits_90d']} 次提交 —— 仍在高强度维护的老将"
-            p["badge"] = "🔥 活跃榜"
-            p["growth_note"] = f"{p['commits_90d']} commits/90d"
+        m = p.get("momentum")
+        bits = []
+        if p.get("commits_90d") is not None:
+            bits.append(f"近 90 天 {p['commits_90d']} 次提交")
+        if p.get("contributors") is not None:
+            bits.append(f"{p['contributors']} 位贡献者")
+        if bits:
+            p["note"] = " · ".join(bits) + " —— 势头分 " + str(m)
+            p["badge"] = "📈 势头榜"
+            p["growth_note"] = f"势头 {m}"
         else:
-            p["note"] = "star 总量第一梯队"
-            p["growth_note"] = "增速数据不可得"
+            p["note"] = f"star 总量 {p['stars']}，势头分 {m}"
+            p["badge"] = "🏛️ 常青"
+            p["growth_note"] = f"势头 {m}"
 
     # 深挖：优先挑选「我写过人工文案」的项目，再从各分类补足
     # （人工文案清单由 enrich.py 维护，这里读取以确保这些项目一定被收录）
