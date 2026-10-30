@@ -21,6 +21,12 @@ id_rsa*
 .npmrc
 .authinfo
 
+# GitHub Actions 工作流
+# 当前采用「分支直发 Pages」方案，无需 Actions。
+# 备用 Actions 方案保存在 deploy/pages-actions.yml，
+# 如需启用请同时给 token 添加 workflow scope，然后移回 .github/workflows/
+.github/workflows/
+
 # 采集缓存
 /tmp/
 *.cache
