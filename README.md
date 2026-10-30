@@ -72,12 +72,55 @@ push 到 `main` → 自动构建 → 自动发布到 GitHub Pages。
 
 本项目**不需要** token 也能跑（数据来自公开 API），但配了 token 之后：
 
-- API 限额从 60 次/小时 提升到 5000 次/小时
-- 常青榜能拿到**真实的近 30 天 star 增速**（该接口强制要求认证）
+- API 限额从 60 次/小时 提升到 **5000 次/小时**，搜索从 10 次/分钟 提升到 30 次/分钟
+- 能读取 `contributors` 等更细的社区指标，常青榜的「势头分」更准
+- **能推送到 `zcoriander.github.io` 并触发 Pages 部署**（需 Contents 写权限）
 
 安全接入方式见 [`docs/SECURITY.md`](docs/SECURITY.md)。
 
 **核心原则：token 只进环境变量或本地受限文件，永不写入仓库、永不进入页面内容。**
+
+当前 token 位置：`~/.config/qwenpaw/github_token`（权限 600），不在仓库内。
+
+> ⚠️ 当前 token 缺少 `zcoriander.github.io` 的 **Contents 写权限**，推送会被拒。
+> 修复步骤见 `docs/SECURITY.md` 的「当前阻塞」一节。
+
+---
+
+## 部署
+
+```bash
+# 生成站点（纯静态，无需 npm / node）
+python3 tools/collect.py    # 抓数据 → data/projects.json
+python3 tools/enrich.py     # 注入人工撰写的深度分析
+python3 tools/build_site.py # 生成 HTML
+
+# 安全推送（token 经内存态 credential helper，不落盘）
+sh tools/push.sh main
+```
+
+推送后由 GitHub Actions 自动构建并发布到 GitHub Pages
+（`.github/workflows/pages.yml`）。
+
+> 首次部署需要在仓库 **Settings → Pages → Build and deployment**
+> 把 Source 设为 **GitHub Actions**。
+
+## 常青榜的特殊处理
+
+大多数榜单按 star 总数排，结果永远是那几个老面孔——因为它们的 star 早就不涨了。
+
+所以这一栏改用「**势头分**」综合排序：
+
+| 信号 | 权重 | 含义 |
+|------|------|------|
+| 近 90 天 commit 数 | ≤30 | 维护强度 |
+| fork / star 比 | ≤25 | 真有人在动手用 |
+| 最近提交新鲜度 | ≤20 | 是否还在活跃 |
+| 推荐分 | ≤15 | 综合健康度 |
+| 贡献者数 | ≤20 | 社区规模 |
+
+> 注：GitHub 的 `stargazers` 时间戳接口对 fine-grained token 返回 403，
+> 无法直接计算「近 30 天 star 增量」，故采用上述组合信号。详见 `docs/SECURITY.md`。
 
 ## 推荐分算法
 
