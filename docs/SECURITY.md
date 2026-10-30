@@ -4,15 +4,22 @@
 
 ---
 
-## ✅ 当前状态
+## ✅ 当前状态：已上线
 
-Token 已就位且**不在工作区内**：
+**线上地址**：https://zcoriander.github.io （已验证可访问，HTTP 200）
 
-```
-~/.config/qwenpaw/github_token    权限 600
-```
+| 项目 | 状态 |
+|------|------|
+| Token 类型 | Fine-grained PAT（`github_pat_` 前缀），93 字符 |
+| 认证身份 | `zcoriander`（User） |
+| Token 位置 | `~/.config/qwenpaw/github_token`（权限 600），**不在工作区内** |
+| API 限额 | **5000 次/小时**（未认证 60）、搜索 **30 次/分钟**（未认证 10） |
+| 公开仓库读取 | ✅ repo / commits / contributors 正常 |
+| `zcoriander.github.io` 写入 | ✅ Contents(RW) 已授权，推送成功 |
+| Pages 部署 | ✅ 分支直发（main 分支根目录），status = `built` |
+| 工作区残留 | 无（token 已迁至 `~/.config/qwenpaw/`，原文件移入 `.local-secrets/` 备份） |
 
-验证（只输出状态，不显示 token）：
+验证：
 
 ```bash
 sh tools/gh_api.sh --auth-only
@@ -20,68 +27,30 @@ sh tools/gh_api.sh --auth-only
 # → rate_limit_probe_http: 200
 ```
 
-已确认：
-
-| 项目 | 状态 |
-|------|------|
-| Token 类型 | Fine-grained PAT（`github_pat_` 前缀），93 字符 |
-| 认证身份 | `zcoriander`（User） |
-| 可见仓库 | `zcoriander.github.io`、`zcoriander/MyGamesZhWiki` |
-| API 限额 | **5000 次/小时**（未认证 60）、搜索 **30 次/分钟**（未认证 10） |
-| 公开仓库读取 | ✅ repo / commits / contributors 全部正常 |
-| **写入 `zcoriander.github.io`** | ❌ **被拒绝（见下）** |
-
 ---
 
-## ❌ 当前阻塞：缺少 `zcoriander.github.io` 的 Contents 写权限
+## ⚠️ 为什么没有用 GitHub Actions
 
-### 现象
+最初配了 `.github/workflows/pages.yml`，推送时被拒：
 
-```bash
-git push  →  remote: Permission to zcoriander.github.io.git denied to zcoriander.
+```
+refusing to allow a Personal Access Token to create or update workflow
+`.github/workflows/pages.yml` without `workflow` scope
 ```
 
-### 诊断结论
+**`workflow` scope 意味着 token 可以修改 CI 流水线** —— 这是代码执行入口。
+为一个纯静态站点要这个权限，风险收益不成比例。
 
-Token 能看到该仓库、`permissions` 显示 `push: True`，但**所有写路径都返回
-`Resource not accessible by personal access token`**：
+**解决方案**：改为「分支直发 Pages」。
 
-| 接口 | HTTP | 说明 |
-|------|------|------|
-| `GET /repos/.../zcoriander.github.io` | 200 | Metadata 权限（公开仓库元信息本来就可读） |
-| `GET /repos/.../zcoriander.github.io/contents/` | 404 | Contents 权限缺失 |
-| `PUT /repos/.../contents/.probe` | 403 | Contents 写权限缺失 |
-| `POST /repos/.../git/blobs` | 403 | Git Data 写权限缺失 |
-| `POST /repos/.../git/refs` | 403 | 同上 |
+- `build_site.py` 直接产出静态 HTML，无需 npm / 构建器
+- 仓库含 `.nojekyll`，GitHub 不会用 Jekyll 二次处理
+- Pages 配置：`source = { branch: main, path: / }`，`build_type = legacy`
+- **零 CI 依赖、零额外权限**
 
-**对照组验证**（同一个 token）：
-
-| 仓库 | `GET contents/` | 结论 |
-|------|----------------|------|
-| `zcoriander/MyGamesZhWiki` | **200** | 该仓库**已授权** Contents |
-| `zcoriander/zcoriander.github.io` | **404** | 该仓库**未授权** Contents |
-
-> ⚠️ `permissions.push: True` 是**仓库本身的属性**（你的账号是该仓库 owner，
-> 所以权限字段显示为 true），不代表**这个 token** 拿到了对应权限。
-> fine-grained token 的实际授权范围才是决定性的。
-
-### 修复方法（3 分钟）
-
-GitHub → Settings → Developer settings → Personal access tokens → 选中当前 token
-→ **Repository access** → 确认 `zcoriander.github.io` 在已选列表中
-→ **Permissions → Repository permissions** → 找到 **Contents** → 设为 **Read and write**
-→ 另加 **Pages** → **Read and write**
-→ 保存
-
-或者更简单 —— **直接重新生成一个 token**，权限如下：
-
-| Repository | Permissions | Level |
-|------------|-------------|-------|
-| `zcoriander.github.io` | **Contents** | **Read and write** |
-| `zcoriander.github.io` | **Pages** | **Read and write** |
-| `zcoriander.github.io` | Metadata | Read-only |
-
-然后把新 token 文件放到工作区根目录（命名 `github_token`），告诉 Agent 即可。
+> 备用 Actions 工作流保留在 `deploy/pages-actions.yml`。
+> 若要启用：给 token 加 `workflow` scope → 文件移回 `.github/workflows/pages.yml`
+> → Settings → Pages 把 Source 改为 **GitHub Actions**。
 
 ---
 

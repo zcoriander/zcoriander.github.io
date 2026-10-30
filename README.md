@@ -89,6 +89,8 @@ push 到 `main` → 自动构建 → 自动发布到 GitHub Pages。
 
 ## 部署
 
+**线上地址**：https://zcoriander.github.io
+
 ```bash
 # 生成站点（纯静态，无需 npm / node）
 python3 tools/collect.py    # 抓数据 → data/projects.json
@@ -99,11 +101,18 @@ python3 tools/build_site.py # 生成 HTML
 sh tools/push.sh main
 ```
 
-推送后由 GitHub Actions 自动构建并发布到 GitHub Pages
-（`.github/workflows/pages.yml`）。
+### 为什么是「分支直发」而不是 GitHub Actions
 
-> 首次部署需要在仓库 **Settings → Pages → Build and deployment**
-> 把 Source 设为 **GitHub Actions**。
+原本配了 Actions 工作流，但 GitHub 规定：**修改 `.github/workflows/*` 下的文件需要
+token 具备 `workflow` scope**。那是一个代码执行入口权限 —— 为了发布一个纯静态站点
+不值得要。
+
+本项目 `build_site.py` 直接产出静态 HTML，且已包含 `.nojekyll`，
+所以改为从 `main` 分支根目录直发，**零构建、零 CI 依赖**。
+
+> 若日后想改用 Actions，备用工作流保留在 `deploy/pages-actions.yml`。
+> 启用步骤：给 token 添加 `workflow` scope → 把该文件移回 `.github/workflows/pages.yml`
+> → 在仓库 Settings → Pages 把 Source 改为 **GitHub Actions**。
 
 ## 常青榜的特殊处理
 
