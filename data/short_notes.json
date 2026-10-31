@@ -1,0 +1,330 @@
+{
+  "_comment": "内容数据层。short_notes = 每个项目的短评（是什么 + 适合谁）；deep_dives = A 标准详情（有独立页面）。新增内容只需在此追加，无需改生成器。",
+  "short_notes": {
+    "seedds/nxnative": {
+      "one_line": "把 Switch 游戏转成能在 iPhone/iPad/Mac 上原生跑的 IPA，不是模拟器",
+      "for_who": "有 Switch 游戏、有 Mac 和 A17 Pro 以上设备、愿意折腾 sideload 的人",
+      "hook": "游戏自己的代码直接跑在 Apple 芯片上，图形层用 Metal 重建。仓库里不含任何游戏内容。"
+    },
+    "storytold/effectcraft": {
+      "one_line": "纯 Rust 从零写的动效合成器，对标 After Effects",
+      "for_who": "做动态图形、标题动画、视觉特效的人，尤其是想要一个可脚本化、可版本控制的替代品",
+      "hook": "项目文件是 JSON，能干净地 diff；308 个效果，Lottie 导入导出内置；引擎命令走 CLI / JSON 控制通道 / MCP。"
+    },
+    "simbasjungles/free-my-tv": {
+      "one_line": "给 Google TV / LG / 三星做的无广告开源首页",
+      "for_who": "嫌电视系统首页广告多、想要自己掌控主界面的人",
+      "hook": "60fps、内存占用比系统首页少 60%（96MB vs 242MB）；不用 root，一个按钮恢复出厂首页。"
+    },
+    "deepseek-ai/DeepInfer": {
+      "one_line": "面向 DeepSeek 系列模型的高性能大规模推理框架",
+      "for_who": "做模型部署和推理优化的工程师",
+      "hook": "DeepSeek 官方出品，和 deepseek-harness 配套，适合关注自研模型部署链路的人。"
+    },
+    "openai/math": {
+      "one_line": "OpenAI 的数学推理相关仓库",
+      "for_who": "关注 OpenAI 官方开源方向的人",
+      "hook": "本项目由 OpenAI 官方维护，属于其公开研究产出的一部分。"
+    },
+    "storytold/designcraft": {
+      "one_line": "纯 Rust 从零写的页面与布局设计编辑器",
+      "for_who": "做 UI 设计、原型设计，想摆脱闭源工具的人",
+      "hook": "和 effectcraft 同源的 Rust 创作工具家族，风格一致。"
+    },
+    "jhaizhou-ops/d2r-mobile": {
+      "one_line": "《暗黑破坏神 2》重制版的开源兼容层，含 Reign of the Warlock 资料片支持",
+      "for_who": "想在移动设备上玩 D2R 的玩家",
+      "hook": "兼容层思路而非移植，是研究老游戏跨平台运行的一个具体样本。"
+    },
+    "storytold/deckcraft": {
+      "one_line": "纯 Rust 从零写的 PowerPoint 替代品（clean-room 重实现）",
+      "for_who": "需要可编程、可脚本化生成 PPT 的人",
+      "hook": "clean-room 实现，不使用原仓库代码；配套 Craft 工具家族。"
+    },
+    "storytold/craft-launcher": {
+      "one_line": "Craft 工具家族的统一启动器",
+      "for_who": "使用 effectcraft / designcraft / photocraft 等工具的人",
+      "hook": "storytold 正在用 Rust 重建一整条创作工具链，launcher 是入口。"
+    },
+    "amosblomqvist/learnharness": {
+      "one_line": "用来学习困难知识的 Agent harness",
+      "for_who": "想用 AI 系统化攻克难点的人",
+      "hook": "和 learn-claude-code 同属「造 harness」这一类，但目标不同：它面向学习场景。"
+    },
+    "awesome-dsh-plugin/awesome-dsh-plugin": {
+      "one_line": "DeepSeek Harness 的插件精选列表",
+      "for_who": "刚开始用 dsh、想知道能装什么的人",
+      "hook": "中文社区维护的插件索引，配合 deepseek-harness 使用。"
+    },
+    "YuJunZhiXue/dsh-purge": {
+      "one_line": "给 DeepSeek Harness 用的越狱提示词集，可按模型切换",
+      "for_who": "在做模型行为研究或需要特定提示策略的人",
+      "hook": "默认提示词面向国产模型「小码酱」，这套思路对做提示研究有参考价值。"
+    },
+    "deepseek-ai/deepseek-harness": {
+      "one_line": "DeepSeek 官方的 Agent harness，核心理念是「一切皆插件」",
+      "for_who": "想理解国产 Agent harness 设计思路，或想在 dsh 上做扩展的人",
+      "hook": "26 万 star 级的官方项目，和 OpenClaw、superpowers 属于同一片新大陆。"
+    },
+    "storytold/photocraft": {
+      "one_line": "纯 Rust 从零写的照片编辑器",
+      "for_who": "想要轻量、可脚本化修图工具的人",
+      "hook": "Craft 家族的一员，架构思路与 effectcraft 一致。"
+    },
+    "NandhaKishorM/laya": {
+      "one_line": "非自回归的 System 1 决策引擎，单次前向完成选择、评分和是否判断",
+      "for_who": "关注快速决策、分类、意图识别场景的研究者",
+      "hook": "System 1 思路在开源实现里少见，对延迟敏感的场景有参考意义。"
+    },
+    "guillaumemeyer/watermarks-remover": {
+      "one_line": "隐私优先的 AI 水印移除工具，只处理你自己拥有的内容",
+      "for_who": "需要处理自己生成内容水印的创作者",
+      "hook": "本地运行，强调不外传。注意使用范围——只适用于自己有权修改的内容。"
+    },
+    "robbietilton/Compositor": {
+      "one_line": "Mac 上的 Photoshop 替代品",
+      "for_who": "Mac 用户，想做图像合成但不想订阅 Adobe",
+      "hook": "又一个「开源替代商业软件」的方向，可以对比着看各家做到什么程度。"
+    },
+    "storytold/lightcraft": {
+      "one_line": "纯 Rust 从零写的非破坏性照片编辑器",
+      "for_who": "想要非破坏性工作流和可版本控制工程文件的人",
+      "hook": "「可读的工程文件」是 Craft 家族的一致主张。"
+    },
+    "peach-mitao/peach": {
+      "one_line": "本地优先的视频元数据刮削器和媒体管理器",
+      "for_who": "整理本地影视库、想自动补全元数据的人",
+      "hook": "local-first 思路，数据不出本机。"
+    },
+    "shihabal3amri/DiPlay": {
+      "one_line": "兼容 Android 车机的独立 CarPlay 接收器，支持有线和无线",
+      "for_who": "有老旧安卓车机、想加 CarPlay 的人",
+      "hook": "目前是 public preview 阶段，硬件适配仍需自己验证。"
+    },
+    "firstcontributions/first-contributions": {
+      "one_line": "专门用来带你完成「第一次」开源贡献的练习仓库",
+      "for_who": "想开始给开源提 PR、但卡在流程不熟的人",
+      "hook": "流程拆解到每一步都给确切命令，把第一次的心理成本降到最低。"
+    },
+    "career-ops-hq/career-ops": {
+      "one_line": "开源 AI 求职 Agent：扫描职位、按简历打分 1-5 分再决定投不投",
+      "for_who": "在刷招聘网站、需要自动化筛选的人",
+      "hook": "「先打分再投」的思路比无脑海投有效，也能改造成别的打分逻辑。"
+    },
+    "rust-lang/rustlings": {
+      "one_line": "Rust 官方出的小练习集，专治读不懂 Rust 代码",
+      "for_who": "Rust 新手，尤其是卡在所有权和借用检查器的人",
+      "hook": "官方出品，题目难度递进，是学 Rust 最省事的入口之一。"
+    },
+    "PokeAPI/pokeapi": {
+      "one_line": "宝可梦数据 API",
+      "for_who": "做练习项目、想用干净公开 API 练手的人",
+      "hook": "接口设计简单规范，适合当第一个 API 项目练手。"
+    },
+    "HeyPuter/puter": {
+      "one_line": "开源的「互联网电脑」，自带云存储和桌面环境",
+      "for_who": "想要自托管替代方案、不想被云服务绑定的人",
+      "hook": "不是单个应用，是一整套自托管云桌面。"
+    },
+    "recloudstream/cloudstream": {
+      "one_line": "Android 上的流媒体播放与下载客户端",
+      "for_who": "想在手机上看自己 NAS 里的片库的人",
+      "hook": "Android 原生实现，注意它支持的格式和转码方式。"
+    },
+    "openvinotoolkit/openvino": {
+      "one_line": "Intel 开源的 AI 推理优化与部署工具包",
+      "for_who": "在 Intel 硬件上做模型部署和性能优化的人",
+      "hook": "模型转换、量化、硬件优化一条链，工业部署常用。"
+    },
+    "bluewave-labs/Checkmate": {
+      "one_line": "自托管的服务器硬件、在线率和响应时间监控",
+      "for_who": "想自己掌控监控数据和告警的人",
+      "hook": "自托管意味着监控数据不出机房，适合有合规要求的场景。"
+    },
+    "PySimpleGUI/PySimpleGUI": {
+      "one_line": "让 Python GUI 变得像写函数调用一样简单的库",
+      "for_who": "Python 用户想快速做个小工具界面、不想学 Qt",
+      "hook": "上手极快，但要注意它和 PySimpleGUI 商业授权的分叉情况。"
+    },
+    "lingdojo/kana-dojo": {
+      "one_line": "仿 Duolingo + Monkeytype 的日语假名学习平台",
+      "for_who": "想用打字的肌肉记忆记日语假名的人",
+      "hook": "把打字练习和记忆曲线结合，这个组合思路很有意思。"
+    },
+    "vikiboss/60s": {
+      "one_line": "「每天 60 秒看世界」——热搜、天气、油价、金价、翻译等一站式免费 API",
+      "for_who": "想做每日信息卡片、机器人、聚合首页的人",
+      "hook": "Cloudflare Workers 部署、全球 CDN，一个接口解决一屏信息。"
+    },
+    "Cog-Creators/Red-DiscordBot": {
+      "one_line": "功能丰富的老牌 Discord 机器人",
+      "for_who": "想给自己的 Discord 服务器加实用功能的人",
+      "hook": "Python 实现、插件化、活跃维护多年，是学习机器人开发的好样本。"
+    },
+    "lpereira/lwan": {
+      "one_line": "实验性的可扩展高性能 HTTP 服务器",
+      "for_who": "想读 C 语言服务器实现、理解性能瓶颈的人",
+      "hook": "C 写的，不追求易用，追求看清每一层。"
+    },
+    "oldratlee/fucking-java-concurrency": {
+      "one_line": "用代码演示 Java 并发各种坑的合集",
+      "for_who": "Java 开发者，尤其是被并发问题折磨过的人",
+      "hook": "「seeing is believing」——每个坑都能跑出直观结果。"
+    },
+    "community-shaders/skyrim-community-shaders": {
+      "one_line": "《上古卷轴》社区驱动的进阶画面 MOD 集合",
+      "for_who": "Skyrim 玩家、图形爱好者",
+      "hook": "社区长期协作的 mod 工程，看它能学到游戏图形社区的组织方式。"
+    },
+    "taigrr/spank": {
+      "one_line": "拍你的 MacBook，它会叫回来",
+      "for_who": "想在工位上制造一点声响的极客",
+      "hook": "Go 写的，通过 Apple Silicon 加速度计 + IOKit HID 实现。"
+    },
+    "Stable-Baselines-Team/stable-baselines3-contrib": {
+      "one_line": "Stable Baselines3 的实验性强化学习扩展包",
+      "for_who": "做 RL 研究、需要非标准算法和实验性实现的人",
+      "hook": "官方 contrib 目录，放的都是还不稳定但值得试的东西。"
+    },
+    "carbon-language/carbon-lang": {
+      "one_line": "Google 主导的实验性系统编程语言",
+      "for_who": "关注语言设计、研究 C++ 继承者的人",
+      "hook": "目标是 C++ 的安全替代品，文档先行、实现仍在推进。"
+    },
+    "opennookorg/screenshot-studio": {
+      "one_line": "浏览器里的免费截图编辑器，无注册无水印",
+      "for_who": "需要快速做产品图、社交媒体配图的人",
+      "hook": "纯前端，不上传图片，隐私友好。"
+    },
+    "sepandhaghighi/art": {
+      "one_line": "Python 的 ASCII 艺术库",
+      "for_who": "想在终端里画点什么的 Python 用户",
+      "hook": "经典老库，接口简单，pip install 就能用。"
+    },
+    "shareAI-lab/learn-claude-code": {
+      "one_line": "从零手写一个 Claude Code 风格的 agent harness",
+      "for_who": "想理解 agent harness 每个零件为什么存在，而不是直接用现成产品的人",
+      "hook": "核心论点：能动性来自模型，harness 是车。这个仓库教你造车。"
+    },
+    "rohitg00/ai-engineering-from-scratch": {
+      "one_line": "AI 工程从零学：Learn it. Build it. Ship it.",
+      "for_who": "想系统补齐 AI 工程能力的开发者",
+      "hook": "强调「ship 给别人用」，不只是跑通 notebook。"
+    },
+    "MLEveryday/100-Days-Of-ML-Code": {
+      "one_line": "100 天机器学习编码计划的中文版",
+      "for_who": "需要每日固定节奏积累 ML 实践量的人",
+      "hook": "有中文翻译和配套 notebook，适合跟练。"
+    },
+    "recommenders-team/recommenders": {
+      "one_line": "微软的推荐系统最佳实践合集",
+      "for_who": "做推荐、搜索、排序模型的人",
+      "hook": "带 notebook 和工业经验总结，是推荐领域的系统性参考。"
+    },
+    "processing/p5.js": {
+      "one_line": "让艺术家、设计师、学生用代码表达创意的 JS 平台",
+      "for_who": "想学创意编程、想快速做出视觉实验的人",
+      "hook": "降低了创意编程的门槛极多，社区案例海量。"
+    },
+    "ankidroid/Anki-Android": {
+      "one_line": "Anki 记忆卡片的 Android 客户端",
+      "for_who": "用间隔重复背单词、考证书的人",
+      "hook": "开源客户端配合 AnkiWeb 同步，是被验证过的记忆工具。"
+    },
+    "EbookFoundation/free-programming-books": {
+      "one_line": "免费编程书籍的索引，按语言和主题分类",
+      "for_who": "想找一本靠谱教材自学的人",
+      "hook": "经典索引仓库，注意里面部分链接会失效，需要自己甄别。"
+    },
+    "opf/openproject": {
+      "one_line": "开源的项目组合管理软件，覆盖项目与作品集层级",
+      "for_who": "需要正规项目管理工具替代 Jira/Redmine 的团队",
+      "hook": "功能接近商业产品，自托管部署，GPLv3 授权需注意合规。"
+    },
+    "toly1994328/FlutterUnit": {
+      "one_line": "Flutter 全平台实践应用合集",
+      "for_who": "Flutter 开发者，想看跨平台实战案例的人",
+      "hook": "大量真实场景的小应用，适合拆开看具体实现。"
+    },
+    "mouredev/roadmap-retos-programacion": {
+      "one_line": "基于社区练习的编程学习路线图（西语）",
+      "for_who": "西语开发者，想跟着路线系统练逻辑",
+      "hook": "每一步都是社区真实练习，路线清晰。"
+    },
+    "openclaw/openclaw": {
+      "one_line": "跑在你自己机器上的 AI 助手，住进你已经在用的聊天软件",
+      "for_who": "愿意自己管一台机器、想要数据不离开本地的技术用户",
+      "hook": "架构主张：可信网关、不可信执行、策略由代码强制。"
+    },
+    "NousResearch/hermes-agent": {
+      "one_line": "会和你一起成长的 agent 框架",
+      "for_who": "关注 agent 长期记忆与自我演化方向的人",
+      "hook": "25 万 star 级项目，「grows with you」不是营销词而是技术方向。"
+    },
+    "morluto/rea": {
+      "one_line": "用 agent 从应用行为逆向到原生二进制",
+      "for_who": "做逆向工程、安全研究、协议分析的人",
+      "hook": "把逆向工程流程 agent 化，思路激进。"
+    },
+    "affaan-m/ECC": {
+      "one_line": "Agent harness 的性能优化系统：技能、本能、记忆、安全",
+      "for_who": "研究怎么让 agent 更稳定、更高效的人",
+      "hook": "把「本能」和「记忆」提升到与技能同等的地位，是很少见的思路。"
+    },
+    "public-apis/public-apis": {
+      "one_line": "免费公开 API 的大集合",
+      "for_who": "找现成 API 快速做原型的人",
+      "hook": "按领域分类，条目极多，附认证说明和 HTTPS 支持标记。"
+    },
+    "freeCodeCamp/freeCodeCamp": {
+      "one_line": "全球最大的免费编程学习平台，课程本身也开源",
+      "for_who": "完全零基础、需要一条完整学习路径的人",
+      "hook": "完全免费、靠捐款运营，浏览器内直接写代码。"
+    },
+    "vinta/awesome-python": {
+      "one_line": "「我想用 Python 做 X，该用哪个库」的标准答案",
+      "for_who": "Python 用户做技术选型时",
+      "hook": "按任务而非按库分类，是它比同类索引好用的原因。"
+    },
+    "nilbuild/developer-roadmap": {
+      "one_line": "交互式开发者成长路线图",
+      "for_who": "不知道该按什么顺序学、想看全景的人",
+      "hook": "交互式图谱，能点开看每个节点该学什么。"
+    },
+    "react/react": {
+      "one_line": "用于构建 Web 和原生界面的 JavaScript 库",
+      "for_who": "所有前端开发者",
+      "hook": "生态最大、资料最多，但学习曲线和技术债也需要正视。"
+    },
+    "awesome-selfhosted/awesome-selfhosted": {
+      "one_line": "可以自己托管的自由软件服务清单",
+      "for_who": "想摆脱 SaaS 依赖、自建服务的人",
+      "hook": "分类清晰，每个条目都有源码和许可信息，是自建方案的地图。"
+    },
+    "obra/superpowers": {
+      "one_line": "给编码 agent 用的完整开发方法论，不只是几个提示词",
+      "for_who": "团队在用 AI 编码但产出质量忽高忽低的人",
+      "hook": "自动触发的工作流：先谈清楚设计，再给计划，再用子 agent 流水线执行。"
+    },
+    "mattpocock/skills": {
+      "one_line": "资深工程师每天在用的 agent 技能包，明确反对 vibe coding",
+      "for_who": "想深度定制 agent 行为、不接受黑箱流程的人",
+      "hook": "技能做得小、可改、可组合，跟模型无关。"
+    },
+    "ssloy/tinyrenderer": {
+      "one_line": "500 行裸 C++ 实现软件渲染器，配 14 篇课程笔记",
+      "for_who": "想真正搞明白图形 API 底下发生了什么的人",
+      "hook": "一套「逆向学习法」：先手写最简实现，再回头补理论。"
+    },
+    "codecrafters-io/build-your-own-x": {
+      "one_line": "从零复刻你喜欢的技术——数据库、操作系统、编译器、容器",
+      "for_who": "想搞懂某个技术底层原理、愿意动手做一遍的人",
+      "hook": "把「我想搞懂 X」变成一条明确的行动路径。"
+    },
+    "donnemartin/system-design-primer": {
+      "one_line": "大规模系统设计的学习指南 + 系统设计面试题解",
+      "for_who": "正在准备系统设计面试、或想补系统设计知识的人",
+      "hook": "每节配 Anki 记忆卡，把「读过」变成「记得住」。"
+    }
+  }
+}

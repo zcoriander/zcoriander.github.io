@@ -27,6 +27,18 @@ id_rsa*
 # 如需启用请同时给 token 添加 workflow scope，然后移回 .github/workflows/
 .github/workflows/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
 # 采集缓存
 /tmp/
 *.cache
