@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>深度拆解：seedds/nxnative · GitHub 冲浪手记</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
+    <nav>
+      <a href="../index.html">首页</a>
+      <a href="#categories">分类榜</a>
+      <a href="../deep-dive.html" class="active">深度拆解</a>
+      <a href="../about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page-main deep-page">
+  <div class="page-head">
+    <h1>seedds/nxnative</h1>
+    <div class="deep-meta">
+      <a href="https://github.com/seedds/nxnative" target="_blank" rel="noopener" class="repo-link">https://github.com/seedds/nxnative</a>
+      <span class="stars">★ 10.9k</span>
+      <span class="lang">Python</span>
+      
+    </div>
+  </div>
+
+  <p class="deep-lead">在 iPhone/iPad 上原生运行你自己的 Nintendo Switch 游戏：带上游戏的 NSP 文件和 prod.keys，一条脚本把它们打包成 IPA，侧载到苹果设备上。不是模拟器——游戏代码直接在 Apple 芯片上跑，Switch 图形重建为 Metal；已开始支持 Switch 2（Donkey Kong Bananza 已在 Mac 上运行）。</p>
+  <div class="deep-topics"></div>
+  <div class="metrics"><div class="metric"><strong>★ 10.9k</strong><span>Star</span></div><div class="metric"><strong>⑂ 1.8k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 90</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+
+  <div class="deep-sections">
+        <h3>它到底在做什么</h3>
+        <p>核心流程：你提供 Switch 游戏的 NSP 文件和 prod.keys，nxnative 的脚本把它们处理成可以在 iPhone/iPad 上安装的 IPA。底层用 dm/tools/nx_extract 读 NSP、用 LibHac 把更新层叠到基础游戏、用 Ryujinx 的着色器翻译器把着色器翻成 SPIR-V 再经 SPIRV-Cross 变成 Metal Shading Language、用 NSO rewriter + Horizon 主机模仿层 + NVN-on-Metal 层让游戏代码在 Apple 芯片上跑，iOS app shell 负责界面。</p>
+<p>仓库结构反映了这条管线：dm/ 下是从 d2r-mobile 继承的通用部分（NSO rewriter、Horizon 替代、NVN-on-Metal、iOS app shell），dm/third_party/ 下是 ryujinx、Atmosphère 内核语义参考、LibHac、SPIRV-Cross、glslang，dm/gfx/nvn/ 下有 Metal 相关的索引与着色器降级代码。</p>
+<p>Switch 2 游戏已开始支持：Donkey Kong Bananza 已在 Mac 上运行；iPhone/iPad 尚未测试。</p>
+        <ul><li>不是模拟器：游戏代码直接在 Apple 芯片运行，图形用 Metal 重建</li><li>需自备 NSP + prod.keys，仓库不含游戏内容，与 Nintendo 无关</li><li>基于 d2r-mobile、Ryujinx、Atmosphère、LibHac、SPIRV-Cross 等开源项目</li></ul>
+        <h3>适合谁与门槛</h3>
+        <p>适合有 Mac（macOS 26.6+、Xcode 27.2、Homebrew、Python 3.12 arm64）、自备 Switch 游戏备份、愿意折腾侧载的人；iPhone 打包还需要 Xcode 的 iOS 平台。</p>
+<p>门槛较高：需要理解签名、prod.keys、Metal 着色器编译；不是「下载即玩」，更像是一个面向爱好者的开源工具链。</p>
+        
+  </div>
+
+  <div class="deep-verdict">
+    <h4>我的结论</h4>
+    <p>它不是模拟器，而是「原生执行」：游戏自己的机器码直接在 Apple 芯片上运行，图形层用 Metal 重建，所以性能比模拟器好，但合法性处于灰色地带（你需要自备游戏备份和 prod.keys，仓库里不含任何游戏内容，也不与 Nintendo 有关）。它站在 d2r-mobile、Ryujinx、Atmosphère、LibHac、SPIRV-Cross、glslang 等开源项目的肩膀上，NX2Apple / NX Play 等社区 Mac App 又把它做成了无需命令行的 App。</p>
+  </div>
+
+  <nav class="deep-nav">
+    <a href="deep-dive/firstcontributions__first-contributions.html" class="nav-link prev">← firstcontributions/first-contributions</a>
+    <a href="../deep-dive.html" class="nav-link index">返回目录</a>
+    <a href="deep-dive/storytold__effectcraft.html" class="nav-link next">storytold/effectcraft →</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 独立页面：deep-dive/seedds__nxnative.html</p></div>
+</footer>
+</body>
+</html>

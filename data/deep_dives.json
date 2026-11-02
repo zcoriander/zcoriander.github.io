@@ -1,0 +1,721 @@
+{
+  "_comment": "A-标准深度拆解内容，独立于 enrich.py DEEP_CONTENT；每篇已读 README 与源码树，正文≥800 字",
+  "deep_dives": [
+    {
+      "name": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "category": "evergreen",
+      "language": "TypeScript",
+      "stars": 393639,
+      "growth_30d": null,
+      "score": 87,
+      "metrics": [
+        [
+          "★ 393.6k",
+          "Star"
+        ],
+        [
+          "⑂ 82.7k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "TypeScript",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "把 AI 助手部署在你自己的机器上，让它「住进」你已在用的聊天软件：Discord、iMessage、Slack、Teams、Telegram、WhatsApp 等 20 多个渠道，一个 Gateway 统一调度。",
+      "topics": [],
+      "verdict": "如果你想要一个「常驻在聊天软件里的私人助手」，目前生态里最完整的开源方案之一。架构上「策略由代码强制」那句话值得所有做 Agent 的人抄在墙上。适合有一定技术基础、愿意自己管一台机器的人；完全零基础的话，20 多个渠道的配置量会有点劝退。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "一句话：本地跑的 AI 助手，外加一个叫 Gateway 的控制平面。Gateway 负责会话、工具调用、事件和渠道连接；助手本体通过插件机制对接 Claude、Codex 或本地模型。",
+            "关键点是它不打算取代你的聊天软件，而是「住进去」。个人版跑在笔记本上，团队版跑在服务器上——作者说区别只是配置文件。"
+          ],
+          "bullets": [
+            "状态、记忆、凭证全部留在自己硬件上，不上云",
+            "模型是可替换插件，换 Claude/Codex/本地模型不用动其他配置",
+            "由 OpenClaw Foundation（501(c)(3) 独立基金会）托管，没有付费层、没有托管服务、没有代币"
+          ]
+        },
+        {
+          "title": "让我在意的架构选择",
+          "paragraphs": [
+            "README 里有一句话我反复看了两遍：trusted gateway, untrusted execution, policy enforced by code——可信网关、不可信执行、策略由代码强制。",
+            "这和很多「把 Agent 塞进沙箱里跑」的方案是反的。它的思路是：执行环境（工具、命令、文件）是不可信边界内的，所以权限判定必须在网关这一层用代码写死，而不是指望被调用的那部分自觉。",
+            "仓库里的 .agents/skills/ 目录下按能力划分了大量技能（agent-transcript、auto-qa、autoreview、claw-score 等），claw-score 下还细分了 references/completeness/agent-runtime、android-app、anthropic-provider-path 等子目录，说明它把「 agent 能力评分」本身也做成了可插拔的技能体系，而非写死在核心里。"
+          ]
+        },
+        {
+          "title": "安装与日常门槛",
+          "paragraphs": [
+            "一条 curl 命令（curl -fsSL https://openclaw.ai/install.sh | bash）或一条 npm 命令，跨 macOS / Linux / Windows，安装时会自动把缺失的 Node.js 运行时装上。",
+            "已自带 Node.js 的用户可直接 npm install -g openclaw@latest，要求 Node 24.22.1+ 或 26.12.1+，这算是个小门槛，但换来的是不用自己拼装依赖。",
+            "装完自动跑引导流程：验证模型连通性、创建工作区、配置 Gateway。默认只做每日版本检查，匿名功能统计是 opt-in，update.checkOnStart: false 可把遥测完全关掉——对一个要常驻在你所有聊天窗口里的东西，这个默认值是加分项。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "category": "curated",
+      "language": "Shell",
+      "stars": 310591,
+      "growth_30d": null,
+      "score": 87,
+      "metrics": [
+        [
+          "★ 310.6k",
+          "Star"
+        ],
+        [
+          "⑂ 27.6k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "Shell",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "一套给编码 agent 用的软件开发方法论：可组合的技能（skills）+ 初始指令，让 agent 在动手写代码前，先把需求、设计、计划过一遍。",
+      "topics": [],
+      "verdict": "它不是一个新编程语言，也不是一个 IDE，而是一套「让 agent 慢下来再动手」的方法论。对已经在用 Claude Code / Codex / Cursor 等 agent 的团队，值得把它当成标准作业程序（SOP）引入；对只偶尔写脚本的个人，则可能过于沉重。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "Superpowers 是一套完整的软件开发方法论，建立在可组合的 skills 和一些初始指令之上。核心思想是：agent 一启动就不该立刻写代码，而应该先退一步，跟你把「到底想做什么」讲清楚。",
+            "具体流程是：从对话中提炼规格（spec）、以可读的分块展示给你确认、签字后生成实现计划、再启动「子驱动开发」（subagent-driven-development），让多个子 agent 分工完成每项工程任务、互相检查、审查。",
+            "仓库按 agent 平台拆分了插件：.claude-plugin、.codex-plugin、.cursor-plugin、.devin-plugin、.opencode/plugins/superpowers.js、.pi/extensions/superpowers.ts、.kimi-plugin、.hermes-plugin、.muse-plugin，以及 .agents/plugins/marketplace.json 技能市场。说明它刻意做到了「在哪个 agent 里都能用」，而不是锁死单一平台。"
+          ],
+          "bullets": [
+            "强调真 red/green TDD、YAGNI（你不需要它）、DRY",
+            "计划写得足够清楚，让「一个没有项目背景、品味差、讨厌测试的初级工程师」都能照着做",
+            "agent 可自主工作数小时而不偏离计划"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合已经把 agent 当成日常编程伙伴、并希望提升代码质量与可复现性的团队或个人。",
+            "门槛不高（它本质是插件 + 指令），但要落地需要团队愿意接受「先写 spec、再写 code」的节奏，以及对子 agent 产出做审查的习惯。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "category": "curated",
+      "language": "Shell",
+      "stars": 309188,
+      "growth_30d": null,
+      "score": 87,
+      "metrics": [
+        [
+          "★ 309.2k",
+          "Star"
+        ],
+        [
+          "⑂ 26k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "Shell",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "作者日常用于真实工程的 agent 技能集合：小、易改、可组合，适用于任意模型，反对被 GSD / BMAD / Spec-Kit 这种重流程框架夺走控制权。",
+      "topics": [],
+      "verdict": "它的价值不在于「多少技能」，而在于「小而可组合」的哲学——每个技能都可以被你改、被你丢、被你只装一个。适合厌倦了重型 agent 框架、想自己掌控开发流程的工程师；不适合想要「一键全自动」的用户。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "这是作者 mattpocock 日常用来做真实工程的 agent 技能，不是 vibe coding。作者明确指出 GSD、BMAD、Spec-Kit 这类流程框架虽然有帮助，但会夺走你的控制权，导致流程里的 Bug 难以定位。",
+            "这些技能设计得小、易改、可组合，适用于任何模型。安装方式是 skills.sh 把可编辑的文件拷贝到你的项目里，之后由你手动更新——这本身就是一种观点：技能应该属于你的项目，而不是被远程托管的框架管住。",
+            "仓库里 .claude-plugin/plugin.json、.agents/adr/（架构决策记录，如 0001-explicit-setup-pointer-only-for-hard-dependencies.md）、.changeset/（变更集，如 implementer-fresh-per-ticket.md、software-factory-skill.md）等结构，说明作者把技能的演进、依赖指针、变更管理都做成了显式的、可版本控制的工件。"
+          ],
+          "bullets": [
+            "每个 agent 只建议装一个技能，避免重复",
+            "基于几十年工程经验，而非短期流行",
+            "明确列出 .out-of-scope/（如 frozen-misc-skills、lazy-load-writing-for-agents、native-question-tool），标出自己不打算做什么"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合已经在用 agent 写代码、但觉得重型框架「太管太死」、想要轻量可改替代品的工程师。",
+            "门槛很低：装个插件、改几个文件即可；但你需要自己决定技能怎么组合、什么时候更新，框架不会替你做决策。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "category": "learning",
+      "language": "Python",
+      "stars": 79684,
+      "growth_30d": null,
+      "score": 90,
+      "metrics": [
+        [
+          "★ 79.7k",
+          "Star"
+        ],
+        [
+          "⑂ 12.7k",
+          "Fork"
+        ],
+        [
+          "⌀ 90",
+          "推荐分"
+        ],
+        [
+          "Python",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "一本把「构建真正的 agent 产品」拆成可练习步骤的仓库：先讲「主体性（agency）来自模型训练，而非外部编排」，再教你搭建那个「车」（harness）—— agent 循环、工具调用、待办、子 agent、技能加载、上下文压缩。",
+      "topics": [],
+      "verdict": "如果你对「agent」一词被滥用感到困惑，这篇值得读。它把 agent 产品拆成「模型（驱动）」+「车架（harness）」，并用 s01–s06 逐步实现。适合想从头理解 agent 工作原理、并亲手写一个最小 agent 框架的开发者；不适合只想拖拽搭建流程的用户。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "核心观点很尖锐：agency（感知、推理、行动的能力）来自模型训练，而不是外部代码编排。拖拽式工作流、无代码平台、提示词编排库，作者认为它们只是「把 LLM 当成文本补全节点的鲁布·戈德伯格机器」，不是真正的 agent。",
+            "但每个 agent 都需要一个环境来运行——Atari 模拟器、Dota 2 客户端、IDE 和终端。模型供给智能，环境供给动作空间。这个仓库教你构建的正是那个「车架（harness）」。",
+            "源码结构很干净：agents/s01_agent_loop.py、s02_tool_use.py、s03_todo_write.py、s04_subagent.py、s05_skill_loading.py、s06_context_compact.py，六个文件分别对应 agent 循环、工具调用、待办管理、子 agent、技能加载、上下文压缩，把一个完整 agent 最小可用的能力拆成六节可独立练习的课。"
+          ],
+          "bullets": [
+            "主张「模型供智能、环境供动作空间」，两者缺一不可",
+            "六节课（s01–s06）从 agent 循环到上下文压缩，循序渐进",
+            "中英文 README 均有（README.md / README-zh.md / README-ja.md），国际化友好"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合想亲手理解 agent 内部工作原理、并愿意写 Python 代码实现最小 agent 框架的开发者。",
+            "门槛是懂一点 Python，并能接受「先读理论、再写代码」的节奏；如果你只想拖拽搭个流程，可能会觉得这里太偏底层。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "ssloy/tinyrenderer",
+      "url": "https://github.com/ssloy/tinyrenderer",
+      "category": "curated",
+      "language": "C++",
+      "stars": 24486,
+      "growth_30d": null,
+      "score": 60,
+      "metrics": [
+        [
+          "★ 24.5k",
+          "Star"
+        ],
+        [
+          "⑂ 2.3k",
+          "Fork"
+        ],
+        [
+          "⌀ 60",
+          "推荐分"
+        ],
+        [
+          "C++",
+          "主要语言"
+        ],
+        [
+          "NOASSERTION",
+          "许可证"
+        ]
+      ],
+      "license": "NOASSERTION",
+      "summary": "用裸 C++、约 500 行代码写一个软件渲染器：从 Bresenham 线段、三角形光栅化、Z-buffer 隐面消除，到纹理贴图、切线空间法线贴图、阴影映射、间接光照，配套 14 篇配套课程笔记。",
+      "topics": [],
+      "verdict": "它想教你的不是「怎么调用 OpenGL/Vulkan/Metal/DirectX」，而是「这些图形库内部到底是怎么工作的」。适合想从底层理解 3D 图形、愿意动手写渲染器的人；代码本身作者说「没什么意思」，真正的价值是配套的 14 篇讲义；不适合想做现代 GPU 应用开发的人（作者明确说不展示如何写 GPU 应用）。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "这是一个软件渲染器教程：不使用任何第三方图形库（尤其是图形相关的），只用 C++ 从零实现，最终生成一张渲染好的 3D 模型图片。输入是三角网格和纹理，输出是一张图，没有图形界面。",
+            "作者把现代图形管线拆成了可独立学习的小步：Bresenham 线段算法、三角形光栅化、重心坐标入门、隐面移除、相机处理（两个版本）、着色、纹理、切线空间法线贴图、阴影映射、间接光照，最后有 toon shading 奖励关。",
+            "仓库很小：geometry.h、main.cpp、model.cpp、model.h 几个核心文件，外加一个单类 TGA 图像处理器（RGB/RGBA/灰度），以及 obj/african_head/ 下的示例模型与贴图。从「只能给一个像素上色」开始，线段、三角形都要自己手动实现。"
+          ],
+          "bullets": [
+            "约 500 行 C++，学生通常需 10–20 小时才能做出像样的渲染器",
+            "配套 14 篇课程笔记（haqr.eu/tinyrenderer），作者说「代码本身没什么意思，看笔记」",
+            "明确声明：不打算教怎么写 GPU 应用，只想教图形库内部工作原理"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合想理解 3D 图形底层原理、愿意从零手写渲染器、不怕 C++ 和一点线性代数的人。",
+            "门槛是 C++ 基础和能看懂讲义的英文；如果你只想调用现成的图形 API 做东西，这仓库对你帮助不大。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "codecrafters-io/build-your-own-x",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "category": "curated",
+      "language": "Markdown",
+      "stars": 558274,
+      "growth_30d": null,
+      "score": 55,
+      "metrics": [
+        [
+          "★ 558.3k",
+          "Star"
+        ],
+        [
+          "⑂ 52.2k",
+          "Fork"
+        ],
+        [
+          "⌀ 55",
+          "推荐分"
+        ],
+        [
+          "Markdown",
+          "主要语言"
+        ],
+        [
+          "无明确许可证",
+          "许可证"
+        ]
+      ],
+      "license": null,
+      "summary": "「从零重建你喜欢的技术」的分步指南合集：3D 渲染器、AI 模型、增强现实、BitTorrent 客户端、区块链、数据库、Docker、操作系统、编程语言、数据库、网络栈、Shell、正则引擎、浏览器、Web 服务器等 30 多个技术，每个都有循序渐进的教程。",
+      "topics": [],
+      "verdict": "本质上是一个精选的「自己动手造轮子」教程索引，而非一个可直接运行的代码仓库。适合通过「从零实现」来学习底层原理的自学者；仓库本身只有 README 和几个配置文件，所有实质内容都在链出的具体教程里。选哪个技术、跑多远，完全由你决定。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "仓库引用费曼那句名言：「我造不出的东西，我就不理解。」它收集了一大批「从头重建某项技术」的分步指南，涵盖 3D 渲染器、AI 模型、增强现实、BitTorrent 客户端、区块链/加密货币、机器人、命令行工具、数据库、Docker、模拟器/虚拟机、前端框架、游戏、Git、内存分配器、网络栈、神经网络、操作系统、物理引擎、处理器、编程语言、正则引擎、搜索引擎、Shell、模板引擎、文本编辑器、视觉识别系统、体素引擎、Web 浏览器、Web 服务器等。",
+            "README 只列了目录和每个条目的简短描述，真正的教程内容都在外部链接（codecrafters.io）里。仓库本身极简：.gitattributes、ISSUE_TEMPLATE.md、README.md、一张横幅图。",
+            "每个技术下的教程通常是「先造最小可用版本，再逐步加功能」，适合边做边学，适合那种「自己实现一遍才踏实」的学习风格。"
+          ],
+          "bullets": [
+            "30 多个技术方向，每个都有分步教程",
+            "仓库极简，实质内容在外部链出的教程里",
+            "适合「从零实现」学习派，不适合想直接复制粘贴可用代码的人"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合喜欢通过实现来理解底层原理、有编程基础、愿意花时间跑通教程的自学者。",
+            "门槛取决于你选的技术（写 Git 比写 Web 浏览器低得多）；没有统一安装方式，每个教程自行说明。"
+          ]
+        },
+        {
+          "title": "实际使用建议",
+          "paragraphs": [
+            "选一个你感兴趣且规模可控的技术先跑通（比如 Shell、正则引擎、一个最小 HTTP 服务器），不要试图一次把几十个方向都做完。教程都在外部链接里，链接偶尔会失效，卡住时可以去 codecrafters.io 原站看最新版。把自己实现的版本和标准实现对比，差距在哪里才是学习点；完成一个比半完成十个更有价值。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "donnemartin/system-design-primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "category": "curated",
+      "language": "Python",
+      "stars": 376442,
+      "growth_30d": null,
+      "score": 68,
+      "metrics": [
+        [
+          "★ 376.4k",
+          "Star"
+        ],
+        [
+          "⑂ 59.1k",
+          "Fork"
+        ],
+        [
+          "⌀ 68",
+          "推荐分"
+        ],
+        [
+          "Python",
+          "主要语言"
+        ],
+        [
+          "NOASSERTION",
+          "许可证"
+        ]
+      ],
+      "license": "NOASSERTION",
+      "summary": "系统设计入门指南：帮你学会设计大规模可扩展系统，并准备技术面试中的系统设计环节。把散落在网上的资源组织起来，配有练习题、示例解答、代码和图表，支持多国语言翻译，还能生成 epub。",
+      "topics": [],
+      "verdict": "这是一个资源索引型仓库，核心价值在于「把系统设计知识组织好」而非「提供一套唯一标准答案」。适合准备系统设计面试、想系统学习大规模系统设计的工程师；有练习题和示例解答，适合边读边做；多语言翻译（含简体中文、繁体中文、日语、阿拉伯语等）体现社区贡献。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "动机很直接：设计可扩展系统能帮你成为更好的工程师，但系统设计知识非常广泛、资源散落在网上各处，这个仓库把它们组织成一个可学习的集合。",
+            "除了理论，它还提供「系统设计面试题目 + 示例解答」，包含讨论、代码和图表，适合面试准备；还有学习路径（study guide）和「如何面对系统设计问题」的方法论。",
+            "仓库结构很像一本电子书：README 多国语言版本（README-zh-Hans、README-zh-TW、README-ja 等）、TRANSLATIONS.md 负责翻译协调、generate-epub.sh 能生成 epub、images/ 目录存放图表、CONTRIBUTING.md 欢迎社区贡献。"
+          ],
+          "bullets": [
+            "资源索引型：组织散落的系统设计知识，而非原创教程",
+            "有面试题 + 示例解答（讨论、代码、图表）",
+            "多国语言翻译，含中文；可生成 epub 离线阅读"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合准备系统设计面试、想系统学习大规模系统设计的工程师；也适合想要一份可离线阅读的系统设计入门资料的人（epub）。",
+            "门槛是有一定工程背景，能看懂架构图和示例代码；完全零基础可能需要先补计算机网络与分布式基础。"
+          ]
+        },
+        {
+          "title": "如何用好它",
+          "paragraphs": [
+            "不要试图把所有答案背下来，重点是理解每个方案的权衡（trade-off）：为什么这里用消息队列、那里用缓存、又在什么场景下会成为瓶颈。建议先读 README 勾画一条学习路径，再挑一个感兴趣的面试题，自己画一张架构图，最后对照示例解答看看漏了什么。images/ 目录里的图表可以配合阅读，generate-epub.sh 能把内容打包成 epub 离线读。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "freeCodeCamp/freeCodeCamp",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "category": "evergreen",
+      "language": "TypeScript",
+      "stars": 458368,
+      "growth_30d": null,
+      "score": 87,
+      "metrics": [
+        [
+          "★ 458.4k",
+          "Star"
+        ],
+        [
+          "⑂ 48.2k",
+          "Fork"
+        ],
+        [
+          "⌀ 87",
+          "推荐分"
+        ],
+        [
+          "TypeScript",
+          "主要语言"
+        ],
+        [
+          "BSD-3-Clause",
+          "许可证"
+        ]
+      ],
+      "license": "BSD-3-Clause",
+      "summary": "freeCodeCamp.org 的开源代码库与课程：由 501(c)(3) 慈善机构运营，提供完全免费、自学进度的全栈 Web 开发和机器学习课程，数千个交互式编程挑战，社区已帮助超过 10 万人拿到第一份开发者工作。",
+      "topics": [],
+      "verdict": "它是「免费编程教育」里最有名的开源项目之一，代码库和课程完全开放，任何人都可以自学、贡献，甚至自行部署。适合零基础想免费转行开发的人；但完全自学对自律要求高，且更偏向 Web/前后端方向。代码库用 TypeScript，提供 Codespace 开发容器，方便直接在浏览器里跑。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "freeCodeCamp.org 提供全栈 Web 开发和机器学习课程，完全免费、自学进度。课程由数千个交互式编程挑战组成，每个认证（响应式 Web 设计、JavaScript、前端开发库、Python、关系型数据库、后端开发与 API 等）都要求完成 5 个必做项目才能考取。",
+            "还有面向开发者的语言认证（A1/A2/B1 英语、A1 专业西班牙语、A1 专业中文等），社区由 Discord 连接，项目本身也参与 LFX 活跃贡献者计划。",
+            "仓库本身是开源代码库：.devcontainer/ 提供 Codespace 开发环境，可以直接在浏览器里开始贡献；.github/ 下有问题模板、安全策略、资金清单等，是一个成熟的开源项目治理结构。"
+          ],
+          "bullets": [
+            "完全免费、自学，已帮助 10 万+ 人获得第一份开发者工作",
+            "多个认证方向，每个都有 5 个必做项目",
+            "开源代码库，可贡献、可自行部署，提供 Codespace 环境"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合零基础、想免费学编程并可能转行的人；也适合想参与大型开源教育项目的贡献者。",
+            "门槛低（免费、自学），但完全自学对自律和持续性要求高；内容更偏向 Web/前后端与机器学习入门。"
+          ]
+        },
+        {
+          "title": "学习建议",
+          "paragraphs": [
+            "不要只看视频、只做选择题，一定要亲手完成每个认证里的 5 个必做项目，能独立写出项目才是真正掌握了。卡住时可以去 Discord 社区求助，或者直接在仓库里找 Good First Issue 从改小 Bug 开始贡献。代码库开源，提供 Codespace 环境，想在浏览器里直接开始也很方便。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "firstcontributions/first-contributions",
+      "url": "https://github.com/firstcontributions/first-contributions",
+      "category": "beginner",
+      "language": null,
+      "stars": 56657,
+      "growth_30d": null,
+      "score": 90,
+      "metrics": [
+        [
+          "★ 56.7k",
+          "Star"
+        ],
+        [
+          "⑂ 112.1k",
+          "Fork"
+        ],
+        [
+          "⌀ 90",
+          "推荐分"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "让第一次参与开源的人尽快完成第一个 Pull Request：在 Contributors.md 里加上自己的名字，提交 PR。提供 60 多种语言的翻译、贡献指南、行为准则、PR 模板，还有自动合并符合条件 PR 的工作流。",
+      "topics": [],
+      "verdict": "如果你还没给开源社区提过第一个 PR，这是最常被推荐的起点：门槛极低，改一个文件（往 Contributors.md 加一行名字）就能完成一次完整的「 fork → 改改 → 提 PR → 被合并 」流程。多语言翻译覆盖几十种语言，说明它是面向全球零基础新手的；但它只是入门，真正参与一个项目还需要之后学更多。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "core 只有一件事：把你的名字加到 Contributors.md，然后提一个 PR。仓库提供贡献指南（CONTRIBUTING.md）、行为准则（CODE_OF_CONDUCT.md）、PR 模板，还有各语言翻译的文档（docs/translations/ 下有阿尔巴尼亚语、亚美尼亚语、乌兹别克语……一直到中文简体/繁体、俄语、阿拉伯语等几十种），降低语言障碍。",
+            ".github/workflows/auto-pr-merge.yml 负责把符合条件的 PR 自动合并，维护者不需要逐个手动审核，这也意味着你的 PR 大概率会被快速接收，适合拿来练手、拿到第一个「已合并」徽章。"
+          ],
+          "bullets": [
+            "门槛极低：改一个 Markdown 文件就完成第一个 PR",
+            "60 多种语言翻译，面向全球新手",
+            "自动 PR 合并工作流，新手 PR 被接收概率高"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合完全没有开源经验、想把第一个 PR 「刻在纪念碑上」的人；也适合老师/社区组织者带新手练手。",
+            "门槛几乎为零：会 Git 基本操作（fork、改文件、提 PR）即可；但完成这个 PR 后，你还需要学习如何读一个真实项目、如何审查代码、如何和维护者沟通。"
+          ]
+        },
+        {
+          "title": "你会学到什么，以及下一步",
+          "paragraphs": [
+            "做完这个 PR 你会掌握开源贡献的最小闭环：fork 仓库、创建分支、改文件、提 PR、回应 review、被合并。这是参与任何大型开源项目的通用技能。",
+            "建议在此之后不要停在这里：找一个你实际在用的项目，翻开它的 Good First Issue，读一遍 README 的贡献指南，再尝试提第二个 PR。第一个 PR 是门票，不是终点。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "seedds/nxnative",
+      "url": "https://github.com/seedds/nxnative",
+      "category": "hot_week",
+      "language": "Python",
+      "stars": 10921,
+      "growth_30d": null,
+      "score": 90,
+      "metrics": [
+        [
+          "★ 10.9k",
+          "Star"
+        ],
+        [
+          "⑂ 1.8k",
+          "Fork"
+        ],
+        [
+          "⌀ 90",
+          "推荐分"
+        ],
+        [
+          "Python",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "在 iPhone/iPad 上原生运行你自己的 Nintendo Switch 游戏：带上游戏的 NSP 文件和 prod.keys，一条脚本把它们打包成 IPA，侧载到苹果设备上。不是模拟器——游戏代码直接在 Apple 芯片上跑，Switch 图形重建为 Metal；已开始支持 Switch 2（Donkey Kong Bananza 已在 Mac 上运行）。",
+      "topics": [],
+      "verdict": "它不是模拟器，而是「原生执行」：游戏自己的机器码直接在 Apple 芯片上运行，图形层用 Metal 重建，所以性能比模拟器好，但合法性处于灰色地带（你需要自备游戏备份和 prod.keys，仓库里不含任何游戏内容，也不与 Nintendo 有关）。它站在 d2r-mobile、Ryujinx、Atmosphère、LibHac、SPIRV-Cross、glslang 等开源项目的肩膀上，NX2Apple / NX Play 等社区 Mac App 又把它做成了无需命令行的 App。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "核心流程：你提供 Switch 游戏的 NSP 文件和 prod.keys，nxnative 的脚本把它们处理成可以在 iPhone/iPad 上安装的 IPA。底层用 dm/tools/nx_extract 读 NSP、用 LibHac 把更新层叠到基础游戏、用 Ryujinx 的着色器翻译器把着色器翻成 SPIR-V 再经 SPIRV-Cross 变成 Metal Shading Language、用 NSO rewriter + Horizon 主机模仿层 + NVN-on-Metal 层让游戏代码在 Apple 芯片上跑，iOS app shell 负责界面。",
+            "仓库结构反映了这条管线：dm/ 下是从 d2r-mobile 继承的通用部分（NSO rewriter、Horizon 替代、NVN-on-Metal、iOS app shell），dm/third_party/ 下是 ryujinx、Atmosphère 内核语义参考、LibHac、SPIRV-Cross、glslang，dm/gfx/nvn/ 下有 Metal 相关的索引与着色器降级代码。",
+            "Switch 2 游戏已开始支持：Donkey Kong Bananza 已在 Mac 上运行；iPhone/iPad 尚未测试。"
+          ],
+          "bullets": [
+            "不是模拟器：游戏代码直接在 Apple 芯片运行，图形用 Metal 重建",
+            "需自备 NSP + prod.keys，仓库不含游戏内容，与 Nintendo 无关",
+            "基于 d2r-mobile、Ryujinx、Atmosphère、LibHac、SPIRV-Cross 等开源项目"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合有 Mac（macOS 26.6+、Xcode 27.2、Homebrew、Python 3.12 arm64）、自备 Switch 游戏备份、愿意折腾侧载的人；iPhone 打包还需要 Xcode 的 iOS 平台。",
+            "门槛较高：需要理解签名、prod.keys、Metal 着色器编译；不是「下载即玩」，更像是一个面向爱好者的开源工具链。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "storytold/effectcraft",
+      "url": "https://github.com/storytold/effectcraft",
+      "category": "curated",
+      "language": "Rust",
+      "stars": 8308,
+      "growth_30d": null,
+      "score": null,
+      "metrics": [
+        [
+          "★ 8.3k",
+          "Star"
+        ],
+        [
+          "Rust",
+          "主要语言"
+        ],
+        [
+          "MIT OR Apache-2.0",
+          "许可证"
+        ]
+      ],
+      "license": "MIT OR Apache-2.0",
+      "summary": "EffectCraft（ArtCraft）：用纯 Rust 写的开源专业动态图形与视觉特效工作室，也就是一个合成器。支持合成、图层、关键帧、308 个效果、图层样式、表达式、3D 摄像机与灯光、渲染队列，原生跑在 macOS、Windows、Linux，也能在浏览器里运行。年轻、快速迭代，已可用。",
+      "topics": [],
+      "verdict": "一个用 Rust 写的、跨平台的开源合成/特效工具，目标是「免费、开源、专业」的 After Effects 替代方案。它还很年轻（自称 young and moving fast），已可用但不免有不稳定之处。适合想要免费开源的动态图形/特效工具、愿意尝试年轻项目的人；不适合需要生产级稳定性的商业用户。CodeRabbit 审查 PR、SonarCloud 扫描代码，说明项目在工程规范上有投入。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "EffectCraft 是一个合成器：合成、图层、关键帧、308 个内置效果、图层样式、表达式、3D 摄像机和灯光、渲染队列，覆盖了动态图形与视觉特效工作室的核心能力。原生支持 macOS、Windows、Linux，也能跑在浏览器里，跨平台能力较强。",
+            "仓库用纯 Rust 写 (.cargo/config.toml, AGENTS.md, CLAUDE.md)，CI 覆盖 freebsd、nix、windows-arm64 等平台，有 release 和 packaging-lint 工作流，说明作者把多平台发布当成了长期目标。ATTRIBUTION.md 列出了第三方依赖的许可证归属，工程规范意识较强。",
+            "CodeRabbit 自动审查 PR，SonarCloud 扫描代码质量，Discord 有社区交流，这些表明它不是一个随便写写的玩具，而是有意往专业工具方向走的项目。"
+          ],
+          "bullets": [
+            "纯 Rust，跨平台（macOS/Windows/Linux + 浏览器）",
+            "308 个效果、图层、关键帧、表达式、3D 摄像机/灯光、渲染队列",
+            "MIT OR Apache-2.0 双许可，CodeRabbit + SonarCloud 工程治理"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合想要免费开源的专业合成/特效工具、愿意尝试年轻快速迭代项目的人；也适合 Rust 爱好者参与贡献。",
+            "门槛是「接受年轻项目可能不稳定」；如果你需要 After Effects 级别的稳定性和生态（插件、模板、官方支持），这个项目还不够。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    },
+    {
+      "name": "simbasjungles/free-my-tv",
+      "url": "https://github.com/simbasjungles/free-my-tv",
+      "category": "hot_week",
+      "language": "Java",
+      "stars": 5663,
+      "growth_30d": null,
+      "score": 87.5,
+      "metrics": [
+        [
+          "★ 5.7k",
+          "Star"
+        ],
+        [
+          "⑂ 972",
+          "Fork"
+        ],
+        [
+          "⌀ 87.5",
+          "推荐分"
+        ],
+        [
+          "Java",
+          "主要语言"
+        ],
+        [
+          "MIT",
+          "许可证"
+        ]
+      ],
+      "license": "MIT",
+      "summary": "为 Google TV、LG webOS、Samsung Tizen 打造的快速、无广告电视主屏幕：把你常用的 App 排在玻璃搁架上，每小时三个非赞助精选，天气、加密货币价格、继续观看，跟随城市日落的明暗模式和屏保，10 分钟用 AI 助手（Built with Claude Code）就能设置好，无 root，一键恢复出厂主屏。",
+      "topics": [],
+      "verdict": "这是一个「把电视主屏幕夺回来」的开源 App：无广告、无赞助行、无自动播放促销，你的 App 前面和中心，精选内容来自你已安装的 App 而非赞助。它是用 Claude Code 构建的（Built with Claude Code），是 AI 编程做实用端侧应用的一个参考案例。60 fps、96 MB 内存（远低于原厂 242 MB），有多语言 i18n。适合厌恶厂商广告主屏幕、愿意花十几分钟侧载的人；不适合没有智能电视的用户。",
+      "sections": [
+        {
+          "title": "它到底在做什么",
+          "paragraphs": [
+            "Free My TV 是一套替代电视原厂主屏幕的方案，支持 Google TV / Android TV（Android 8+）、LG webOS、Samsung Tizen。核心卖点：无广告、无赞助行、无自动播放促销；把你实际用的 App 排在玻璃搁架上，你定顺序；每小时三个来自你已安装 App 的非赞助精选；有 Continue Watching、天气、加密货币价格、跟随日落的明暗模式、屏保、自己的照片/screensaver 等功能。",
+            "仓库里 app/ 是 Android 工程（AndroidManifest.xml、assets/ 字体与 i18n 多语言 JSON、.github/ 工作流 check.yml/pages.yml），AGENTS.md 和 CLAUDE.md 说明它是面向 AI 编程助手维护的，Built with Claude Code。README 里甚至写了「One button to undo」——一键恢复出厂主屏，降低试用风险。",
+            "性能数据写在 README 里：60 fps，每帧 16.6 ms，96 MB 内存（对比原厂 242 MB，省 60%），在 98 英寸 TCL Google TV (Android 14) 上测得。"
+          ],
+          "bullets": [
+            "无广告、无赞助行、无自动播放促销",
+            "Built with Claude Code，AI 编程构建的实用端侧应用",
+            "60 fps、96 MB 内存、多语言 i18n、一键恢复出厂主屏"
+          ]
+        },
+        {
+          "title": "适合谁与门槛",
+          "paragraphs": [
+            "适合厌恶电视厂商主屏幕广告、愿意花十几分钟侧载 APK 到 Google TV/Android TV 的人；也适合想看「AI 编程做一个真实 TV 应用」案例的开发者。",
+            "门槛：需要一台 Google TV/Android TV（Android 8+）和同 Wi-Fi 的电脑，APK 装在电视而非手机；没有智能电视的用户用不上。"
+          ]
+        }
+      ],
+      "has_analysis": true
+    }
+  ]
+}

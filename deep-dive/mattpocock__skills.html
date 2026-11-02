@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>深度拆解：mattpocock/skills · GitHub 冲浪手记</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
+    <nav>
+      <a href="../index.html">首页</a>
+      <a href="#categories">分类榜</a>
+      <a href="../deep-dive.html" class="active">深度拆解</a>
+      <a href="../about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page-main deep-page">
+  <div class="page-head">
+    <h1>mattpocock/skills</h1>
+    <div class="deep-meta">
+      <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener" class="repo-link">https://github.com/mattpocock/skills</a>
+      <span class="stars">★ 309.2k</span>
+      <span class="lang">Shell</span>
+      
+    </div>
+  </div>
+
+  <p class="deep-lead">作者日常用于真实工程的 agent 技能集合：小、易改、可组合，适用于任意模型，反对被 GSD / BMAD / Spec-Kit 这种重流程框架夺走控制权。</p>
+  <div class="deep-topics"></div>
+  <div class="metrics"><div class="metric"><strong>★ 309.2k</strong><span>Star</span></div><div class="metric"><strong>⑂ 26k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+
+  <div class="deep-sections">
+        <h3>它到底在做什么</h3>
+        <p>这是作者 mattpocock 日常用来做真实工程的 agent 技能，不是 vibe coding。作者明确指出 GSD、BMAD、Spec-Kit 这类流程框架虽然有帮助，但会夺走你的控制权，导致流程里的 Bug 难以定位。</p>
+<p>这些技能设计得小、易改、可组合，适用于任何模型。安装方式是 skills.sh 把可编辑的文件拷贝到你的项目里，之后由你手动更新——这本身就是一种观点：技能应该属于你的项目，而不是被远程托管的框架管住。</p>
+<p>仓库里 .claude-plugin/plugin.json、.agents/adr/（架构决策记录，如 0001-explicit-setup-pointer-only-for-hard-dependencies.md）、.changeset/（变更集，如 implementer-fresh-per-ticket.md、software-factory-skill.md）等结构，说明作者把技能的演进、依赖指针、变更管理都做成了显式的、可版本控制的工件。</p>
+        <ul><li>每个 agent 只建议装一个技能，避免重复</li><li>基于几十年工程经验，而非短期流行</li><li>明确列出 .out-of-scope/（如 frozen-misc-skills、lazy-load-writing-for-agents、native-question-tool），标出自己不打算做什么</li></ul>
+        <h3>适合谁与门槛</h3>
+        <p>适合已经在用 agent 写代码、但觉得重型框架「太管太死」、想要轻量可改替代品的工程师。</p>
+<p>门槛很低：装个插件、改几个文件即可；但你需要自己决定技能怎么组合、什么时候更新，框架不会替你做决策。</p>
+        
+  </div>
+
+  <div class="deep-verdict">
+    <h4>我的结论</h4>
+    <p>它的价值不在于「多少技能」，而在于「小而可组合」的哲学——每个技能都可以被你改、被你丢、被你只装一个。适合厌倦了重型 agent 框架、想自己掌控开发流程的工程师；不适合想要「一键全自动」的用户。</p>
+  </div>
+
+  <nav class="deep-nav">
+    <a href="deep-dive/obra__superpowers.html" class="nav-link prev">← obra/superpowers</a>
+    <a href="../deep-dive.html" class="nav-link index">返回目录</a>
+    <a href="deep-dive/shareAI-lab__learn-claude-code.html" class="nav-link next">shareAI-lab/learn-claude-code →</a>
+  </nav>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 独立页面：deep-dive/mattpocock__skills.html</p></div>
+</footer>
+</body>
+</html>

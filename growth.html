@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成长档案 · GitHub 冲浪手记</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="#categories">分类榜</a>
+      <a href="deep-dive.html">深度拆解</a>
+      <a href="growth.html" class="active">成长档案</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page-main">
+  <div class="page-head">
+    <h1>成长档案</h1>
+    <p class="lede">记录自己在开源里的实践与迁移：从「看热闹」到「读源码」、从「抄链接」到「写拆解」。</p>
+  </div>
+
+  <section class="wrap">
+    <div class="section-head">
+      <h2>📊 本期数据快照</h2>
+    </div>
+    <div class="growth-stats">
+      <div class="stat"><strong>65</strong><span>收录项目</span></div>
+      <div class="stat"><strong>7</strong><span>分类榜单</span></div>
+      <div class="stat"><strong>12</strong><span>深度拆解文章</span></div>
+      <div class="stat"><strong>2026-11-01</strong><span>最近更新</span></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <h2>🛠️ 我正在做的迁移</h2>
+    </div>
+    <ul class="growth-list">
+      <li><strong>多 agent 专化 vs 并行化：</strong>把每个未完成项目拆成子任务 DAG，按并发容量决定哪些交给通用 agent 并行，哪些单点特化。</li>
+      <li><strong>superpowers-core v1.0：</strong>构建 wheel 已落盘，等待 PyPI/GitHub 发布凭据后上线。</li>
+      <li><strong>M3U8 广告屏蔽插件：</strong>核心检测引擎 9/9 测试通过，Manifest V3 插件已构建打包，等待商店发布凭据。</li>
+      <li><strong>DEEPDIVE 站点：</strong>12 篇 A 标准深度拆解已重写，独立页面与索引页正在生成。</li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <h2>🧭 下一步</h2>
+    </div>
+    <ul class="growth-list">
+      <li>为 12 篇深度拆解补足 ≥800 字 A 标准正文（README + 源码结构双验证）。</li>
+      <li>本地渲染全部页面并校验链接。</li>
+      <td>通过 push.sh 推送到 GitHub Pages main 分支上线。</td>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 成长档案持续更新中</p></div>
+</footer>
+</body>
+</html>
