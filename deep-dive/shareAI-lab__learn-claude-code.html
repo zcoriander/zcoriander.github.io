@@ -24,37 +24,36 @@
     <h1>shareAI-lab/learn-claude-code</h1>
     <div class="deep-meta">
       <a href="https://github.com/shareAI-lab/learn-claude-code" target="_blank" rel="noopener" class="repo-link">https://github.com/shareAI-lab/learn-claude-code</a>
-      <span class="stars">★ 79.7k</span>
+      <span class="stars">★ 80k</span>
       <span class="lang">Python</span>
       
     </div>
   </div>
 
-  <p class="deep-lead">一本把「构建真正的 agent 产品」拆成可练习步骤的仓库：先讲「主体性（agency）来自模型训练，而非外部编排」，再教你搭建那个「车」（harness）—— agent 循环、工具调用、待办、子 agent、技能加载、上下文压缩。</p>
+  <p class="deep-lead">从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。</p>
   <div class="deep-topics"></div>
-  <div class="metrics"><div class="metric"><strong>★ 79.7k</strong><span>Star</span></div><div class="metric"><strong>⑂ 12.7k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 90</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+  <div class="metrics"><div class="metric"><strong>★ 80k</strong><span>Star</span></div><div class="metric"><strong>⑂ 12.8k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 85</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
 
   <div class="deep-sections">
-        <h3>它到底在做什么</h3>
-        <p>核心观点很尖锐：agency（感知、推理、行动的能力）来自模型训练，而不是外部代码编排。拖拽式工作流、无代码平台、提示词编排库，作者认为它们只是「把 LLM 当成文本补全节点的鲁布·戈德伯格机器」，不是真正的 agent。</p>
-<p>但每个 agent 都需要一个环境来运行——Atari 模拟器、Dota 2 客户端、IDE 和终端。模型供给智能，环境供给动作空间。这个仓库教你构建的正是那个「车架（harness）」。</p>
-<p>源码结构很干净：agents/s01_agent_loop.py、s02_tool_use.py、s03_todo_write.py、s04_subagent.py、s05_skill_loading.py、s06_context_compact.py，六个文件分别对应 agent 循环、工具调用、待办管理、子 agent、技能加载、上下文压缩，把一个完整 agent 最小可用的能力拆成六节可独立练习的课。</p>
-        <ul><li>主张「模型供智能、环境供动作空间」，两者缺一不可</li><li>六节课（s01–s06）从 agent 循环到上下文压缩，循序渐进</li><li>中英文 README 均有（README.md / README-zh.md / README-ja.md），国际化友好</li></ul>
-        <h3>适合谁与门槛</h3>
-        <p>适合想亲手理解 agent 内部工作原理、并愿意写 Python 代码实现最小 agent 框架的开发者。</p>
-<p>门槛是懂一点 Python，并能接受「先读理论、再写代码」的节奏；如果你只想拖拽搭个流程，可能会觉得这里太偏底层。</p>
+        <h3>核心论点</h3>
+        <p>README 开头那句话很清醒：Agency comes from the model. An agent product = model + harness. 智能来自模型训练，不是外部代码编排。模型是驾驶员，harness 是车。这个仓库教你怎么造那辆车。</p>
+<p>接着它用三个历史案例论证——DeepMind DQN 打 Atari（2013）、OpenAI Five 打 Dota 2（2019）、AlphaStar 打星际争霸 2（2019）——说明能动性是学出来的，不是编排出来的。</p>
         
+        <h3>它和 Superpowers 的关系</h3>
+        <p>两个项目放在一起看很有意思：learn-claude-code 是「造车厂」，superpowers 是「驾驶规范」。</p>
+<p>前者让你理解 harness 的每个零件为什么存在，后者规定拿到车之后该怎么开。</p>
+        <ul><li>用 Bash 从零实现一个 nano 级的 agent harness</li><li>配套中文/日文翻译，学习门槛低</li><li>有 Trendshift 徽章，说明在新生代项目里热度很高</li></ul>
   </div>
 
   <div class="deep-verdict">
     <h4>我的结论</h4>
-    <p>如果你对「agent」一词被滥用感到困惑，这篇值得读。它把 agent 产品拆成「模型（驱动）」+「车架（harness）」，并用 s01–s06 逐步实现。适合想从头理解 agent 工作原理、并亲手写一个最小 agent 框架的开发者；不适合只想拖拽搭建流程的用户。</p>
+    <p>这是我在这批项目里最推荐给「想理解而不是想直接用」的人的项目。README 的写作质量在开源项目里属于头部——论述清晰、有历史纵深、有明确的观点。读完你会发现，很多「AI 编程工具」的差异，本质是 harness 设计哲学的差异。</p>
   </div>
 
   <nav class="deep-nav">
-    <a href="deep-dive/mattpocock__skills.html" class="nav-link prev">← mattpocock/skills</a>
+    <a href="mattpocock__skills.html" class="nav-link prev">← mattpocock/skills</a>
     <a href="../deep-dive.html" class="nav-link index">返回目录</a>
-    <a href="deep-dive/ssloy__tinyrenderer.html" class="nav-link next">ssloy/tinyrenderer →</a>
+    <a href="ssloy__tinyrenderer.html" class="nav-link next">ssloy/tinyrenderer →</a>
   </nav>
 </main>
 

@@ -405,7 +405,7 @@ def render_growth(all_deep, projects):
 </html>"""
 
 
-def render_home(data, short_notes):
+def render_home(data, short_notes, weekly_changes=None):
     latest = data.get("generated_at", "")[:10]
     total = sum(len(data["categories"].get(c, [])) for c, _, _ in CATEGORIES)
     hero_picks = data.get("hero_picks", [])
@@ -422,6 +422,8 @@ def render_home(data, short_notes):
         <span class="cat-count">{len(items)} 个项目</span>
         {f'<span class="cat-lead">领跑：{esc(top["full_name"])}</span>' if top else ''}
       </a>""")
+
+    weekly_changes_html = render_weekly_changes(weekly_changes)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -475,6 +477,8 @@ def render_home(data, short_notes):
     </div>
   </section>
 
+  {weekly_changes_html}
+
   <section class="wrap" id="categories">
     <div class="section-head">
       <h2>📂 分类榜单</h2>
@@ -522,6 +526,63 @@ def render_home(data, short_notes):
 </footer>
 </body>
 </html>"""
+
+
+def render_weekly_changes(weekly_changes):
+    """首页本周榜单变动板块：新加入、被顶替、排名变动。"""
+    if not weekly_changes or weekly_changes.get("note"):
+        return f"""    <section class="wrap" id="weekly-changes">
+      <div class="section-head">
+        <h2>📈 本周榜单变动</h2>
+        <p class="muted">暂无变动数据（首次运行或等待下周一更新）</p>
+      </div>
+    </section>"""
+
+    new_entries = weekly_changes.get("new_entries", [])
+    out_entries = weekly_changes.get("out_entries", [])
+    moved_entries = weekly_changes.get("moved_entries", [])
+    week_start = weekly_changes.get("week_start", "")
+
+    def change_card(p, is_out=False):
+        cat_html = f'<span class="cat">{esc(p.get("category",""))}</span>' if not is_out else f'<span class="cat prev-cat">原 {esc(p.get("prev_category",""))}</span>'
+        return f"""          <article class="change-card">
+            <a class="repo" href="https://github.com/{esc(p['full_name'])}" target="_blank" rel="noopener">
+              {esc(p['full_name'])}
+            </a>
+            {cat_html}
+            <span class="stars">★ {fmt(p.get("stars",0))}</span>
+          </article>"""
+
+    new_html = "\n".join(change_card(p) for p in new_entries) or '<p class="muted">本周无新加入</p>'
+    out_html = "\n".join(change_card(p, is_out=True) for p in out_entries) or '<p class="muted">本周无项目被顶替</p>'
+    moved_html = "\n".join(change_card(p) for p in moved_entries) or '<p class="muted">本周无排名变动</p>'
+
+    return f"""    <section class="wrap" id="weekly-changes">
+      <div class="section-head">
+        <h2>📈 本周榜单变动</h2>
+        <p>每周一更新 · 数据周期：{week_start}</p>
+      </div>
+      <div class="changes-grid">
+        <div class="change-block change-new">
+          <h3>🆕 新加入（共{len(new_entries)}个）</h3>
+          <div class="change-cards">
+{new_html}
+          </div>
+        </div>
+        <div class="change-block change-out">
+          <h3>📉 被顶替（共{len(out_entries)}个）</h3>
+          <div class="change-cards">
+{out_html}
+          </div>
+        </div>
+        <div class="change-block change-moved">
+          <h3>📊 排名变动（共{len(moved_entries)}个）</h3>
+          <div class="change-cards">
+{moved_html}
+          </div>
+        </div>
+      </div>
+    </section>"""
 
 
 def render_categories(data):
@@ -657,6 +718,7 @@ def main():
     projects = load_json(PROJECTS, {"categories": {}, "generated_at": "", "hero_picks": [], "thoughts": [], "category_notes": {}})
     short_notes = load_json(SHORT_NOTES, {})
     all_deep = load_json(DEEP_DIVES, {"deep_dives": []}).get("deep_dives", [])
+    weekly_changes = load_json(os.path.join(DATA, "weekly_changes.json"), None)
     # 按 DEEP_ORDER 排序，缺失的补空
     by_name = {d["name"]: d for d in all_deep}
     ordered_deep = [by_name[n] for n in DEEP_ORDER if n in by_name]
@@ -664,7 +726,7 @@ def main():
     os.makedirs(DEEP_OUT, exist_ok=True)
 
     outputs = {
-        "index.html": render_home(projects, short_notes),
+        "index.html": render_home(projects, short_notes, weekly_changes),
         "categories.html": render_categories(projects),
         "deep-dive.html": render_deep_index(ordered_deep, short_notes, projects),
         "about.html": render_about(projects),
