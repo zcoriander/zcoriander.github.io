@@ -24,37 +24,41 @@
     <h1>obra/superpowers</h1>
     <div class="deep-meta">
       <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" class="repo-link">https://github.com/obra/superpowers</a>
-      <span class="stars">★ 310.6k</span>
+      <span class="stars">★ 313.6k</span>
       <span class="lang">Shell</span>
       
     </div>
   </div>
 
-  <p class="deep-lead">一套给编码 agent 用的软件开发方法论：可组合的技能（skills）+ 初始指令，让 agent 在动手写代码前，先把需求、设计、计划过一遍。</p>
+  <p class="deep-lead">一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。</p>
   <div class="deep-topics"></div>
-  <div class="metrics"><div class="metric"><strong>★ 310.6k</strong><span>Star</span></div><div class="metric"><strong>⑂ 27.6k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+  <div class="metrics"><div class="metric"><strong>★ 313.6k</strong><span>Star</span></div><div class="metric"><strong>⑂ 27.9k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
 
   <div class="deep-sections">
-        <h3>它到底在做什么</h3>
-        <p>Superpowers 是一套完整的软件开发方法论，建立在可组合的 skills 和一些初始指令之上。核心思想是：agent 一启动就不该立刻写代码，而应该先退一步，跟你把「到底想做什么」讲清楚。</p>
-<p>具体流程是：从对话中提炼规格（spec）、以可读的分块展示给你确认、签字后生成实现计划、再启动「子驱动开发」（subagent-driven-development），让多个子 agent 分工完成每项工程任务、互相检查、审查。</p>
-<p>仓库按 agent 平台拆分了插件：.claude-plugin、.codex-plugin、.cursor-plugin、.devin-plugin、.opencode/plugins/superpowers.js、.pi/extensions/superpowers.ts、.kimi-plugin、.hermes-plugin、.muse-plugin，以及 .agents/plugins/marketplace.json 技能市场。说明它刻意做到了「在哪个 agent 里都能用」，而不是锁死单一平台。</p>
-        <ul><li>强调真 red/green TDD、YAGNI（你不需要它）、DRY</li><li>计划写得足够清楚，让「一个没有项目背景、品味差、讨厌测试的初级工程师」都能照着做</li><li>agent 可自主工作数小时而不偏离计划</li></ul>
-        <h3>适合谁与门槛</h3>
-        <p>适合已经把 agent 当成日常编程伙伴、并希望提升代码质量与可复现性的团队或个人。</p>
-<p>门槛不高（它本质是插件 + 指令），但要落地需要团队愿意接受「先写 spec、再写 code」的节奏，以及对子 agent 产出做审查的习惯。</p>
+        <h3>核心思路：先谈清楚，再写代码</h3>
+        <p>它在你启动编码 Agent 的那一刻就介入。Agent 不会直接开始写代码，而是先退一步问你到底想做什么。</p>
+<p>从对话里提炼出规格之后，它会分成你「读得完、咽得下」的小块给你看。你签字确认设计，然后它给出实现计划——README 里形容这个计划要清晰到「一个热情但品味糟糕、没判断力、不了解项目背景、还讨厌写测试的初级工程师」都能照着做。</p>
+<p>这描述挺刻薄的，但很诚实：它假设执行者不会替你思考，所以计划必须自带上下文。</p>
+        
+        <h3>执行阶段：子 Agent 流水线</h3>
+        <p>你说「go」之后，它启动一个子 Agent 驱动的开发流程：Agent 逐个任务往下推进，自己检查和审查自己的工作，然后继续。</p>
+<p>README 里说它「连续自主工作几小时不偏离计划」并不罕见。同时强制真·红绿 TDD、YAGNI 和 DRY。</p>
+        <ul><li>规格先行的设计评审，避免一上来就写</li><li>子 Agent 承担实现与自审</li><li>方法论约束（TDD / YAGNI / DRY）内建在技能里</li></ul>
+        <h3>生态兼容性</h3>
+        <p>这是我觉得它最聪明的地方：支持面极广——Claude Code、Codex、Cursor、Copilot CLI、Gemini CLI、OpenCode、Qwen Code、Hermes Agent……十几种 harness 都能装。</p>
+<p>因为它把方法论做成了「可组合的技能 + 少量初始指令」，而不是绑死在某一个产品上。这让它更像是「Agent 时代的 GDD 文档」。</p>
         
   </div>
 
   <div class="deep-verdict">
     <h4>我的结论</h4>
-    <p>它不是一个新编程语言，也不是一个 IDE，而是一套「让 agent 慢下来再动手」的方法论。对已经在用 Claude Code / Codex / Cursor 等 agent 的团队，值得把它当成标准作业程序（SOP）引入；对只偶尔写脚本的个人，则可能过于沉重。</p>
+    <p>如果你团队在用 AI 编码工具但产出质量忽高忽低，缺的不是模型而是流程约束。这个项目提供的正是流程。而且它明确反对「 vibe coding 」，跟我的看法一致：AI 降低了写代码的门槛，但没降低想清楚要什么的门槛。</p>
   </div>
 
   <nav class="deep-nav">
-    <a href="deep-dive/openclaw__openclaw.html" class="nav-link prev">← openclaw/openclaw</a>
+    <a href="openclaw__openclaw.html" class="nav-link prev">← openclaw/openclaw</a>
     <a href="../deep-dive.html" class="nav-link index">返回目录</a>
-    <a href="deep-dive/mattpocock__skills.html" class="nav-link next">mattpocock/skills →</a>
+    <a href="mattpocock__skills.html" class="nav-link next">mattpocock/skills →</a>
   </nav>
 </main>
 

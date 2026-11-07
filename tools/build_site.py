@@ -176,15 +176,15 @@ def render_deep_detail(d, all_deep):
             f'<div class="metric"><strong>{esc(m[0])}</strong><span>{esc(m[1])}</span></div>'
             for m in d["metrics"]
         ) + "</div>"
-    # 上下篇链接
-    idx = DEEP_ORDER.index(d["name"]) if d["name"] in DEEP_ORDER else -1
+    # 上下篇链接（独立页已在 deep-dive/ 目录下，链接不应再带 deep-dive/ 前缀）
+    idx = next((i for i, x in enumerate(all_deep) if x.get("name") == d.get("name")), -1)
     prev_html = next_html = ""
     if idx > 0:
         pd = all_deep[idx-1]
-        prev_html = f'<a href="deep-dive/{deep_slug(pd["name"])}.html" class="nav-link prev">← {esc(pd["name"])}</a>'
-    if idx < len(DEEP_ORDER) - 1:
+        prev_html = f'<a href="{deep_slug(pd["name"])}.html" class="nav-link prev">← {esc(pd["name"])}</a>'
+    if idx >= 0 and idx < len(all_deep) - 1:
         nd = all_deep[idx+1]
-        next_html = f'<a href="deep-dive/{deep_slug(nd["name"])}.html" class="nav-link next">{esc(nd["name"])} →</a>'
+        next_html = f'<a href="{deep_slug(nd["name"])}.html" class="nav-link next">{esc(nd["name"])} →</a>'
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">

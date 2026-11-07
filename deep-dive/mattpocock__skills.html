@@ -24,37 +24,40 @@
     <h1>mattpocock/skills</h1>
     <div class="deep-meta">
       <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener" class="repo-link">https://github.com/mattpocock/skills</a>
-      <span class="stars">★ 309.2k</span>
+      <span class="stars">★ 316.6k</span>
       <span class="lang">Shell</span>
       
     </div>
   </div>
 
-  <p class="deep-lead">作者日常用于真实工程的 agent 技能集合：小、易改、可组合，适用于任意模型，反对被 GSD / BMAD / Spec-Kit 这种重流程框架夺走控制权。</p>
+  <p class="deep-lead">作者每天在用的 Agent 技能包，定位很明确：给「做真实工程」用，不是给 vibe coding 用。</p>
   <div class="deep-topics"></div>
-  <div class="metrics"><div class="metric"><strong>★ 309.2k</strong><span>Star</span></div><div class="metric"><strong>⑂ 26k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+  <div class="metrics"><div class="metric"><strong>★ 316.6k</strong><span>Star</span></div><div class="metric"><strong>⑂ 26.5k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 87</strong><span>推荐分</span></div><div class="metric"><strong>Shell</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
 
   <div class="deep-sections">
-        <h3>它到底在做什么</h3>
-        <p>这是作者 mattpocock 日常用来做真实工程的 agent 技能，不是 vibe coding。作者明确指出 GSD、BMAD、Spec-Kit 这类流程框架虽然有帮助，但会夺走你的控制权，导致流程里的 Bug 难以定位。</p>
-<p>这些技能设计得小、易改、可组合，适用于任何模型。安装方式是 skills.sh 把可编辑的文件拷贝到你的项目里，之后由你手动更新——这本身就是一种观点：技能应该属于你的项目，而不是被远程托管的框架管住。</p>
-<p>仓库里 .claude-plugin/plugin.json、.agents/adr/（架构决策记录，如 0001-explicit-setup-pointer-only-for-hard-dependencies.md）、.changeset/（变更集，如 implementer-fresh-per-ticket.md、software-factory-skill.md）等结构，说明作者把技能的演进、依赖指针、变更管理都做成了显式的、可版本控制的工件。</p>
-        <ul><li>每个 agent 只建议装一个技能，避免重复</li><li>基于几十年工程经验，而非短期流行</li><li>明确列出 .out-of-scope/（如 frozen-misc-skills、lazy-load-writing-for-agents、native-question-tool），标出自己不打算做什么</li></ul>
-        <h3>适合谁与门槛</h3>
-        <p>适合已经在用 agent 写代码、但觉得重型框架「太管太死」、想要轻量可改替代品的工程师。</p>
-<p>门槛很低：装个插件、改几个文件即可；但你需要自己决定技能怎么组合、什么时候更新，框架不会替你做决策。</p>
+        <h3>它反对什么</h3>
+        <p>README 里点名了 GSD、BMAD、Spec-Kit 这类方案：它们试图通过「接管整个流程」来帮助开发者，代价是你失去了控制权，而且流程里出的 bug 很难排查。</p>
+<p>作者的选择是完全相反的：技能要小、易改、可组合，跟模型无关。</p>
+        <ul><li>刻意做得小而可组合</li><li>不绑定特定模型</li><li>设计上允许你「随便改，改成自己的」</li></ul>
+        <h3>安装方式体现了设计哲学</h3>
+        <p>推荐用 skills.sh 把可编辑的文件直接拷进你的项目，然后你自己维护更新——注意它建议你「每个 agent 选一个」，装两个会导致每个技能出现两遍。</p>
+<p>这种「拷贝文件而不是装插件」的方式，代价是要手动更新，收益是你能完全掌控内容、也能按自己的团队习惯改写。</p>
+        
+        <h3>为什么这类项目现在重要</h3>
+        <p>把「资深工程师的隐性经验」变成 Agent 可执行的技能文件，本质上是在做知识的显性化。</p>
+<p>这也解释了为什么 2026 年会有大量同类仓库涌出——当 Agent 能力趋同，真正的差异化就落到了「你给它喂什么方法论」上。</p>
         
   </div>
 
   <div class="deep-verdict">
     <h4>我的结论</h4>
-    <p>它的价值不在于「多少技能」，而在于「小而可组合」的哲学——每个技能都可以被你改、被你丢、被你只装一个。适合厌倦了重型 agent 框架、想自己掌控开发流程的工程师；不适合想要「一键全自动」的用户。</p>
+    <p>和 Superpowers 是一对镜像：superpowers 是重流程、可自动触发；这个是轻流程、完全可控。两者都指向同一件事——AI 编码的瓶颈已经从「模型能不能写」转移到「流程约束得好不好」。想快速起步用前者，想深度定制用后者。</p>
   </div>
 
   <nav class="deep-nav">
-    <a href="deep-dive/obra__superpowers.html" class="nav-link prev">← obra/superpowers</a>
+    <a href="obra__superpowers.html" class="nav-link prev">← obra/superpowers</a>
     <a href="../deep-dive.html" class="nav-link index">返回目录</a>
-    <a href="deep-dive/shareAI-lab__learn-claude-code.html" class="nav-link next">shareAI-lab/learn-claude-code →</a>
+    <a href="shareAI-lab__learn-claude-code.html" class="nav-link next">shareAI-lab/learn-claude-code →</a>
   </nav>
 </main>
 
