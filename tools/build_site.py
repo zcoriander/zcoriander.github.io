@@ -6,11 +6,11 @@ build_site.py — 从 data/projects.json / data/short_notes.json / data/deep_div
 数据分层：
 - data/projects.json        事实层：分类榜单、hero、分类备注、手记
 - data/short_notes.json     判断层（短评）：65 条 one_line/for_who/hook，key=full_name
-- data/deep_dives.json      判断层（深度拆解）：12 篇 A 标准详情，独立文件
+- data/deep_dives.json      判断层（深度拆解）：全部 A 标准详情，独立文件
 
 设计原则：
 - 纯静态、零构建依赖、无需 Node
-- deep-dive.html 做索引页：全部短评 + 12 篇深度链接；每篇详情单独页面 deep-dive/{owner}_{repo}.html
+- deep-dive.html 做索引页（分页，每页最多 DEEP_PER_PAGE 篇）；每篇详情单独页面 deep-dive/{owner}_{repo}.html
 - 新增 growth.html 成长档案页
 """
 import json, os, html, datetime, re
@@ -247,8 +247,33 @@ def render_deep_detail(d, all_deep):
 </html>"""
 
 
-def render_deep_index(all_deep, short_notes, projects):
-    """deep-dive.html 索引页：全部短评 + 12 篇深度卡片。"""
+DEEP_PER_PAGE = 10
+
+
+def deep_pagination_html(page, total_pages, base_name="deep-dive"):
+    """生成分页导航 HTML。"""
+    if total_pages <= 1:
+        return ""
+    prev_page = page - 1
+    next_page = page + 1
+
+    def href(p):
+        return f"{base_name}.html" if p == 1 else f"{base_name}-{p}.html"
+
+    prev_html = f'<a href="{href(prev_page)}" class="nav-link prev">← 第 {prev_page} 页</a>' if prev_page >= 1 else ""
+    next_html = f'<a href="{href(next_page)}" class="nav-link next">第 {next_page} 页 →</a>' if next_page <= total_pages else ""
+
+    return f"""    <nav class="deep-pagination">
+      <span class="page-info">第 {page} 页，共 {total_pages} 页</span>
+      <div class="page-links">
+        {prev_html}
+        {next_html}
+      </div>
+    </nav>"""
+
+
+def render_deep_index(deep_page, page, total_pages, short_notes, projects, base_name="deep-dive"):
+    """深度拆解索引页（分页）：当前页短评卡片 + 该页深度卡片 + 全部短评列表。"""
     # 把 short_notes 按 projects.json 的分类归类
     cats = projects.get("categories", {})
     cat_items = {}
@@ -275,15 +300,25 @@ def render_deep_index(all_deep, short_notes, projects):
       </div>
     </section>""")
     note_blocks_joined = "\n".join(note_blocks)
-    deep_cards_joined = "\n".join(render_deep_card(d) for d in all_deep)
-    deep_count = len(all_deep)
+    deep_cards_joined = "\n".join(render_deep_card(d) for d in deep_page)
+    total_count = len(projects.get("deep_dives", [])) if projects.get("deep_dives") else len(deep_page) + sum(
+        len(projects.get("deep_dives", [])) - len(deep_page) for _ in [0]
+    )
+    # 总数优先用 projects 里的 deep_dives，若无则回退到当前页累计
+    if not projects.get("deep_dives"):
+        total_count = len(deep_page) * total_pages if total_pages > 1 else len(deep_page)
+
+    is_first = page == 1
+    nav_active = ' class="active"' if is_first else ""
+    page_title = f"深度拆解（第 {page} 页）" if total_pages > 1 else "深度拆解"
+    active_link = f'<a href="deep-dive.html"{nav_active}>深度拆解</a>'
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>深度拆解 · GitHub 冲浪手记</title>
+<title>{page_title} · GitHub 冲浪手记</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -293,7 +328,7 @@ def render_deep_index(all_deep, short_notes, projects):
     <nav>
       <a href="index.html">首页</a>
       <a href="#categories">分类榜</a>
-      <a href="deep-dive.html" class="active">深度拆解</a>
+      {active_link}
       <a href="about.html">关于</a>
     </nav>
   </div>
@@ -301,22 +336,24 @@ def render_deep_index(all_deep, short_notes, projects):
 
 <main class="wrap page-main">
   <div class="page-head">
-    <h1>深度拆解</h1>
+    <h1>{page_title}</h1>
     <p class="lede">
-      下面是全部收录项目的简短手记，以及 {deep_count} 篇我重点拆解的深度文章。短评帮你快速筛选，
-      深度文章里我翻开了 README、看过目录结构，写下可落地的判断。
+      下面是全部收录项目的简短手记，以及第 {page} 页的深度拆解文章（本页 {len(deep_page)} 篇，共 {total_count} 篇）。
+      短评帮你快速筛选，深度文章里我翻开了 README、看过目录结构，写下可落地的判断。
     </p>
   </div>
 
   <section class="wrap">
     <div class="section-head">
-      <h2>🧠 重点深度拆解（{deep_count} 篇）</h2>
+      <h2>🧠 重点深度拆解（第 {page} 页，共 {total_count} 篇）</h2>
       <p>每篇都读过 README 与源码结构，包含架构判断、安装门槛与我的结论。</p>
     </div>
     <div class="deeps-grid">
 {deep_cards_joined}
     </div>
   </section>
+
+{deep_pagination_html(page, total_pages, base_name)}
 
   <section class="wrap" id="categories">
     <div class="section-head">
@@ -385,7 +422,7 @@ def render_growth(all_deep, projects):
       <li><strong>多 agent 专化 vs 并行化：</strong>把每个未完成项目拆成子任务 DAG，按并发容量决定哪些交给通用 agent 并行，哪些单点特化。</li>
       <li><strong>superpowers-core v1.0：</strong>构建 wheel 已落盘，等待 PyPI/GitHub 发布凭据后上线。</li>
       <li><strong>M3U8 广告屏蔽插件：</strong>核心检测引擎 9/9 测试通过，Manifest V3 插件已构建打包，等待商店发布凭据。</li>
-      <li><strong>DEEPDIVE 站点：</strong>12 篇 A 标准深度拆解已重写，独立页面与索引页正在生成。</li>
+      <li><strong>DEEPDIVE 站点：</strong>{len(all_deep)} 篇 A 标准深度拆解已重写，独立页面与索引页正在生成。</li>
     </ul>
   </section>
 
@@ -394,7 +431,7 @@ def render_growth(all_deep, projects):
       <h2>🧭 下一步</h2>
     </div>
     <ul class="growth-list">
-      <li>为 12 篇深度拆解补足 ≥800 字 A 标准正文（README + 源码结构双验证）。</li>
+      <li>为 {len(all_deep)} 篇深度拆解补足 ≥800 字 A 标准正文（README + 源码结构双验证）。</li>
       <li>本地渲染全部页面并校验链接。</li>
       <td>通过 push.sh 推送到 GitHub Pages main 分支上线。</td>
     </ul>
@@ -728,10 +765,13 @@ def main():
 
     os.makedirs(DEEP_OUT, exist_ok=True)
 
+    # 分页生成深度拆解索引页，每页最多 DEEP_PER_PAGE 篇
+    total_deep = len(ordered_deep)
+    total_pages = max(1, (total_deep + DEEP_PER_PAGE - 1) // DEEP_PER_PAGE)
+
     outputs = {
         "index.html": render_home(projects, short_notes, weekly_changes),
         "categories.html": render_categories(projects),
-        "deep-dive.html": render_deep_index(ordered_deep, short_notes, projects),
         "about.html": render_about(projects),
         "growth.html": render_growth(ordered_deep, projects),
     }
@@ -740,6 +780,17 @@ def main():
         with open(path, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"  ✓ {name} ({len(content):,} bytes)")
+
+    for page in range(1, total_pages + 1):
+        start = (page - 1) * DEEP_PER_PAGE
+        end = start + DEEP_PER_PAGE
+        deep_page = ordered_deep[start:end]
+        file_name = "deep-dive.html" if page == 1 else f"deep-dive-{page}.html"
+        content = render_deep_index(deep_page, page, total_pages, short_notes, projects)
+        path = os.path.join(OUT, file_name)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"  ✓ {file_name} ({len(content):,} bytes)")
 
     # 每篇深度拆解独立页面
     for d in ordered_deep:
