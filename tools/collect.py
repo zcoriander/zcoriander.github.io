@@ -351,9 +351,9 @@ def load_curated_names():
     try:
         with open(path, encoding="utf-8") as f:
             src = f.read()
-        # 解析 DEEP_CONTENT 字典的 key
+        # 解析 DEEP_CONTENT 字典的 key，贪婪匹配直到最后的 }
         import re
-        block = re.search(r"DEEP_CONTENT\s*=\s*\{(.*?)\n\}", src, re.S)
+        block = re.search(r"DEEP_CONTENT\s*=\s*\{(.*)\n\}", src, re.S)
         if block:
             names = re.findall(r'^\s*"([^"]+)"\s*:\s*\{', block.group(1), re.M)
     except OSError:
@@ -577,17 +577,8 @@ def main():
             deep.append(make_deep(p, cid))
             seen_deep.add(name)
 
-    # 2) 从各分类补足到 12 个
-    for cid in ["hot_week", "evergreen", "beginner", "fun", "learning", "new_star"]:
-        for p in categories.get(cid, []):
-            if len(deep) >= 12:
-                break
-            if p["full_name"] in seen_deep:
-                continue
-            seen_deep.add(p["full_name"])
-            deep.append(make_deep(p, cid))
-        if len(deep) >= 12:
-            break
+    # 不再为凑数而补足 deep_dives，只保留真正有人工文案的项目
+    # 每个 deep_dive 都必须有对应的人工 DEEP_CONTENT，has_analysis 由 enrich.py 设为 True
 
     out = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

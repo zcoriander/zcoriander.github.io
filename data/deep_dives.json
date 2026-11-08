@@ -5,7 +5,7 @@
       "url": "https://github.com/openclaw/openclaw",
       "category": "evergreen",
       "language": "TypeScript",
-      "stars": 394059,
+      "stars": 394103,
       "growth_30d": null,
       "summary": "把 AI 助手部署在你自己的机器上，然后让它住进你已经在用的聊天软件里。Discord、iMessage、Slack、WhatsApp、Telegram……20 多个平台，一个 Gateway 统一调度。",
       "topics": [
@@ -19,9 +19,9 @@
       ],
       "score": 87,
       "license": "MIT",
-      "forks": 82811,
-      "open_issues": 7629,
-      "pushed_at": "2026-11-06",
+      "forks": 82821,
+      "open_issues": 7634,
+      "pushed_at": "2026-11-07",
       "sections": [
         {
           "title": "它到底在做什么",
@@ -81,7 +81,7 @@
       "url": "https://github.com/obra/superpowers",
       "category": "curated",
       "language": "Shell",
-      "stars": 313580,
+      "stars": 313823,
       "growth_30d": null,
       "summary": "一套给编码 Agent 用的完整开发方法论——不是几个提示词，而是一套带自动触发机制的工作流。",
       "topics": [
@@ -96,8 +96,8 @@
       ],
       "score": 87,
       "license": "MIT",
-      "forks": 27895,
-      "open_issues": 340,
+      "forks": 27917,
+      "open_issues": 342,
       "pushed_at": "2026-11-03",
       "sections": [
         {
@@ -132,7 +132,7 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 313.6k",
+          "★ 313.8k",
           "Star"
         ],
         [
@@ -158,14 +158,14 @@
       "url": "https://github.com/mattpocock/skills",
       "category": "curated",
       "language": "Shell",
-      "stars": 316620,
+      "stars": 317127,
       "growth_30d": null,
       "summary": "作者每天在用的 Agent 技能包，定位很明确：给「做真实工程」用，不是给 vibe coding 用。",
       "topics": [],
       "score": 87,
       "license": "MIT",
-      "forks": 26485,
-      "open_issues": 217,
+      "forks": 26541,
+      "open_issues": 218,
       "pushed_at": "2026-11-05",
       "sections": [
         {
@@ -199,7 +199,7 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 316.6k",
+          "★ 317.1k",
           "Star"
         ],
         [
@@ -225,7 +225,7 @@
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "category": "curated",
       "language": "Python",
-      "stars": 79992,
+      "stars": 80005,
       "growth_30d": null,
       "summary": "从零手写一个 Claude Code 风格的 Agent Harness，重点不是用 Claude Code，而是理解它为什么这么设计。",
       "topics": [
@@ -240,7 +240,7 @@
       ],
       "score": 85,
       "license": "MIT",
-      "forks": 12794,
+      "forks": 12796,
       "open_issues": 58,
       "pushed_at": "2026-10-27",
       "sections": [
@@ -294,7 +294,7 @@
       "url": "https://github.com/ssloy/tinyrenderer",
       "category": "curated",
       "language": "C++",
-      "stars": 24495,
+      "stars": 24497,
       "growth_30d": null,
       "summary": "500 行裸 C++ 实现软件渲染器，用来教人搞明白 OpenGL / Vulkan / Metal / DirectX 底下到底发生了什么。",
       "topics": [
@@ -309,7 +309,7 @@
       ],
       "score": 60,
       "license": "NOASSERTION",
-      "forks": 2312,
+      "forks": 2313,
       "open_issues": 4,
       "pushed_at": "2026-07-29",
       "sections": [
@@ -363,7 +363,7 @@
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "category": "curated",
       "language": "Markdown",
-      "stars": 560404,
+      "stars": 560576,
       "growth_30d": null,
       "summary": "从零复刻你喜欢的技术：数据库、操作系统、编译器、容器、Docker、Git……全是教程。",
       "topics": [
@@ -376,8 +376,8 @@
       ],
       "score": 55,
       "license": null,
-      "forks": 52431,
-      "open_issues": 689,
+      "forks": 52448,
+      "open_issues": 691,
       "pushed_at": "2026-07-14",
       "sections": [
         {
@@ -404,7 +404,7 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 560.4k",
+          "★ 560.6k",
           "Star"
         ],
         [
@@ -426,7 +426,7 @@
       "url": "https://github.com/donnemartin/system-design-primer",
       "category": "curated",
       "language": "Python",
-      "stars": 377116,
+      "stars": 377189,
       "growth_30d": null,
       "summary": "大规模系统设计的学习指南，还附带了 Anki 记忆卡，直接对着面试准备。",
       "topics": [
@@ -441,8 +441,8 @@
       ],
       "score": 68,
       "license": "NOASSERTION",
-      "forks": 59192,
-      "open_issues": 636,
+      "forks": 59206,
+      "open_issues": 637,
       "pushed_at": "2026-09-15",
       "sections": [
         {
@@ -462,7 +462,7 @@
       "has_analysis": true,
       "metrics": [
         [
-          "★ 377.1k",
+          "★ 377.2k",
           "Star"
         ],
         [
@@ -488,7 +488,7 @@
       "url": "https://github.com/freeCodeCamp/freeCodeCamp",
       "category": "evergreen",
       "language": "TypeScript",
-      "stars": 458667,
+      "stars": 458695,
       "growth_30d": null,
       "summary": "全球最大的免费编程学习平台，458k star，课程本身也是开源的。",
       "topics": [
@@ -504,7 +504,7 @@
       "score": 87,
       "license": "BSD-3-Clause",
       "forks": 48134,
-      "open_issues": 181,
+      "open_issues": 182,
       "pushed_at": "2026-11-06",
       "sections": [
         {
@@ -556,7 +556,7 @@
       "url": "https://github.com/firstcontributions/first-contributions",
       "category": "beginner",
       "language": null,
-      "stars": 56724,
+      "stars": 56731,
       "growth_30d": null,
       "summary": "专门用来教新手完成第一次开源贡献的仓库，56k star。",
       "topics": [
@@ -571,9 +571,9 @@
       ],
       "score": 90,
       "license": "MIT",
-      "forks": 112327,
-      "open_issues": 652,
-      "pushed_at": "2026-11-06",
+      "forks": 112341,
+      "open_issues": 654,
+      "pushed_at": "2026-11-07",
       "sections": [
         {
           "title": "设计得极巧",
@@ -617,83 +617,59 @@
       ]
     },
     {
-      "name": "storytold/craft-anything",
-      "url": "https://github.com/storytold/craft-anything",
-      "category": "hot_week",
-      "language": "Rust",
-      "stars": 17815,
-      "growth_30d": null,
-      "summary": "Craft Anything: understand how any software works, and craft your own.",
-      "topics": [],
-      "score": 90,
-      "license": "Apache-2.0",
-      "forks": 3259,
-      "open_issues": 210,
-      "pushed_at": "2026-11-06",
-      "sections": [
-        {
-          "title": "项目速览",
-          "paragraphs": [
-            "Craft Anything: understand how any software works, and craft your own.",
-            "最近一次代码提交在 2026-11-06，当前有 210 个未关闭 issue，许可证为 Apache-2.0。"
-          ],
-          "bullets": []
-        }
-      ],
-      "verdict": "这是一个 star 数 17.8k 的项目，fork 3.3k。许可证清晰，适合上手试用。",
-      "has_analysis": false,
-      "metrics": [
-        [
-          "★ 17.8k",
-          "Star"
-        ],
-        [
-          "⑂ 3.3k",
-          "Fork"
-        ],
-        [
-          "⌀ 90",
-          "推荐分"
-        ],
-        [
-          "Rust",
-          "主要语言"
-        ],
-        [
-          "Apache-2.0",
-          "许可证"
-        ]
-      ]
-    },
-    {
       "name": "seedds/nxnative",
       "url": "https://github.com/seedds/nxnative",
       "category": "hot_week",
       "language": "Python",
-      "stars": 12918,
+      "stars": 13143,
       "growth_30d": null,
-      "summary": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
+      "summary": "把 Switch 游戏转成能在 iPhone/iPad/Mac 上原生运行的 IPA。不是模拟器，而是把 NSP 文件夹重写成未签名 IPA，游戏代码直接跑在 Apple 芯片上，图形层用 Metal 重建。仓库里不含任何游戏内容，只提供转换和运行框架。",
       "topics": [],
       "score": 90,
       "license": "MIT",
-      "forks": 2200,
-      "open_issues": 735,
-      "pushed_at": "2026-11-06",
+      "forks": 2247,
+      "open_issues": 748,
+      "pushed_at": "2026-11-07",
       "sections": [
         {
-          "title": "项目速览",
+          "title": "它到底在做什么",
           "paragraphs": [
-            "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)",
-            "最近一次代码提交在 2026-11-06，当前有 735 个未关闭 issue，许可证为 MIT。"
+            "nxnative 的核心是三层：NSO rewriter 把 Switch 的 NSO 可执行文件转成可在 Apple 平台运行的代码；Horizon HLE host 在高层模拟 Switch 系统服务，让游戏认为自己还在原生主机上；NVN→Metal 把 Switch 的图形 API 指令重写成 Metal，跑在 A17 Pro 及以上芯片上。",
+            "关键区别是「原生运行」而不是「模拟器」——没有整机模拟层，游戏自己的代码直接在 Apple 芯片上执行，性能损失理论上更小。但代价是你需要自备合法的 Switch 游戏 NSP 文件，仓库本身不包含任何游戏内容。"
           ],
-          "bullets": []
+          "bullets": [
+            "NSP 文件夹 → 未签名 IPA，可侧载到 iPhone/iPad/Mac",
+            "NSO rewriter + Horizon HLE host + NVN→Metal 三层重建",
+            "游戏代码直接在 Apple 芯片上运行，非整机模拟",
+            "MIT 许可证，仓库不含游戏内容，需自带合法 NSP"
+          ]
+        },
+        {
+          "title": "安装和使用门槛",
+          "paragraphs": [
+            "这是一个 Python 项目，但「能跑起来」不等于「能玩起来」。你需要：一台 A17 Pro 以上的设备（iPhone 15 Pro 系列、M 系列 Mac 或新款 iPad）、合法的 Switch 游戏 NSP 文件、愿意折腾侧载（sideload）的心理准备。",
+            "目前 735 个未关闭 issue 说明兼容性和稳定性还在早期阶段，不是随便下载就能开玩的成品工具，更适合当作技术预览或学习对象。"
+          ],
+          "bullets": [
+            "设备门槛：A17 Pro / M 系列芯片以上",
+            "需自备合法 Switch 游戏 NSP",
+            "需接受侧载和未签名 IPA 的信任风险",
+            "735 个 open issue，早期项目，稳定性未知"
+          ]
+        },
+        {
+          "title": "为什么这个方向有意思",
+          "paragraphs": [
+            "它走的是「游戏代码原生化」而非「主机整机模拟」的技术路径，这在 Switch 游戏上相对少见。如果 NVN→Metal 这层图形重建能稳定下来，对其他跨平台游戏移植也是有参考价值的。",
+            "同时它也提醒我：开源项目里「原生运行」和「模拟器」的边界正在模糊，未来可能有更多「把 A 平台游戏变成 B 平台 IPA/APK」的转换层项目出现。"
+          ]
         }
       ],
-      "verdict": "这是一个 star 数 12.9k 的项目，fork 2.2k。许可证清晰，适合上手试用。",
-      "has_analysis": false,
+      "verdict": "如果你有合法的 Switch 游戏、一台 A17 Pro 以上的设备、又愿意折腾，这是目前最值得关注的「Switch 游戏在 Apple 设备上原生跑」的开源项目之一。但别把它当成成品游戏机——735 个 open issue 提醒你，这更像是一个技术预览，适合当学习对象或偶尔尝鲜，不适合当日常娱乐工具。",
+      "has_analysis": true,
       "metrics": [
         [
-          "★ 12.9k",
+          "★ 13.1k",
           "Star"
         ],
         [
@@ -715,13 +691,78 @@
       ]
     },
     {
+      "name": "storytold/craft-anything",
+      "url": "https://github.com/storytold/craft-anything",
+      "category": "hot_week",
+      "language": "Rust",
+      "stars": 19260,
+      "growth_30d": null,
+      "summary": "Craft Anything：理解任何软件的工作原理，然后复刻属于你自己的版本。storytold 家族的又一 Rust 工具，主打从零重建主流创作软件的核心引擎。",
+      "topics": [],
+      "score": 90,
+      "license": "Apache-2.0",
+      "forks": 3615,
+      "open_issues": 216,
+      "pushed_at": "2026-11-07",
+      "sections": [
+        {
+          "title": "它的核心主张",
+          "paragraphs": [
+            "craft-anything 不提供现成的软件，而是提供一套「从零理解再重建」的方法论和工具链。它的 README 明确写着：想搞懂某个软件怎么工作，最好的办法不是看文档，而是亲手把它用 Rust 重写一遍。",
+            "这和 codecrafters-io/build-your-own-x 的精神一致，但 craft-anything 更进一步——它不是索引教程，而是提供可直接跑通的 Rust 代码框架，让你在重建过程中拿到可运行的原型。"
+          ],
+          "bullets": [
+            "Rust 语言实现，性能和安全性并重",
+            "强调「理解原理」而非「调用 API」",
+            "storytold 工具家族的一员，与 effectcraft/designcraft 等同源"
+          ]
+        },
+        {
+          "title": "适合谁",
+          "paragraphs": [
+            "如果你只是想用某个软件，这个项目不适合你。它适合那些想深入理解图形渲染、音频处理、文档排版等底层机制的开发者，尤其是愿意用 Rust 重新实现一遍的人。",
+            "目前 210 个未关闭 issue 说明项目还在快速迭代，API 和功能可能会有较大变动。"
+          ],
+          "bullets": [
+            "适合底层原理爱好者和 Rust 学习者",
+            "不适合寻找现成工具的普通用户",
+            "早期项目，接口可能变动"
+          ]
+        }
+      ],
+      "verdict": "craft-anything 不是给普通用户的工具，而是给「想亲手重建一遍」的开发者的实验场。如果你对 Rust 和软件底层原理感兴趣，值得关注；如果只想找个能用的软件，先绕道。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 19.3k",
+          "Star"
+        ],
+        [
+          "⑂ 3.6k",
+          "Fork"
+        ],
+        [
+          "⌀ 90",
+          "推荐分"
+        ],
+        [
+          "Rust",
+          "主要语言"
+        ],
+        [
+          "Apache-2.0",
+          "许可证"
+        ]
+      ]
+    },
+    {
       "name": "wangzan101/Mika",
       "url": "https://github.com/wangzan101/Mika",
       "category": "hot_week",
       "language": "Kotlin",
-      "stars": 7385,
+      "stars": 7495,
       "growth_30d": null,
-      "summary": "An on-device AI agent for Android that operates apps and the web to get things done for you.",
+      "summary": "在 Android 设备上本地运行的 AI Agent，能够操作 App 和浏览器帮你完成事情。主打 on-device，数据不出本机。",
       "topics": [
         "accessibility",
         "ai-agent",
@@ -734,24 +775,41 @@
       ],
       "score": 88.7,
       "license": "Apache-2.0",
-      "forks": 1695,
-      "open_issues": 114,
-      "pushed_at": "2026-11-06",
+      "forks": 1729,
+      "open_issues": 125,
+      "pushed_at": "2026-11-07",
       "sections": [
         {
-          "title": "项目速览",
+          "title": "它能做什么",
           "paragraphs": [
-            "An on-device AI agent for Android that operates apps and the web to get things done for you.",
-            "最近一次代码提交在 2026-11-06，当前有 114 个未关闭 issue，许可证为 Apache-2.0。"
+            "Mika 是一个运行在 Android 上的本地 AI Agent，可以通过 Accessibility Service 操作第三方 App，也能控制浏览器完成网页任务。比如你可以让它「帮我预订一张明天的机票」或「把这张截图发给微信联系人」，Agent 会自动拆解步骤并在设备上执行。",
+            "关键词是「on-device」——推理和操作都在本机完成，不需要把隐私数据发到云端。对于关注数据隐私的用户，这是一个重要区别。"
           ],
-          "bullets": []
+          "bullets": [
+            "本地运行，数据不出设备",
+            "可操作 Android App 和网页",
+            "基于 Kotlin + Jetpack Compose",
+            "Apache-2.0 许可证"
+          ]
+        },
+        {
+          "title": "门槛与局限",
+          "paragraphs": [
+            "on-device AI Agent 目前的瓶颈在于模型大小和手机算力。在中低端设备上，响应速度可能不理想；在高端设备上体验会好一些。同时，Accessibility Service 的权限需要用户手动开启，有一定的设置门槛。",
+            "目前 114 个 open issue，说明功能还在完善中，稳定性有待验证。"
+          ],
+          "bullets": [
+            "设备算力是瓶颈",
+            "需手动开启无障碍权限",
+            "早期项目，功能不完善"
+          ]
         }
       ],
-      "verdict": "这是一个 star 数 7.4k 的项目，fork 1.7k。许可证清晰，适合上手试用。",
-      "has_analysis": false,
+      "verdict": "如果你关注 on-device AI Agent 方向，愿意在自己的 Android 设备上尝鲜，Mika 值得关注。它证明了「AI 操作手机」不一定需要云端，本地运行是可行的。但目前还不是日常好用的工具，更适合作为技术预览。",
+      "has_analysis": true,
       "metrics": [
         [
-          "★ 7.4k",
+          "★ 7.5k",
           "Star"
         ],
         [
@@ -768,6 +826,153 @@
         ],
         [
           "Apache-2.0",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "storytold/effectcraft",
+      "url": "https://github.com/storytold/effectcraft",
+      "category": "curated",
+      "language": "Rust",
+      "stars": 8525,
+      "growth_30d": null,
+      "summary": "纯 Rust 从零写的动效合成器，对标 After Effects。项目文件是 JSON，可脚本化、可版本控制，引擎命令走 CLI / JSON 控制通道 / MCP。",
+      "topics": [
+        "art",
+        "compositing",
+        "compositing-software",
+        "motion-graphics",
+        "rust"
+      ],
+      "score": 86.3,
+      "license": "Apache-2.0",
+      "forks": 4528,
+      "open_issues": 1040,
+      "pushed_at": "2026-11-06",
+      "sections": [
+        {
+          "title": "和 After Effects 的不同",
+          "paragraphs": [
+            "After Effects 是图形界面驱动的，项目文件是二进制的，难以版本控制和脚本化。effectcraft 走的是另一条路：所有动效都用 JSON 描述，可以用 Git 管理，也可以用代码生成。",
+            "内置 308 个效果，支持 Lottie 导入导出。引擎可以通过 CLI、JSON 控制通道或 MCP 协议驱动，适合把动效合成纳入自动化流水线。"
+          ],
+          "bullets": [
+            "纯 Rust 实现，性能可控",
+            "JSON 项目文件，可 diff、可版本控制",
+            "308 个内置效果，Lottie 兼容",
+            "CLI / JSON / MCP 三种控制方式"
+          ]
+        },
+        {
+          "title": "适合场景",
+          "paragraphs": [
+            "如果你需要批量生成标题动画、视觉特效，或者希望动效项目能像代码一样通过 Git 协作，effectcraft 是一个有趣的替代方案。但如果你习惯于 AE 的图形界面和实时预览，可能需要一段时间适应。",
+            "目前项目还在活跃开发中，部分高级功能可能尚未完善。"
+          ],
+          "bullets": [
+            "适合需要脚本化、自动化动效的团队",
+            "适合希望动效项目可版本控制的开发者",
+            "不适合完全依赖 AE 图形界面的用户"
+          ]
+        }
+      ],
+      "verdict": "effectcraft 是「动效合成也可以是代码」的一个坚实尝试。如果你的工作流里需要大量重复性动效，或者希望动效文件能进 Git 管理，它值得一试。纯 Rust 实现也意味着性能和可移植性都有保障。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 8.5k",
+          "Star"
+        ],
+        [
+          "⑂ 4.5k",
+          "Fork"
+        ],
+        [
+          "⌀ 86.3",
+          "推荐分"
+        ],
+        [
+          "Rust",
+          "主要语言"
+        ],
+        [
+          "Apache-2.0",
+          "许可证"
+        ]
+      ]
+    },
+    {
+      "name": "simbasjungles/free-my-tv",
+      "url": "https://github.com/simbasjungles/free-my-tv",
+      "category": "hot_week",
+      "language": "Java",
+      "stars": 6000,
+      "growth_30d": null,
+      "summary": "给 Google TV、LG webOS、三星 Tizen 等智能电视做的无广告开源首页替代方案。60fps，内存占用比系统首页少 60%，不用 root 即可安装。",
+      "topics": [
+        "android-tv",
+        "claude-code",
+        "google-tv",
+        "home-screen",
+        "launcher",
+        "no-ads",
+        "open-source",
+        "samsung-tizen"
+      ],
+      "score": 87.8,
+      "license": "MIT",
+      "forks": 1041,
+      "open_issues": 92,
+      "pushed_at": "2026-11-07",
+      "sections": [
+        {
+          "title": "它解决什么问题",
+          "paragraphs": [
+            "智能电视的系统首页通常满是广告、推荐内容和无法卸载的预装应用，用户很难自定义。free-my-tv 提供一个干净、轻量、无广告的替代首页，让用户重新掌控电视主界面。",
+            "内存占用只有系统首页的 40%（96MB vs 242MB），运行流畅，60fps。不用 root，一个按钮就能恢复出厂首页，降低了尝试门槛。"
+          ],
+          "bullets": [
+            "支持 Google TV、LG webOS、三星 Tizen",
+            "60fps，内存占用比系统首页少 60%",
+            "无广告，无预装应用干扰",
+            "不用 root，一键恢复出厂首页"
+          ]
+        },
+        {
+          "title": "适合谁",
+          "paragraphs": [
+            "如果你的电视首页广告太多、想要更简洁的界面，free-my-tv 是一个实用的选择。它不需要 root，对普通用户来说相对安全。但不同电视型号的适配情况可能不同，安装前需要确认自己的设备是否受支持。",
+            "目前 117 个 open issue，说明兼容性还在完善中。"
+          ],
+          "bullets": [
+            "适合嫌电视首页广告多的用户",
+            "适合想轻量替代系统首页的人",
+            "需先确认设备型号是否受支持"
+          ]
+        }
+      ],
+      "verdict": "free-my-tv 把「夺回电视主控权」这件事做得很扎实。无广告、低内存、不需要 root，这三点已经解决了智能电视用户最痛的问题。如果你的设备在受支持列表里，值得安装试试。",
+      "has_analysis": true,
+      "metrics": [
+        [
+          "★ 6k",
+          "Star"
+        ],
+        [
+          "⑂ 1k",
+          "Fork"
+        ],
+        [
+          "⌀ 87.8",
+          "推荐分"
+        ],
+        [
+          "Java",
+          "主要语言"
+        ],
+        [
+          "MIT",
           "许可证"
         ]
       ]

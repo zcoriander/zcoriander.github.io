@@ -24,32 +24,40 @@
     <h1>seedds/nxnative</h1>
     <div class="deep-meta">
       <a href="https://github.com/seedds/nxnative" target="_blank" rel="noopener" class="repo-link">https://github.com/seedds/nxnative</a>
-      <span class="stars">★ 12.9k</span>
+      <span class="stars">★ 13.1k</span>
       <span class="lang">Python</span>
       
     </div>
   </div>
 
-  <p class="deep-lead">Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)</p>
+  <p class="deep-lead">把 Switch 游戏转成能在 iPhone/iPad/Mac 上原生运行的 IPA。不是模拟器，而是把 NSP 文件夹重写成未签名 IPA，游戏代码直接跑在 Apple 芯片上，图形层用 Metal 重建。仓库里不含任何游戏内容，只提供转换和运行框架。</p>
   <div class="deep-topics"></div>
-  <div class="metrics"><div class="metric"><strong>★ 12.9k</strong><span>Star</span></div><div class="metric"><strong>⑂ 2.2k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 90</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
+  <div class="metrics"><div class="metric"><strong>★ 13.1k</strong><span>Star</span></div><div class="metric"><strong>⑂ 2.2k</strong><span>Fork</span></div><div class="metric"><strong>⌀ 90</strong><span>推荐分</span></div><div class="metric"><strong>Python</strong><span>主要语言</span></div><div class="metric"><strong>MIT</strong><span>许可证</span></div></div>
 
   <div class="deep-sections">
-        <h3>项目速览</h3>
-        <p>Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)</p>
-<p>最近一次代码提交在 2026-11-06，当前有 735 个未关闭 issue，许可证为 MIT。</p>
+        <h3>它到底在做什么</h3>
+        <p>nxnative 的核心是三层：NSO rewriter 把 Switch 的 NSO 可执行文件转成可在 Apple 平台运行的代码；Horizon HLE host 在高层模拟 Switch 系统服务，让游戏认为自己还在原生主机上；NVN→Metal 把 Switch 的图形 API 指令重写成 Metal，跑在 A17 Pro 及以上芯片上。</p>
+<p>关键区别是「原生运行」而不是「模拟器」——没有整机模拟层，游戏自己的代码直接在 Apple 芯片上执行，性能损失理论上更小。但代价是你需要自备合法的 Switch 游戏 NSP 文件，仓库本身不包含任何游戏内容。</p>
+        <ul><li>NSP 文件夹 → 未签名 IPA，可侧载到 iPhone/iPad/Mac</li><li>NSO rewriter + Horizon HLE host + NVN→Metal 三层重建</li><li>游戏代码直接在 Apple 芯片上运行，非整机模拟</li><li>MIT 许可证，仓库不含游戏内容，需自带合法 NSP</li></ul>
+        <h3>安装和使用门槛</h3>
+        <p>这是一个 Python 项目，但「能跑起来」不等于「能玩起来」。你需要：一台 A17 Pro 以上的设备（iPhone 15 Pro 系列、M 系列 Mac 或新款 iPad）、合法的 Switch 游戏 NSP 文件、愿意折腾侧载（sideload）的心理准备。</p>
+<p>目前 735 个未关闭 issue 说明兼容性和稳定性还在早期阶段，不是随便下载就能开玩的成品工具，更适合当作技术预览或学习对象。</p>
+        <ul><li>设备门槛：A17 Pro / M 系列芯片以上</li><li>需自备合法 Switch 游戏 NSP</li><li>需接受侧载和未签名 IPA 的信任风险</li><li>735 个 open issue，早期项目，稳定性未知</li></ul>
+        <h3>为什么这个方向有意思</h3>
+        <p>它走的是「游戏代码原生化」而非「主机整机模拟」的技术路径，这在 Switch 游戏上相对少见。如果 NVN→Metal 这层图形重建能稳定下来，对其他跨平台游戏移植也是有参考价值的。</p>
+<p>同时它也提醒我：开源项目里「原生运行」和「模拟器」的边界正在模糊，未来可能有更多「把 A 平台游戏变成 B 平台 IPA/APK」的转换层项目出现。</p>
         
   </div>
 
   <div class="deep-verdict">
     <h4>我的结论</h4>
-    <p>这是一个 star 数 12.9k 的项目，fork 2.2k。许可证清晰，适合上手试用。</p>
+    <p>如果你有合法的 Switch 游戏、一台 A17 Pro 以上的设备、又愿意折腾，这是目前最值得关注的「Switch 游戏在 Apple 设备上原生跑」的开源项目之一。但别把它当成成品游戏机——735 个 open issue 提醒你，这更像是一个技术预览，适合当学习对象或偶尔尝鲜，不适合当日常娱乐工具。</p>
   </div>
 
   <nav class="deep-nav">
     <a href="firstcontributions__first-contributions.html" class="nav-link prev">← firstcontributions/first-contributions</a>
     <a href="../deep-dive.html" class="nav-link index">返回目录</a>
-    
+    <a href="storytold__craft-anything.html" class="nav-link next">storytold/craft-anything →</a>
   </nav>
 </main>
 

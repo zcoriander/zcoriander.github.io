@@ -23,14 +23,14 @@
   <div class="page-head">
     <h1>深度拆解</h1>
     <p class="lede">
-      下面是全部收录项目的简短手记，以及 12 篇我重点拆解的深度文章。短评帮你快速筛选，
+      下面是全部收录项目的简短手记，以及 14 篇我重点拆解的深度文章。短评帮你快速筛选，
       深度文章里我翻开了 README、看过目录结构，写下可落地的判断。
     </p>
   </div>
 
   <section class="wrap">
     <div class="section-head">
-      <h2>🧠 重点深度拆解（12 篇）</h2>
+      <h2>🧠 重点深度拆解（14 篇）</h2>
       <p>每篇都读过 README 与源码结构，包含架构判断、安装门槛与我的结论。</p>
     </div>
     <div class="deeps-grid">
@@ -51,7 +51,7 @@
         <header class="deep-head">
           <h3><a href="deep-dive/obra__superpowers.html" class="deep-title">obra/superpowers</a></h3>
           <div class="deep-meta">
-            <span class="stars">★ 313.6k</span>
+            <span class="stars">★ 313.8k</span>
             <span class="lang">Shell</span>
           </div>
         </header>
@@ -64,7 +64,7 @@
         <header class="deep-head">
           <h3><a href="deep-dive/mattpocock__skills.html" class="deep-title">mattpocock/skills</a></h3>
           <div class="deep-meta">
-            <span class="stars">★ 316.6k</span>
+            <span class="stars">★ 317.1k</span>
             <span class="lang">Shell</span>
           </div>
         </header>
@@ -103,7 +103,7 @@
         <header class="deep-head">
           <h3><a href="deep-dive/codecrafters-io__build-your-own-x.html" class="deep-title">codecrafters-io/build-your-own-x</a></h3>
           <div class="deep-meta">
-            <span class="stars">★ 560.4k</span>
+            <span class="stars">★ 560.6k</span>
             <span class="lang">Markdown</span>
           </div>
         </header>
@@ -116,7 +116,7 @@
         <header class="deep-head">
           <h3><a href="deep-dive/donnemartin__system-design-primer.html" class="deep-title">donnemartin/system-design-primer</a></h3>
           <div class="deep-meta">
-            <span class="stars">★ 377.1k</span>
+            <span class="stars">★ 377.2k</span>
             <span class="lang">Python</span>
           </div>
         </header>
@@ -155,14 +155,66 @@
         <header class="deep-head">
           <h3><a href="deep-dive/seedds__nxnative.html" class="deep-title">seedds/nxnative</a></h3>
           <div class="deep-meta">
-            <span class="stars">★ 12.9k</span>
+            <span class="stars">★ 13.1k</span>
             <span class="lang">Python</span>
           </div>
         </header>
-        <p class="deep-sub">Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN→Metal)</p>
+        <p class="deep-sub">把 Switch 游戏转成能在 iPhone/iPad/Mac 上原生运行的 IPA。不是模拟器，而是把 NSP 文件夹重写成未签名 IPA，游戏代码直接跑在 Apple 芯片上，图形层用 Metal 重建。仓库里不含任何游戏内容，只提供转换和运行框架。</p>
         <div class="deep-topics"></div>
-        <p class="deep-verdict-preview">这是一个 star 数 12.9k 的项目，fork 2.2k。许可证清晰，适合上手试用。</p>
+        <p class="deep-verdict-preview">如果你有合法的 Switch 游戏、一台 A17 Pro 以上的设备、又愿意折腾，这是目前最值得关注的「Switch 游戏在 Apple 设备上原生跑」的开源项目之一。但别把它当成成品游戏机——735 个 open issue 提醒你，这更像是一个技术预览，适合当学习对象或偶尔尝鲜，不适合当日常娱乐工具。</p>
         <a href="deep-dive/seedds__nxnative.html" class="deep-link">阅读完整拆解 →</a>
+      </article>
+      <article class="deep-card">
+        <header class="deep-head">
+          <h3><a href="deep-dive/storytold__craft-anything.html" class="deep-title">storytold/craft-anything</a></h3>
+          <div class="deep-meta">
+            <span class="stars">★ 19.3k</span>
+            <span class="lang">Rust</span>
+          </div>
+        </header>
+        <p class="deep-sub">Craft Anything：理解任何软件的工作原理，然后复刻属于你自己的版本。storytold 家族的又一 Rust 工具，主打从零重建主流创作软件的核心引擎。</p>
+        <div class="deep-topics"></div>
+        <p class="deep-verdict-preview">craft-anything 不是给普通用户的工具，而是给「想亲手重建一遍」的开发者的实验场。如果你对 Rust 和软件底层原理感兴趣，值得关注；如果只想找个能用的软件，先绕道。</p>
+        <a href="deep-dive/storytold__craft-anything.html" class="deep-link">阅读完整拆解 →</a>
+      </article>
+      <article class="deep-card">
+        <header class="deep-head">
+          <h3><a href="deep-dive/wangzan101__Mika.html" class="deep-title">wangzan101/Mika</a></h3>
+          <div class="deep-meta">
+            <span class="stars">★ 7.5k</span>
+            <span class="lang">Kotlin</span>
+          </div>
+        </header>
+        <p class="deep-sub">在 Android 设备上本地运行的 AI Agent，能够操作 App 和浏览器帮你完成事情。主打 on-device，数据不出本机。</p>
+        <div class="deep-topics"></div>
+        <p class="deep-verdict-preview">如果你关注 on-device AI Agent 方向，愿意在自己的 Android 设备上尝鲜，Mika 值得关注。它证明了「AI 操作手机」不一定需要云端，本地运行是可行的。但目前还不是日常好用的工具，更适合作为技术预览。</p>
+        <a href="deep-dive/wangzan101__Mika.html" class="deep-link">阅读完整拆解 →</a>
+      </article>
+      <article class="deep-card">
+        <header class="deep-head">
+          <h3><a href="deep-dive/storytold__effectcraft.html" class="deep-title">storytold/effectcraft</a></h3>
+          <div class="deep-meta">
+            <span class="stars">★ 8.5k</span>
+            <span class="lang">Rust</span>
+          </div>
+        </header>
+        <p class="deep-sub">纯 Rust 从零写的动效合成器，对标 After Effects。项目文件是 JSON，可脚本化、可版本控制，引擎命令走 CLI / JSON 控制通道 / MCP。</p>
+        <div class="deep-topics"></div>
+        <p class="deep-verdict-preview">effectcraft 是「动效合成也可以是代码」的一个坚实尝试。如果你的工作流里需要大量重复性动效，或者希望动效文件能进 Git 管理，它值得一试。纯 Rust 实现也意味着性能和可移植性都有保障。</p>
+        <a href="deep-dive/storytold__effectcraft.html" class="deep-link">阅读完整拆解 →</a>
+      </article>
+      <article class="deep-card">
+        <header class="deep-head">
+          <h3><a href="deep-dive/simbasjungles__free-my-tv.html" class="deep-title">simbasjungles/free-my-tv</a></h3>
+          <div class="deep-meta">
+            <span class="stars">★ 6k</span>
+            <span class="lang">Java</span>
+          </div>
+        </header>
+        <p class="deep-sub">给 Google TV、LG webOS、三星 Tizen 等智能电视做的无广告开源首页替代方案。60fps，内存占用比系统首页少 60%，不用 root 即可安装。</p>
+        <div class="deep-topics"></div>
+        <p class="deep-verdict-preview">free-my-tv 把「夺回电视主控权」这件事做得很扎实。无广告、低内存、不需要 root，这三点已经解决了智能电视用户最痛的问题。如果你的设备在受支持列表里，值得安装试试。</p>
+        <a href="deep-dive/simbasjungles__free-my-tv.html" class="deep-link">阅读完整拆解 →</a>
       </article>
     </div>
   </section>

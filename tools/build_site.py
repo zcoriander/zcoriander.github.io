@@ -44,6 +44,8 @@ DEEP_ORDER = [
     "freeCodeCamp/freeCodeCamp",
     "firstcontributions/first-contributions",
     "seedds/nxnative",
+    "storytold/craft-anything",
+    "wangzan101/Mika",
     "storytold/effectcraft",
     "simbasjungles/free-my-tv",
 ]
@@ -274,6 +276,7 @@ def render_deep_index(all_deep, short_notes, projects):
     </section>""")
     note_blocks_joined = "\n".join(note_blocks)
     deep_cards_joined = "\n".join(render_deep_card(d) for d in all_deep)
+    deep_count = len(all_deep)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -300,14 +303,14 @@ def render_deep_index(all_deep, short_notes, projects):
   <div class="page-head">
     <h1>深度拆解</h1>
     <p class="lede">
-      下面是全部收录项目的简短手记，以及 12 篇我重点拆解的深度文章。短评帮你快速筛选，
+      下面是全部收录项目的简短手记，以及 {deep_count} 篇我重点拆解的深度文章。短评帮你快速筛选，
       深度文章里我翻开了 README、看过目录结构，写下可落地的判断。
     </p>
   </div>
 
   <section class="wrap">
     <div class="section-head">
-      <h2>🧠 重点深度拆解（12 篇）</h2>
+      <h2>🧠 重点深度拆解（{deep_count} 篇）</h2>
       <p>每篇都读过 README 与源码结构，包含架构判断、安装门槛与我的结论。</p>
     </div>
     <div class="deeps-grid">
