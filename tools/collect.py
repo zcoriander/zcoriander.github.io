@@ -344,48 +344,30 @@ def dedupe(items):
     return out
 
 
-def load_curated_names():
-    """读取 enrich.py 里人工撰写文案的项目名单"""
-    path = os.path.join(ROOT, "tools", "enrich.py")
+def load_deep_dives_list():
+    """从 data/deep_dives.json 读取深度拆解项目名单（权威来源）"""
+    path = os.path.join(DATA_DIR, "deep_dives.json")
     names = []
     try:
         with open(path, encoding="utf-8") as f:
-            src = f.read()
-        # 解析 DEEP_CONTENT 字典的 key，贪婪匹配直到最后的 }
-        import re
-        block = re.search(r"DEEP_CONTENT\s*=\s*\{(.*)\n\}", src, re.S)
-        if block:
-            names = re.findall(r'^\s*"([^"]+)"\s*:\s*\{', block.group(1), re.M)
-    except OSError:
+            data = json.load(f)
+        for d in data.get("deep_dives", []):
+            names.append(d["name"])
+    except (OSError, json.JSONDecodeError):
         pass
     return names
 
 
-def fetch_repo_detail(full_name):
-    """拉取单个仓库的详情（用于人工文案项目未出现在当前榜单时）"""
-    data, _ = get(f"repos/{full_name}")
-    if not data or "full_name" not in data:
-        return None
-    return {
-        "full_name": data["full_name"],
-        "url": data["html_url"],
-        "description": data.get("description"),
-        "language": data.get("language"),
-        "stars": data.get("stargazers_count", 0),
-        "forks": data.get("forks_count", 0),
-        "open_issues": data.get("open_issues_count", 0),
-        "topics": data.get("topics", []),
-        "created_at": data.get("created_at", ""),
-        "pushed_at": data.get("pushed_at", ""),
-        "license": (data.get("license") or {}).get("spdx_id"),
-        "owner": data.get("owner", {}).get("login", ""),
-        "name": data.get("name", ""),
-    }
+_PUBLISHED = set()
 
+def register_published(names):
+    """注册已发布项目，pick 时自动排除"""
+    global _PUBLISHED
+    _PUBLISHED |= set(names)
 
 def pick(items, n=10, exclude=()):
     """打分排序后取前 n"""
-    ex = set(exclude)
+    ex = set(exclude) | _PUBLISHED
     pool = [i for i in items if i["full_name"] not in ex]
     for p in pool:
         p["score"] = score_repo(p)
@@ -396,6 +378,20 @@ def pick(items, n=10, exclude=()):
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
     print(f"认证状态: {'已配置 token' if TOKEN else '未认证（受限流影响）'}")
+
+    # 加载已发布项目清单，避免重复推荐
+    pub_path = os.path.join(DATA_DIR, "published_projects.json")
+    published_projects = set()
+    if os.path.isfile(pub_path):
+        try:
+            with open(pub_path, encoding="utf-8") as f:
+                pub_data = json.load(f)
+            published_projects = set(pub_data.get("projects", []))
+            print(f"    已发布项目清单: {len(published_projects)} 个（将从本次抓取中排除）")
+        except (OSError, json.JSONDecodeError) as e:
+            print(f"    ! 读取 published_projects.json 失败: {e}")
+    register_published(published_projects)
+
 
     today = datetime.now(timezone.utc)
     d30 = (today - timedelta(days=30)).strftime("%Y-%m-%d")
@@ -445,7 +441,7 @@ def main():
     print("    正在估算各分类的 star 增速（用于常青榜重排）...")
 
     categories = {}
-    used = set()
+    used = set(published_projects)
 
     # hot_week
     hot = [h for h in hot if days_since(h["created_at"]) <= 30]
@@ -525,66 +521,35 @@ def main():
             p["badge"] = "🏛️ 常青"
             p["growth_note"] = f"势头 {m}"
 
-    # 深挖：优先挑选「我写过人工文案」的项目，再从各分类补足
-    # （人工文案清单由 enrich.py 维护，这里读取以确保这些项目一定被收录）
-    curated = load_curated_names()
-    deep = []
-    seen_deep = set()
-    by_name = {}
+    # 精选推荐：从各分类轮换挑选，保证多样性
+    hero_picks = []
+    by_cat = {}
     for cid, items in categories.items():
         for p in items:
-            by_name[p["full_name"]] = p
-
-    def make_deep(p, cid):
-        if p.get("growth_30d") is None and p["stars"] > 100000:
-            g = estimate_growth(p["full_name"], p["stars"])
-            if g is not None:
-                p["growth_30d"] = g
-        return {
-            "name": p["full_name"],
-            "url": p["url"],
-            "category": cid,
-            "language": p.get("language"),
-            "stars": p.get("stars", 0),
-            "growth_30d": p.get("growth_30d"),
-            "summary": p.get("description") or "",
-            "topics": p.get("topics", [])[:8],
-            "score": p.get("score"),
-            "license": p.get("license"),
-            "forks": p.get("forks", 0),
-            "open_issues": p.get("open_issues", 0),
-            "pushed_at": p.get("pushed_at", "")[:10],
-        }
-
-    # 1) 人工文案项目优先
-    for name in curated:
-        p = by_name.get(name)
-        if p is None:
-            # 不在当前榜单里，单独拉取详情
-            p = fetch_repo_detail(name)
-            if p:
-                p["score"] = score_repo(p)
-                by_name[name] = p
-                cid = "curated"
-                categories.setdefault("curated", []).append(p)
-        else:
-            cid = next(
-                (c for c, items in categories.items()
-                 if any(i["full_name"] == name for i in items)),
-                "curated",
-            )
-        if p:
-            deep.append(make_deep(p, cid))
-            seen_deep.add(name)
-
-    # 不再为凑数而补足 deep_dives，只保留真正有人工文案的项目
-    # 每个 deep_dive 都必须有对应的人工 DEEP_CONTENT，has_analysis 由 enrich.py 设为 True
+            by_cat.setdefault(cid, []).append(p)
+    round_no = 0
+    while len(hero_picks) < 4 and round_no < 4:
+        for cid, items in by_cat.items():
+            if round_no < len(items):
+                p = items[round_no]
+                if p["full_name"] not in [hp["full_name"] for hp in hero_picks]:
+                    hero_picks.append({
+                        "full_name": p["full_name"], "url": p["url"],
+                        "description": p.get("description", ""),
+                        "language": p.get("language"), "stars": p.get("stars", 0),
+                        "growth_30d": p.get("growth_30d"),
+                        "topics": p.get("topics", []), "score": p.get("score"),
+                        "category": cid,
+                        "badge": "✨ 本期精选",
+                        "note": "本期强推",
+                    })
+        round_no += 1
+    hero_picks = hero_picks[:4]
 
     out = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "categories": categories,
-        "deep_dives": deep,
-        "hero_picks": [],
+        "hero_picks": hero_picks,
         "thoughts": [],
         "category_notes": {
             "evergreen": "这一栏不看 star 总数（老牌项目几乎不涨，总数永远那几个），改看近 30 天新增 star——谁在悄悄上位，一眼就能看出来。",
@@ -597,7 +562,8 @@ def main():
     print("\n完成:")
     for cid, items in categories.items():
         print(f"  {cid}: {len(items)} 个")
-    print(f"  deep_dives: {len(deep)} 个")
+    print(f"  hero_picks: {len(hero_picks)} 个")
+    print("  (deep_dives 由 enrich.py 结合 data/deep_dives.json 生成)")
 
 
 if __name__ == "__main__":

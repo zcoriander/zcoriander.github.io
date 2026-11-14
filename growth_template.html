@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成长档案 · GitHub 冲浪手记</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="#categories">分类榜</a>
+      <a href="deep-dive.html">深度拆解</a>
+      <a href="growth.html" class="active">成长档案</a>
+      <a href="about.html">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap page-main">
+  <div class="page-head">
+    <h1>成长档案</h1>
+    <p class="lede">每次冲浪的收获、判断力变化都自动记录在这里。数据全部来自 daily_trending 日志、weekly_changes.json 和 Git 提交历史，无硬编码。</p>
+  </div>
+
+  <section class="prose">
+    <h2>当前站点指标（实时）</h2>
+    <table class="growth-table">
+      <thead><tr><th>指标</th><th>数值</th><th>来源</th></tr></thead>
+      <tbody>
+        <tr><td>收录项目总数</td><td>{total_projects}</td><td>projects.json · categories</td></tr>
+        <tr><td>深度拆解篇数</td><td>{total_deep}</td><td>deep_dives.json · has_analysis=True</td></tr>
+        <tr><td>短评条数</td><td>{total_short}</td><td>short_notes.json · short_notes</td></tr>
+        <tr><td>本期精选</td><td>{total_hero}</td><td>projects.json · hero_picks</td></tr>
+        <tr><td>最近更新</td><td>{latest}</td><td>projects.json · generated_at</td></tr>
+        <tr><td>自动化状态</td><td>运行中</td><td>每日 06:00 Cron 定时收集</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="prose">
+    <h2>阶段对比（从日志自动推算）</h2>
+    <table class="growth-table">
+      <thead><tr><th>维度</th><th>第 1 期（{first_date}）</th><th>当前（第 {log_count} 期）</th><th>变化</th></tr></thead>
+      <tbody>
+        <tr><td>收录项目数</td><td>{first_total}</td><td>{last_total}</td><td>{total_change}</td></tr>
+        <tr><td>深度拆解</td><td>{first_deep}</td><td>{last_deep}</td><td>{deep_change}</td></tr>
+        <tr><td>常青榜排序</td><td>Star 总数</td><td>势头分（提交数+Fork/Star+贡献者）</td><td>⬆️ 抗停滞</td></tr>
+        <tr><td>自动化</td><td>手动跑脚本</td><td>Cron 定时 + Diff 检查 + 条件推送</td><td>⬆️ 零长期凭证</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="prose">
+    <h2>每期收集记录（自动从日志生成）</h2>
+    {entries_html}
+  </section>
+
+  {weekly_html}
+
+  {git_html}
+
+  {short_notes_html}
+
+  <section class="prose">
+    <h2>核心方法论演进</h2>
+    <div class="method-timeline">
+      <div class="method-phase"><span class="phase-num">01</span><div><strong>只看数字</strong><br>Star、Fork、Issue 计数 → 榜单即数字排序</div></div>
+      <div class="method-phase"><span class="phase-num">02</span><div><strong>看增速信号</strong><br>常青榜改势头分 → 抗停滞、抗刷</div></div>
+      <div class="method-phase"><span class="phase-num">03</span><div><strong>亲自读源码</strong><br>每篇深度拆解基于 README + 目录结构 + 关键文件</div></div>
+      <div class="method-phase"><span class="phase-num">04</span><div><strong>显性化判断</strong><br>短评 + 深度拆解 → 分层存储、可迁移</div></div>
+      <div class="method-phase"><span class="phase-num">05</span><div><strong>复盘闭环</strong><br>每期记录踩坑、纠错、新判断 → 知识可迁移</div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 成长档案随每期冲浪自动更新 · 最后生成 {gen_time}</p></div>
+</footer>
+</body>
+</html>

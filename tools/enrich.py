@@ -465,39 +465,30 @@ THOUGHTS = [
 ]
 
 
+DEEP_DIVES_FILE = os.path.join(ROOT, "data", "deep_dives.json")
+
+
 def main():
+    # 1) 读取 projects.json（collect.py 产出，不含 deep_dives）
     with open(DATA, encoding="utf-8") as f:
         data = json.load(f)
 
-    # 1) 深度拆解：合并自动事实 + 人工判断
-    for d in data.get("deep_dives", []):
+    # 2) 读取 deep_dives.json（权威来源）
+    with open(DEEP_DIVES_FILE, encoding="utf-8") as f:
+        deep_data = json.load(f)
+    deep_dives = deep_data.get("deep_dives", [])
+
+    # 3) 注入人工文案（DEEP_CONTENT）到 deep_dives
+    for d in deep_dives:
         content = DEEP_CONTENT.get(d["name"])
-        if content:
-            d["summary"] = content["summary"]
-            d["sections"] = content["sections"]
-            d["verdict"] = content["verdict"]
-            d["has_analysis"] = True
-        else:
-            # 没有人工文案的项目，生成一个基于事实的简版
-            d["sections"] = [
-                {
-                    "title": "项目速览",
-                    "paragraphs": [
-                        d.get("summary") or "（该项目没有填写简介）",
-                        f"最近一次代码提交在 {d.get('pushed_at', '未知')}，"
-                        f"当前有 {fmt(d.get('open_issues'))} 个未关闭 issue，"
-                        f"许可证为 {d.get('license') or '未声明'}。",
-                    ],
-                    "bullets": [],
-                }
-            ]
-            d["verdict"] = (
-                f"这是一个 star 数 {fmt(d.get('stars'))} 的项目，"
-                f"fork {fmt(d.get('forks'))}。"
-                + ("许可证清晰，适合上手试用。" if d.get("license") else
-                   "注意：没有明确声明许可证，商用前需谨慎。")
-            )
-            d["has_analysis"] = False
+        if not content:
+            raise ValueError(f"deep_dive '{d['name']}' 缺少 DEEP_CONTENT 人工文案，"
+                           f"请先在 enrich.py 的 DEEP_CONTENT 中添加后再运行")
+
+        d["summary"] = content["summary"]
+        d["sections"] = content["sections"]
+        d["verdict"] = content["verdict"]
+        d["has_analysis"] = True
 
         # 指标卡片
         metrics = [
@@ -513,9 +504,11 @@ def main():
             metrics.append((d["license"], "许可证"))
         d["metrics"] = metrics
 
-    # 2) 本期精选：优先选有真人工分析的，按分类轮换，避免全是同一类
-    analyzed = [d for d in data.get("deep_dives", []) if d.get("has_analysis")]
-    # 分类轮换：每个分类最多取 2 个，保证多样性
+    # 4) 写回 projects.json（合并 deep_dives）
+    data["deep_dives"] = deep_dives
+
+    # 5) 本期精选：从 deep_dives 按分类轮换
+    analyzed = [d for d in deep_dives if d.get("has_analysis")]
     by_cat = {}
     for d in analyzed:
         by_cat.setdefault(d.get("category", "other"), []).append(d)
@@ -540,10 +533,10 @@ def main():
     picks = picks[:4]
     data["hero_picks"] = picks
 
-    # 3) 手记
+    # 6) 手记
     data["thoughts"] = THOUGHTS
 
-    # 4) 分类说明
+    # 7) 分类说明
     data["category_notes"] = {
         "evergreen": "这一栏不看 star 总数（老牌项目几乎不涨，总数永远那几个），改看「近 30 天新增 star」——谁在悄悄上位，一眼就能看出来。未配置 token 时退化为「近 90 天提交数」，同样能看出谁还在高强度维护。",
         "hot_week": "最近 30 天内新建的仓库。star 数还不高，但增速吓人——这里最容易淘到未来的 stars。",
@@ -556,7 +549,7 @@ def main():
     with open(DATA, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"深度拆解: {len(data['deep_dives'])} 个（其中 {len(picks)} 个进入精选）")
+    print(f"深度拆解: {len(deep_dives)} 个（其中 {len(picks)} 个进入精选）")
     print(f"手记: {len(data['thoughts'])} 条")
     print("文案注入完成")
 

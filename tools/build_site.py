@@ -372,79 +372,195 @@ def render_deep_index(deep_page, page, total_pages, short_notes, projects, base_
 
 
 def render_growth(all_deep, projects):
-    """growth.html 成长档案页。"""
+    """growth.html 成长档案页 - 所有数据动态获取，无硬编码。"""
+    import glob, subprocess, re, json, os
+    from datetime import datetime
+
+    DATA_DIR = os.path.join(ROOT, "data")
+    WORKSPACE = "/run/csi/mount-root/nas/4079184d856ecc166ed19d4887083405/workspaces/github"
+    TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), "..", "growth_template.html")
+
+    # ========== 1. 从数据源动态读取 ==========
+    deep_dives = all_deep if all_deep else []
+    total_deep = len(deep_dives)
+
+    short_notes = {}
+    sn_path = os.path.join(DATA_DIR, "short_notes.json")
+    if os.path.exists(sn_path):
+        with open(sn_path, encoding="utf-8") as f:
+            sn_data = json.load(f)
+        short_notes = sn_data.get("short_notes", {})
+
+    categories = projects.get("categories", {})
+    total_projects = sum(len(items) for items in categories.values())
+
+    hero_picks = projects.get("hero_picks", [])
+    total_hero = len(hero_picks)
+
     latest = projects.get("generated_at", "")[:10]
-    total = sum(len(projects.get("categories", {}).get(cid, [])) for cid, _, _ in CATEGORIES)
-    return f"""<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>成长档案 · GitHub 冲浪手记</title>
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">🌊</span><span>GitHub 冲浪手记</span></a>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="#categories">分类榜</a>
-      <a href="deep-dive.html">深度拆解</a>
-      <a href="growth.html" class="active">成长档案</a>
-    </nav>
-  </div>
-</header>
 
-<main class="wrap page-main">
-  <div class="page-head">
-    <h1>成长档案</h1>
-    <p class="lede">记录自己在开源里的实践与迁移：从「看热闹」到「读源码」、从「抄链接」到「写拆解」。</p>
-  </div>
+    # ========== 2. 从日志获取历史收集记录 ==========
+    log_files = sorted(glob.glob(os.path.join(WORKSPACE, "daily_trending_*.log")), reverse=True)
+    log_entries = []
+    for lf in log_files[:8]:
+        try:
+            with open(lf, encoding="utf-8") as f:
+                content_log = f.read()
+            date_match = re.search(r"(\d{4})(\d{2})(\d{2})", os.path.basename(lf))
+            log_date = f"{date_match.group(1)}-{date_match.group(2)}-{date_match.group(3)}" if date_match else "未知"
 
-  <section class="wrap">
-    <div class="section-head">
-      <h2>📊 本期数据快照</h2>
-    </div>
-    <div class="growth-stats">
-      <div class="stat"><strong>{total}</strong><span>收录项目</span></div>
-      <div class="stat"><strong>{len(CATEGORIES)}</strong><span>分类榜单</span></div>
-      <div class="stat"><strong>{len(all_deep)}</strong><span>深度拆解文章</span></div>
-      <div class="stat"><strong>{latest}</strong><span>最近更新</span></div>
-    </div>
-  </section>
+            cat_counts = {}
+            for cat in ["hot_week", "new_star", "beginner", "fun", "learning", "evergreen"]:
+                m = re.search(fr"{cat}: (\d+) 个", content_log)
+                if m:
+                    cat_counts[cat] = int(m.group(1))
 
-  <section class="wrap">
-    <div class="section-head">
-      <h2>🛠️ 我正在做的迁移</h2>
-    </div>
-    <ul class="growth-list">
-      <li><strong>多 agent 专化 vs 并行化：</strong>把每个未完成项目拆成子任务 DAG，按并发容量决定哪些交给通用 agent 并行，哪些单点特化。</li>
-      <li><strong>superpowers-core v1.0：</strong>构建 wheel 已落盘，等待 PyPI/GitHub 发布凭据后上线。</li>
-      <li><strong>M3U8 广告屏蔽插件：</strong>核心检测引擎 9/9 测试通过，Manifest V3 插件已构建打包，等待商店发布凭据。</li>
-      <li><strong>DEEPDIVE 站点：</strong>{len(all_deep)} 篇 A 标准深度拆解已重写，独立页面与索引页正在生成。</li>
-    </ul>
-  </section>
+            deep_m = re.search(r"深度拆解: (\d+) 个", content_log)
+            hero_m = re.search(r"hero_picks: (\d+) 个", content_log)
+            pushed = "推送完成" in content_log or "Everything up-to-date" in content_log
 
-  <section class="wrap">
-    <div class="section-head">
-      <h2>🧭 下一步</h2>
-    </div>
-    <ul class="growth-list">
-      <li>为 {len(all_deep)} 篇深度拆解补足 ≥800 字 A 标准正文（README + 源码结构双验证）。</li>
-      <li>本地渲染全部页面并校验链接。</li>
-      <td>通过 push.sh 推送到 GitHub Pages main 分支上线。</td>
-    </ul>
-  </section>
-</main>
+            log_entries.append({
+                "date": log_date,
+                "categories": cat_counts,
+                "total": sum(cat_counts.values()),
+                "deep_dives": int(deep_m.group(1)) if deep_m else 0,
+                "hero_picks": int(hero_m.group(1)) if hero_m else 0,
+                "pushed": pushed,
+            })
+        except:
+            pass
 
-<footer class="site-footer">
-  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 成长档案持续更新中</p></div>
-</footer>
-</body>
-</html>"""
+    # ========== 3. 周榜变动 ==========
+    weekly = None
+    wc_path = os.path.join(DATA_DIR, "weekly_changes.json")
+    if os.path.exists(wc_path):
+        with open(wc_path, encoding="utf-8") as f:
+            weekly = json.load(f)
 
+    # ========== 4. Git 提交历史 ==========
+    git_log = []
+    try:
+        pages_dir = os.path.join(WORKSPACE, "pages")
+        out = subprocess.run(["git", "-C", pages_dir, "log", "--oneline", "-10", "--pretty=format:%h|%ad|%s", "--date=short"],
+                           capture_output=True, text=True, timeout=5)
+        for line in out.stdout.strip().split("\n"):
+            if "|" in line:
+                parts = line.split("|", 2)
+                if len(parts) == 3:
+                    git_log.append({"hash": parts[0], "date": parts[1], "msg": parts[2]})
+    except:
+        pass
 
+    # ========== 5. 生成 HTML 片段 ==========
+    first_date = log_entries[0]["date"] if log_entries else latest
+    first_deep = log_entries[0]["deep_dives"] if log_entries else total_deep
+    first_total = log_entries[0]["total"] if log_entries else total_projects
+    last = log_entries[-1] if log_entries else {"deep_dives": total_deep, "total": total_projects}
+
+    total_change = "+" + str(last["total"] - first_total) if last["total"] > first_total else str(last["total"] - first_total)
+    deep_change = "+" + str(last["deep_dives"] - first_deep) if last["deep_dives"] > first_deep else str(last["deep_dives"] - first_deep)
+
+    entries_html = ""
+    for i, e in enumerate(reversed(log_entries), 1):
+        cats = " · ".join(f"{k}:{v}" for k, v in e["categories"].items()) if e["categories"] else "—"
+        push_status = "✅ 已推送" if e["pushed"] else "⏳ 未推送"
+        entries_html += (
+            '    <article class="growth-entry">\n'
+            '      <header class="growth-header">\n'
+            f'        <h3>第 {i} 期（{e["date"]}）</h3>\n'
+            f'        <p class="growth-meta">{cats} · 深度拆解 {e["deep_dives"]} 篇 · 精选 {e["hero_picks"]} 个 · {push_status}</p>\n'
+            '      </header>\n'
+            '    </article>\n'
+        )
+
+    weekly_html = ""
+    if weekly and not weekly.get("note"):
+        new_count = len(weekly.get("new_entries", []))
+        out_count = len(weekly.get("out_entries", []))
+        moved_count = len(weekly.get("moved_entries", []))
+        new_list = "".join(f'<li>{p["full_name"]} - {p.get("category","")} - ★{p.get("stars",0)}</li>' for p in weekly.get("new_entries", [])[:5]) or "<li>无</li>"
+        out_list = "".join(f'<li>{p["full_name"]} - 原{p.get("prev_category","")} - ★{p.get("stars",0)}</li>' for p in weekly.get("out_entries", [])[:5]) or "<li>无</li>"
+        moved_list = "".join(f'<li>{p["full_name"]}: {p.get("prev_category","")}#{p.get("prev_pos",0)+1} → {p.get("curr_category","")}#{p.get("curr_pos",0)+1}</li>' for p in weekly.get("moved_entries", [])[:5]) or "<li>无</li>"
+        weekly_html = (
+            '    <article class="growth-entry">\n'
+            '      <header class="growth-header">\n'
+            f'        <h3>📊 本周榜单变动（{weekly.get("week_start", "本周")}）</h3>\n'
+            f'        <p class="growth-meta">新加入 {new_count} · 被顶替 {out_count} · 排名变动 {moved_count}</p>\n'
+            '      </header>\n'
+            '      <div class="growth-body">\n'
+            '        <details><summary>新加入项目</summary>\n'
+            f'        <ul>{new_list}</ul></details>\n'
+            '        <details><summary>被顶替项目</summary>\n'
+            f'        <ul>{out_list}</ul></details>\n'
+            '        <details><summary>排名变动</summary>\n'
+            f'        <ul>{moved_list}</ul></details>\n'
+            '      </div>\n'
+            '    </article>\n'
+        )
+
+    git_html = ""
+    if git_log:
+        git_items = ""
+        for g in git_log:
+            git_items += f'          <li><code>{g["hash"]}</code> {g["date"]} — {g["msg"]}</li>\n'
+        git_html = (
+            '    <article class="growth-entry">\n'
+            '      <header class="growth-header">\n'
+            f'        <h3>📝 最近提交记录</h3>\n'
+            f'        <p class="growth-meta">pages/ 分支最近 {len(git_log)} 次提交</p>\n'
+            '      </header>\n'
+            '      <div class="growth-body">\n'
+            f'        <ul class="git-log">{git_items}'
+            '        </ul>\n'
+            '      </div>\n'
+            '    </article>\n'
+        )
+
+    short_notes_html = ""
+    sn_items = list(short_notes.items())[:8]
+    if sn_items:
+        sn_items_html = ""
+        for key, val in sn_items:
+            sn_items_html += f'        <li><strong>{key}</strong> — {val.get("one_line", "")}</li>\n'
+        short_notes_html = (
+            '    <article class="growth-entry">\n'
+            '      <header class="growth-header">\n'
+            f'        <h3>💬 精选短评（共 {len(short_notes)} 条）</h3>\n'
+            '        <p class="growth-meta">从 short_notes.json 动态读取，每条一句定语</p>\n'
+            '      </header>\n'
+            '      <div class="growth-body">\n'
+            f'        <ul>{sn_items_html}'
+            '        </ul>\n'
+            '      </div>\n'
+            '    </article>\n'
+        )
+
+    # ========== 6. 读取模板并填充 ==========
+    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+        template = f.read()
+
+    html = template.format(
+        total_projects=total_projects,
+        total_deep=total_deep,
+        total_short=len(short_notes),
+        total_hero=total_hero,
+        latest=latest,
+        first_date=first_date,
+        log_count=len(log_entries),
+        first_total=first_total,
+        last_total=last["total"],
+        total_change=total_change,
+        first_deep=first_deep,
+        last_deep=last["deep_dives"],
+        deep_change=deep_change,
+        entries_html=entries_html,
+        weekly_html=weekly_html,
+        git_html=git_html,
+        short_notes_html=short_notes_html,
+        gen_time=datetime.now().strftime("%Y-%m-%d %H:%M"),
+    )
+
+    return html
 def render_home(data, short_notes, weekly_changes=None):
     latest = data.get("generated_at", "")[:10]
     total = sum(len(data["categories"].get(c, [])) for c, _, _ in CATEGORIES)
