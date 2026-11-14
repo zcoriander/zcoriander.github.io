@@ -15,6 +15,7 @@
       <a href="#categories">分类榜</a>
       <a href="deep-dive.html">深度拆解</a>
       <a href="growth.html" class="active">成长档案</a>
+      <a href="about.html">关于</a>
     </nav>
   </div>
 </header>
@@ -22,47 +23,258 @@
 <main class="wrap page-main">
   <div class="page-head">
     <h1>成长档案</h1>
-    <p class="lede">记录自己在开源里的实践与迁移：从「看热闹」到「读源码」、从「抄链接」到「写拆解」。</p>
+    <p class="lede">把每次冲浪的收获、踩坑、判断力变化都记下来。数据来自真实的收集日志、周榜对比和 Git 提交——不写死，每次生成站点时自动刷新。</p>
   </div>
 
-  <section class="wrap">
-    <div class="section-head">
-      <h2>📊 本期数据快照</h2>
-    </div>
-    <div class="growth-stats">
-      <div class="stat"><strong>67</strong><span>收录项目</span></div>
-      <div class="stat"><strong>7</strong><span>分类榜单</span></div>
-      <div class="stat"><strong>14</strong><span>深度拆解文章</span></div>
-      <div class="stat"><strong>2026-11-07</strong><span>最近更新</span></div>
-    </div>
+  <section class="prose">
+    <h2>当前站点指标</h2>
+    <table class="growth-table">
+      <thead><tr><th>指标</th><th>数值</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>收录项目总数</td><td>60</td><td>6 分类 × 10</td></tr>
+        <tr><td>深度拆解篇数</td><td>14</td><td>全部 A 标准（读过 README + 源码结构）</td></tr>
+        <tr><td>短评条数</td><td>2</td><td>每项目一句定语 + 适合人群 + 钩子</td></tr>
+        <tr><td>本期精选</td><td>4</td><td>分类轮换，保证多样性</td></tr>
+        <tr><td>最近更新</td><td>2026-11-13</td><td>projects.json 生成时间</td></tr>
+        <tr><td>自动化状态</td><td>运行中</td><td>每日 06:00 定时收集 → 有变化才推送</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <section class="wrap">
-    <div class="section-head">
-      <h2>🛠️ 我正在做的迁移</h2>
-    </div>
-    <ul class="growth-list">
-      <li><strong>多 agent 专化 vs 并行化：</strong>把每个未完成项目拆成子任务 DAG，按并发容量决定哪些交给通用 agent 并行，哪些单点特化。</li>
-      <li><strong>superpowers-core v1.0：</strong>构建 wheel 已落盘，等待 PyPI/GitHub 发布凭据后上线。</li>
-      <li><strong>M3U8 广告屏蔽插件：</strong>核心检测引擎 9/9 测试通过，Manifest V3 插件已构建打包，等待商店发布凭据。</li>
-      <li><strong>DEEPDIVE 站点：</strong>14 篇 A 标准深度拆解已重写，独立页面与索引页正在生成。</li>
-    </ul>
+  <section class="prose">
+    <h2>阶段对比：从第 1 期到现在</h2>
+    <table class="growth-table">
+      <thead><tr><th>维度</th><th>第 1 期（2026-11-03）</th><th>当前（第 8 期）</th><th>变化</th></tr></thead>
+      <tbody>
+        <tr><td>收录项目数</td><td>0</td><td>60</td><td>+60</td></tr>
+        <tr><td>深度拆解</td><td>0</td><td>14</td><td>+14</td></tr>
+        <tr><td>常青榜排序</td><td>Star 总数</td><td>势头分（提交数+Fork/Star+贡献者）</td><td>⬆️ 抗停滞</td></tr>
+        <tr><td>自动化</td><td>手动跑脚本</td><td>Cron 定时 + Diff 检查 + 条件推送</td><td>⬆️ 零长期凭证</td></tr>
+        <tr><td>Token 安全</td><td>工作区明文</td><td>~/.config/qwenpaw/ + chmod 600 + 仅 Contents/Pages RW</td><td>⬆️ 生产级</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <section class="wrap">
-    <div class="section-head">
-      <h2>🧭 下一步</h2>
+  <section class="prose">
+    <h2>每期收集记录（自动从日志生成）</h2>
+    
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 1 期（2026-11-13）—— 首次上线</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 4 个 · ✅ 已推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Fri Nov 13 22:00:42 UTC 2026] Starting...
+[Fri Nov 13 22:00:42 UTC 2026] Step 1/5: Running collect.py...
+=== Daily GitHub Trending Collection ===
+[Fri Nov 13 22:03:05 UTC 2026] Starting...
+[Fri Nov 13 22:03:05 UTC 2026] Step 1/5: Running collect.py...
+=== Daily GitHub Trending Collection ===
+[Fri Nov 13 22:06:39 UTC 2026] Starting...
+[Fri Nov 13 22:06:39 UTC 2026] Step 1/5: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 2 期（2026-11-12）—— 每日自动收集</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 4 个 · ✅ 已推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Thu Nov 12 22:00:26 UTC 2026] Starting...
+[Thu Nov 12 22:00:26 UTC 2026] Step 1/5: Running collect.py...
+=== Daily GitHub Trending Collection ===
+[Thu Nov 12 22:01:34 UTC 2026] Starting...
+[Thu Nov 12 22:01:34 UTC 2026] Step 1/5: Running collect.py...
+=== Daily GitHub Trending Collection ===
+[Thu Nov 12 22:04:07 UTC 2026] Starting...
+[Thu Nov 12 22:04:07 UTC 2026] Step 1/5: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 3 期（2026-11-11）—— 每日自动收集</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 4 个 · ✅ 已推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Wed Nov 11 06:00:01 UTC 2026] Starting...
+[Wed Nov 11 06:00:01 UTC 2026] Step 1/3: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new_star (近90天新建)...
+[3/6] 抓取 beginner...
+[4/6] 抓取 fun / creative...
+[5/6] 抓取 learning...
+[6/6] 抓取 evergreen (star 总量前列)...
+    正在估算各分类的 star 增速（用于常青榜重排）...
+    为 20 个候选计算势头信号...
+    [1/20] codecrafters-io/build-your-own-x: commits90=2 contributors=144 score=77
+    [2/20] sindresorhus/awesome: co...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 4 期（2026-11-10）—— 每日自动收集</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 4 个 · ✅ 已推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Tue Nov 10 06:00:02 UTC 2026] Starting...
+[Tue Nov 10 06:00:02 UTC 2026] Step 1/3: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new_star (近90天新建)...
+[3/6] 抓取 beginner...
+[4/6] 抓取 fun / creative...
+[5/6] 抓取 learning...
+[6/6] 抓取 evergreen (star 总量前列)...
+    正在估算各分类的 star 增速（用于常青榜重排）...
+    为 20 个候选计算势头信号...
+    [1/20] codecrafters-io/build-your-own-x: commits90=2 contributors=144 score=77
+    [2/20] sindresorhus/awesome: co...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 5 期（2026-11-09）—— 每日自动收集</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 4 个 · ⏳ 未推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Mon Nov  9 06:00:01 UTC 2026] Starting...
+[Mon Nov  9 06:00:02 UTC 2026] Step 1/3: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new_star (近90天新建)...
+[3/6] 抓取 beginner...
+[4/6] 抓取 fun / creative...
+[5/6] 抓取 learning...
+[6/6] 抓取 evergreen (star 总量前列)...
+    正在估算各分类的 star 增速（用于常青榜重排）...
+    为 20 个候选计算势头信号...
+    [1/20] codecrafters-io/build-your-own-x: commits90=2 contributors=144 score=77
+    [2/20] sindresorhus/awesome: co...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 6 期（2026-11-08）—— 每日自动收集</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 4 个 · ⏳ 未推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Sun Nov  8 05:01:07 UTC 2026] Starting...
+[Sun Nov  8 05:01:07 UTC 2026] Step 1/3: Running collect.py...
+=== Daily GitHub Trending Collection ===
+[Sun Nov  8 06:00:02 UTC 2026] Starting...
+[Sun Nov  8 06:00:02 UTC 2026] Step 1/3: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new_star (近90天新建)...
+[3/6] 抓取 beginner...
+[4/6] 抓取 fun / creative...
+[5/6] 抓取 learning...
+[6/6] 抓取 evergreen (star 总量前列)...
+    正在估算各分类的 star 增速（用于常青榜...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 7 期（2026-11-07）—— 每日自动收集</h3>
+        <p class="growth-meta">hot_week:10 · new_star:10 · beginner:10 · fun:10 · learning:10 · evergreen:10 · 深度拆解 14 篇 · 精选 0 个 · ✅ 已推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Sat Nov  7 22:03:26 UTC 2026] Starting...
+[Sat Nov  7 22:03:27 UTC 2026] Step 1/5: Running collect.py...
+认证状态: 已配置 token
+
+[1/6] 抓取 hot_week (近30天新建)...
+[2/6] 抓取 new_star (近90天新建)...
+[3/6] 抓取 beginner...
+[4/6] 抓取 fun / creative...
+[5/6] 抓取 learning...
+[6/6] 抓取 evergreen (star 总量前列)...
+    正在估算各分类的 star 增速（用于常青榜重排）...
+    为 20 个候选计算势头信号...
+    [1/20] codecrafters-io/build-your-own-x: commits90=None contributors=143 score=55
+    [2/20] sindresorhus/awesome:...</pre></details>
+      </div>
+    </article>
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>第 8 期（2026-11-03）—— 每日自动收集</h3>
+        <p class="growth-meta">— · 深度拆解 0 篇 · 精选 0 个 · ⏳ 未推送</p>
+      </header>
+      <div class="growth-body">
+        <details><summary>查看原始日志摘要</summary>
+        <pre class="log-snippet">=== Daily GitHub Trending Collection ===
+[Tue Nov  3 17:01:35 UTC 2026] Starting...
+[Tue Nov  3 17:01:35 UTC 2026] Step 1/3: Running collect.py...
+...</pre></details>
+      </div>
+    </article>
+  </section>
+
+  
+
+  
+    <article class="growth-entry">
+      <header class="growth-header">
+        <h3>📝 最近提交记录</h3>
+        <p class="growth-meta">pages/ 分支最近 10 次提交</p>
+      </header>
+      <div class="growth-body">
+        <ul class="git-log">
+          <li><code>d211a9b</code> 2026-11-08 — 优化深度拆解目录页：消除硬编码统计，分页每页最多10篇</li>
+          <li><code>3303aa7</code> 2026-11-08 — 补全所有 deep_dive 人工文案，移除水文 fallback，修复目录页统计数字</li>
+          <li><code>45ef06e</code> 2026-11-07 — 首页新增本周榜单变动板块</li>
+          <li><code>e1d696f</code> 2026-11-07 — 构建更新：基于 11-06 22:04 UTC 数据，清理重复 md，修复渲染 bug</li>
+          <li><code>f217188</code> 2026-11-03 — docs: 记录深度拆解重构改动说明</li>
+          <li><code>d559f56</code> 2026-11-03 — feat: 重构深度拆解内容为 WikiFrontmatter 规范</li>
+          <li><code>e77df1f</code> 2026-11-02 — feat: 深度拆解独立页面与成长档案页</li>
+          <li><code>7872d1b</code> 2026-10-31 — chore: 加固 .gitignore（Python 缓存），移除误提交的 __pycache__</li>
+          <li><code>5a0de29</code> 2026-10-30 — docs: 增加 Workflow 全自动化方案分析与可用工作流文件</li>
+          <li><code>3b54b3b</code> 2026-10-30 — docs: 更新部署说明为分支直发，记录上线状态</li>
+        </ul>
+      </div>
+    </article>
+
+  <section class="prose">
+    <h2>核心方法论演进</h2>
+    <div class="method-timeline">
+      <div class="method-phase"><span class="phase-num">01</span><div><strong>只看数字</strong><br>Star、Fork、Issue 计数 → 榜单即数字排序</div></div>
+      <div class="method-phase"><span class="phase-num">02</span><div><strong>看增速信号</strong><br>常青榜改势头分 → 抗停滞、抗刷</div></div>
+      <div class="method-phase"><span class="phase-num">03</span><div><strong>亲自读源码</strong><br>每篇深度拆解基于 README + 目录结构 + 关键文件</div></div>
+      <div class="method-phase"><span class="phase-num">04</span><div><strong>显性化判断</strong><br>短评 + 深度拆解 → 分层存储、可迁移</div></div>
+      <div class="method-phase"><span class="phase-num">05</span><div><strong>复盘闭环</strong><br>每期记录踩坑、纠错、新判断 → 知识可迁移</div></div>
     </div>
-    <ul class="growth-list">
-      <li>为 14 篇深度拆解补足 ≥800 字 A 标准正文（README + 源码结构双验证）。</li>
-      <li>本地渲染全部页面并校验链接。</li>
-      <td>通过 push.sh 推送到 GitHub Pages main 分支上线。</td>
-    </ul>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 成长档案持续更新中</p></div>
+  <div class="wrap"><p class="muted">用 GitHub 公开 API 数据整理 · 成长档案随每期冲浪自动更新 · 最后生成 2026-11-14 12:30</p></div>
 </footer>
 </body>
 </html>
